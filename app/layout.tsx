@@ -6,7 +6,7 @@ import { Footer } from "./components/footer";
 import { SkipNavigation } from "./components/skip-navigation";
 import { CookieConsent } from "./components/cookie-consent";
 import { GoogleAnalytics } from "./components/google-analytics";
-import Script from "next/script";
+import NetlifyIdentityLoader from "./components/netlify-identity-loader";
 
 
 const quantico = Quantico({
@@ -126,27 +126,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <Script
-          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          strategy="afterInteractive"
-          onLoad={() => {
-            if (window.location.hash.includes("invite_token")) {
-              const token = window.location.hash.split("=")[1];
-              document.cookie = `nf_jwt=${token}`;
-              window.location.href = "/admin/";
-            }
-            const windowWithIdentity = window as any;
-            if (windowWithIdentity.netlifyIdentity) {
-              windowWithIdentity.netlifyIdentity.on('init', (user: any) => {
-                if (!user) {
-                  windowWithIdentity.netlifyIdentity.on('login', () => {
-                    document.location.href = '/admin/';
-                  });
-                }
-              });
-            }
-          }}
-        />
+        <NetlifyIdentityLoader />
         
       </body>
     </html>
