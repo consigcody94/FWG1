@@ -34,8 +34,9 @@ export function NetlifyIdentity() {
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
       strategy="afterInteractive"
       onLoad={() => {
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.init();
+        const windowWithIdentity = window as any;
+        if (windowWithIdentity.netlifyIdentity) {
+          windowWithIdentity.netlifyIdentity.init();
         }
       }}
     />
