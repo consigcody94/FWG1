@@ -1,8 +1,6 @@
 # Netlify CMS Configuration with Local Backend
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
-  branch: main
+  name: git-gateway
 
 # Media files location
 media_folder: "public/assets/uploads"
