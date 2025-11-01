@@ -4,6 +4,10 @@ import Script from "next/script";
 import { useEffect } from "react";
 
 const cmsConfig = {
+  backend: {
+    name: 'test-repo',
+    branch: 'main',
+  },
   // Enable local backend only for development
   ...(typeof window !== 'undefined' && window.location.hostname === 'localhost' ? {
     local_backend: {
