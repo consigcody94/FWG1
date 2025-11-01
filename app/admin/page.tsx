@@ -839,6 +839,17 @@ export default function AdminPage() {
       <Script
         src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         strategy="beforeInteractive"
+        onLoad={() => {
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', (user) => {
+              if (!user) {
+                window.netlifyIdentity.on('login', () => {
+                  document.location.href = '/admin/';
+                });
+              }
+            });
+          }
+        }}
       />
       <Script
         src="https://unpkg.com/netlify-cms@^2/dist/netlify-cms.js"

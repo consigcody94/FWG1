@@ -6,6 +6,7 @@ import { Footer } from "./components/footer";
 import { SkipNavigation } from "./components/skip-navigation";
 import { CookieConsent } from "./components/cookie-consent";
 import { GoogleAnalytics } from "./components/google-analytics";
+import NetlifyIdentityRedirect from './components/netlify-identity-redirect';
 
 const quantico = Quantico({
   subsets: ["latin"],
@@ -124,6 +125,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
+        <NetlifyIdentityRedirect />
       </body>
     </html>
   );
