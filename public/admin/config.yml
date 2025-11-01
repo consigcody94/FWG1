@@ -4,9 +4,6 @@ backend:
   proxy_url: http://localhost:8081/api/v1
   branch: main
 
-# This allows editing without GitHub/Netlify!
-local_backend: true
-
 # Media files location
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"

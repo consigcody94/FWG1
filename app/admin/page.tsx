@@ -5,15 +5,9 @@ import { useEffect } from "react";
 
 const cmsConfig = {
   backend: {
-    name: 'test-repo',
+    name: 'git-gateway',
     branch: 'main',
   },
-  // Enable local backend only for development
-  ...(typeof window !== 'undefined' && window.location.hostname === 'localhost' ? {
-    local_backend: {
-      url: 'http://localhost:8081/api/v1',
-    },
-  } : {}),
   media_folder: 'public/assets/uploads',
   public_folder: '/assets/uploads',
   logo_url: '/fwg_logo-removebg-preview.png',
