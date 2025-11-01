@@ -5,9 +5,13 @@ import { useEffect } from "react";
 
 const cmsConfig = {
   backend: {
-    name: 'test-repo',
+    name: 'git-gateway',
+    branch: 'main',
   },
-  local_backend: false,
+  // Enable local backend for development
+  local_backend: {
+    url: 'http://localhost:8081/api/v1',
+  },
   media_folder: 'public/assets/uploads',
   public_folder: '/assets/uploads',
   logo_url: '/fwg_logo-removebg-preview.png',
@@ -833,6 +837,10 @@ export default function AdminPage() {
 
   return (
     <div id="nc-root">
+      <Script
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        strategy="beforeInteractive"
+      />
       <Script
         src="https://unpkg.com/netlify-cms@^2/dist/netlify-cms.js"
         strategy="afterInteractive"
