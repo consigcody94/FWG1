@@ -1,10 +1,13 @@
 # Netlify CMS Configuration with Local Backend
 backend:
   name: git-gateway
+  site_url: https://gentle-biscochitos-7940a8.netlify.app
+  build_hook: https://api.netlify.com/build_hooks/690642449aacbbbc97de00e1
 
 # Media files location
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
+publish_mode: editorial_workflow
 
 # Content Collections
 collections:
