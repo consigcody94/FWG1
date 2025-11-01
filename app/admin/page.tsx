@@ -840,10 +840,11 @@ export default function AdminPage() {
         src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         strategy="beforeInteractive"
         onLoad={() => {
-          if (window.netlifyIdentity) {
-            window.netlifyIdentity.on('init', (user) => {
+          const windowWithIdentity = window as any;
+          if (windowWithIdentity.netlifyIdentity) {
+            windowWithIdentity.netlifyIdentity.on('init', (user: any) => {
               if (!user) {
-                window.netlifyIdentity.on('login', () => {
+                windowWithIdentity.netlifyIdentity.on('login', () => {
                   document.location.href = '/admin/';
                 });
               }
