@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Federal Working Group",
+    "subtitle": "Empowering Excellence Through Innovation, Collaboration, and Execution",
+    "buttonText": "Learn More",
+    "buttonLink": "/about"
+  },
+  "stats": [
+    {
+      "value": "20+",
+      "label": "Years of Excellence"
+    },
+    {
+      "value": "500+",
+      "label": "Expert Professionals"
+    },
+    {
+      "value": "1000+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "150+",
+      "label": "Government Partners"
+    }
+  ],
+  "about": {
+    "title": "About Federal Working Group",
+    "content": "Federal Working Group (FWG) is a premier provider of innovative IT solutions and management consulting services to federal agencies and commercial clients.\n\nSince 2004, we have been at the forefront of delivering cutting-edge technology solutions that drive mission success and operational excellence."
+  }
+}

@@ -1,0 +1,54 @@
+# Simple CMS Configuration for Local Testing
+backend:
+  name: test-repo
+  # No authentication needed for local testing!
+
+# Where to save uploaded images
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Content Collections
+collections:
+  # Homepage Editor
+  - name: "pages"
+    label: "Website Pages"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "content/site-content.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Button 1 Text", name: "buttonText", widget: "string" }
+              - {
+                  label: "Button 2 Text",
+                  name: "secondButtonText",
+                  widget: "string",
+                }
+
+          - label: "Company Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "text" }
+
+      - label: "Contact Info"
+        name: "contact"
+        file: "content/contact-info.json"
+        fields:
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Hours", name: "hours", widget: "string" }
