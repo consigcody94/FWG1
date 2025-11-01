@@ -831,22 +831,7 @@ export default function AdminPage() {
   return (
     <div id="nc-root">
 
-      <Script
-        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        strategy="beforeInteractive"
-        onLoad={() => {
-          const windowWithIdentity = window as any;
-          if (windowWithIdentity.netlifyIdentity) {
-            windowWithIdentity.netlifyIdentity.on('init', (user: any) => {
-              if (!user) {
-                windowWithIdentity.netlifyIdentity.on('login', () => {
-                  document.location.href = '/admin/';
-                });
-              }
-            });
-          }
-        }}
-      />
+
       <Script
         src="https://unpkg.com/netlify-cms@^2/dist/netlify-cms.js"
         strategy="afterInteractive"

@@ -6,6 +6,7 @@ import { Footer } from "./components/footer";
 import { SkipNavigation } from "./components/skip-navigation";
 import { CookieConsent } from "./components/cookie-consent";
 import { GoogleAnalytics } from "./components/google-analytics";
+import Script from "next/script";
 
 
 const quantico = Quantico({
@@ -123,6 +124,22 @@ export default function RootLayout({
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <Script
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          strategy="afterInteractive"
+          onLoad={() => {
+            const windowWithIdentity = window as any;
+            if (windowWithIdentity.netlifyIdentity) {
+              windowWithIdentity.netlifyIdentity.on('init', (user: any) => {
+                if (!user) {
+                  windowWithIdentity.netlifyIdentity.on('login', () => {
+                    document.location.href = '/admin/';
+                  });
+                }
+              });
+            }
           }}
         />
         
