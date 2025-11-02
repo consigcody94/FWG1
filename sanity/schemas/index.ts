@@ -13,6 +13,7 @@ import { testimonialsBlock } from './blocks/testimonials'
 import { contentBlock } from './blocks/content'
 import { teamBlock } from './blocks/team'
 import { ctaBlock } from './blocks/cta'
+import { videoHeroBlock } from './blocks/video-hero'
 
 export const schemas = [
   // Document types
@@ -24,6 +25,7 @@ export const schemas = [
 
   // Block types
   heroBlock,
+  videoHeroBlock,
   statsBlock,
   servicesBlock,
   testimonialsBlock,
