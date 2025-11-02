@@ -6,7 +6,7 @@ import { VideoHero } from "./components/effects/VideoHero";
 import { ParallaxSection } from "./components/effects/ParallaxSection";
 import { GlassCard } from "./components/ui/GlassCard";
 import { StatsBlock } from "./components/blocks/StatsBlock";
-import { TestimonialsBlock } from "./components/blocks/TestimonialsBlock";
+import { SuccessStoriesBlock } from "./components/blocks/SuccessStoriesBlock";
 import { CTABlock } from "./components/blocks/CTABlock";
 import { motion } from "framer-motion";
 import { Shield, Cloud, Network, TrendingUp } from "lucide-react";
@@ -39,38 +39,22 @@ export default function Home() {
       <ParallaxSection speed={0.1}>
         <StatsBlock
           data={{
-            layout: "grid",
-            animated: true,
-            showSeparators: false,
-            backgroundColor: { hex: "#F8FAFC" },
             items: [
               {
-                value: "20",
-                suffix: "+",
+                value: "20+",
                 label: "Years of Excellence",
-                subtext: "Serving Federal Agencies",
-                icon: "Award",
               },
               {
-                value: "500",
-                suffix: "+",
+                value: "500+",
                 label: "Expert Professionals",
-                subtext: "Cleared Personnel",
-                icon: "Users",
               },
               {
-                value: "1000",
-                suffix: "+",
+                value: "1000+",
                 label: "Projects Completed",
-                subtext: "Mission Success",
-                icon: "CheckCircle2",
               },
               {
-                value: "150",
-                suffix: "+",
+                value: "150+",
                 label: "Government Partners",
-                subtext: "Federal Agencies",
-                icon: "Building2",
               },
             ],
           }}
@@ -216,29 +200,12 @@ export default function Home() {
         </ParallaxSection>
       </section>
 
-      {/* CLIENT SUCCESS STORIES - Enhanced Testimonials */}
+      {/* CLIENT SUCCESS STORIES - Detailed Project Highlights */}
       <ParallaxSection speed={0.2}>
-        <TestimonialsBlock
+        <SuccessStoriesBlock
           data={{
             heading: "Client Success Stories",
-            backgroundColor: { hex: "#F1F5F9" },
-            testimonials: [
-              {
-                quote: "Federal Working Group's expertise in cybersecurity and cloud migration was instrumental in our successful transition to a zero-trust architecture.",
-                author: "John Stevens",
-                role: "CIO, Department of Defense",
-              },
-              {
-                quote: "The enterprise architecture solutions provided by FWG transformed our IT landscape and enabled true digital transformation.",
-                author: "Sarah Martinez",
-                role: "IT Director, Homeland Security",
-              },
-              {
-                quote: "FWG's business performance management solutions helped us optimize operations and achieve measurable results ahead of schedule.",
-                author: "Michael Chen",
-                role: "Program Manager, Veterans Affairs",
-              },
-            ],
+            subtitle: "Real-world impact across federal agencies"
           }}
         />
       </ParallaxSection>

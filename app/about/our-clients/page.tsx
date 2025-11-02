@@ -11,31 +11,31 @@ export default function OurClientsPage() {
       name: "Department of Commerce",
       website: "commerce.gov",
       abbreviation: "DOC",
-      logo: "/assets/logos/commerce.png"
+      logo: "/assets/clients/commerce.png"
     },
     {
       name: "Department of Treasury",
       website: "treasury.gov",
       abbreviation: "TREASURY",
-      logo: "/assets/logos/treasury.svg"
+      logo: "/assets/clients/treasury.png"
     },
     {
       name: "Department of Homeland Security",
       website: "dhs.gov",
       abbreviation: "DHS",
-      logo: "/assets/logos/dhs.png"
+      logo: "/assets/clients/homeland.png"
     },
     {
       name: "Department of Health and Human Services",
       website: "hhs.gov",
       abbreviation: "HHS",
-      logo: "/assets/logos/hhs.svg"
+      logo: "/assets/clients/health.png"
     },
     {
       name: "Environmental Protection Agency",
       website: "epa.gov",
       abbreviation: "EPA",
-      logo: "/assets/logos/epa.png"
+      logo: "/assets/clients/environment.png"
     },
     {
       name: "Federal Communications Commission",
