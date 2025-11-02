@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text";
+import { PortableText } from "@portabletext/react";
 
-// Callout box component for rich text
+// Callout box component for Sanity PortableText
 export const Callout = (props: any) => {
   const typeStyles = {
     info: "bg-blue-50 border-blue-500 text-blue-900",
@@ -17,7 +17,10 @@ export const Callout = (props: any) => {
     error: "✗",
   };
 
-  const type = props.type || "info";
+  const type = props.value?.type || "info";
+  const title = props.value?.title;
+  const content = props.value?.content;
+
   const styleClass = typeStyles[type as keyof typeof typeStyles] || typeStyles.info;
   const icon = iconStyles[type as keyof typeof iconStyles] || iconStyles.info;
 
@@ -26,11 +29,12 @@ export const Callout = (props: any) => {
       <div className="flex items-start gap-3">
         <span className="text-2xl flex-shrink-0">{icon}</span>
         <div className="flex-1">
-          {props.title && (
-            <h4 className="font-bold text-lg mb-2">{props.title}</h4>
+          {title && (
+            <h4 className="font-bold text-lg mb-2">{title}</h4>
           )}
           <div className="prose prose-sm max-w-none">
-            <TinaMarkdown content={props.content} />
+            {content && <PortableText value={content} />}
+            {props.children}
           </div>
         </div>
       </div>
@@ -38,7 +42,7 @@ export const Callout = (props: any) => {
   );
 };
 
-// Button component for rich text
+// Button component for Sanity PortableText
 export const Button = (props: any) => {
   const styleClasses = {
     primary: "bg-blue-600 text-white hover:bg-blue-700",
@@ -46,21 +50,27 @@ export const Button = (props: any) => {
     outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50",
   };
 
-  const style = props.style || "primary";
+  const style = props.value?.style || "primary";
+  const url = props.value?.url || "#";
+  const text = props.value?.text || "Click Here";
+
   const styleClass = styleClasses[style as keyof typeof styleClasses] || styleClasses.primary;
 
   return (
     <Link
-      href={props.url || "#"}
+      href={url}
       className={`inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition ${styleClass}`}
     >
-      {props.text || "Click Here"}
+      {text}
     </Link>
   );
 };
 
-// Export all components for TinaMarkdown
-export const components = {
-  Callout,
-  Button,
+// Export all components for PortableText
+// Use in PortableText like: <PortableText value={content} components={portableTextComponents} />
+export const portableTextComponents = {
+  types: {
+    callout: Callout,
+    button: Button,
+  },
 };
