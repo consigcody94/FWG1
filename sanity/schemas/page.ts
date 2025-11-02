@@ -34,6 +34,7 @@ export const pageType = defineType({
       of: [
         defineArrayMember({ type: 'hero' }),
         defineArrayMember({ type: 'videoHero' }),
+        defineArrayMember({ type: 'clientsLogos' }),
         defineArrayMember({ type: 'stats' }),
         defineArrayMember({ type: 'services' }),
         defineArrayMember({ type: 'testimonials' }),
