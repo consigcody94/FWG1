@@ -248,6 +248,64 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "jobs",
+        label: "💼 Job Postings",
+        path: "content/jobs",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Job Title",
+            required: true,
+            isTitle: true,
+          },
+          {
+            type: "string",
+            name: "location",
+            label: "Location",
+            options: [
+              "Washington, DC",
+              "McLean, VA",
+              "Tuscaloosa, AL",
+              "Remote",
+            ],
+          },
+          {
+            type: "string",
+            name: "department",
+            label: "Department",
+          },
+          {
+            type: "string",
+            name: "type",
+            label: "Employment Type",
+            options: ["Full Time", "Part Time", "Contract"],
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Job Description",
+          },
+          {
+            type: "string",
+            name: "requirements",
+            label: "Requirements",
+            list: true,
+          },
+          {
+            type: "string",
+            name: "salary",
+            label: "Salary Range",
+          },
+          {
+            type: "boolean",
+            name: "published",
+            label: "Published",
+          },
+        ],
+      },
     ],
   },
 });
