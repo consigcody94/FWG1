@@ -38,7 +38,7 @@ const securityHeaders = [
       font-src 'self' https://fonts.gstatic.com;
       img-src 'self' data: https: blob:;
       media-src 'self';
-      connect-src 'self' http://localhost:8081 https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://*.sanity.io https://*.sanity-cdn.com;
+      connect-src 'self' http://localhost:8081 https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://*.sanity.io https://*.sanity-cdn.com https://registry.npmjs.org;
       frame-src 'self' https://www.google.com;
       object-src 'none';
       base-uri 'self';
