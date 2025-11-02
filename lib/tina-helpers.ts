@@ -14,6 +14,9 @@ export const pageQuery = `
           buttonText
           buttonLink
           backgroundImage
+          backgroundColor
+          textColor
+          alignment
         }
         ... on PagesBlocksStats {
           items {
@@ -40,6 +43,9 @@ export const pageQuery = `
         }
         ... on PagesBlocksContent {
           body
+          backgroundColor
+          textColor
+          maxWidth
         }
         ... on PagesBlocksTeam {
           heading
@@ -56,6 +62,10 @@ export const pageQuery = `
           text
           buttonText
           buttonLink
+          backgroundColor
+          textColor
+          buttonStyle
+          alignment
         }
       }
     }
