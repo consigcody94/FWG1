@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  # Don't specify publish directory - let @netlify/plugin-nextjs handle it
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Environment variables
+[build.environment]
+  NODE_VERSION = "22"
+
+# Redirect old admin route to studio
+[[redirects]]
+  from = "/admin"
+  to = "/studio"
+  status = 301

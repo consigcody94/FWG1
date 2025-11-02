@@ -33,12 +33,12 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: `
       default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://unpkg.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://unpkg.com https://core.sanity-cdn.com https://identity.netlify.com;
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       font-src 'self' https://fonts.gstatic.com;
       img-src 'self' data: https: blob:;
       media-src 'self';
-      connect-src 'self' http://localhost:8081 https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;
+      connect-src 'self' http://localhost:8081 https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://*.sanity.io https://*.sanity-cdn.com;
       frame-src 'self' https://www.google.com;
       object-src 'none';
       base-uri 'self';
