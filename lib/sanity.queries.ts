@@ -90,15 +90,10 @@ export async function getAllPageSlugs() {
     groq`*[_type == "page" && defined(slug.current)][].slug.current`
   )
 
-  // Exclude patterns for empty/unwanted pages
+  // Only exclude contract vehicle pages as requested
   const excludePatterns = [
     /^contracts$/,  // Remove contracts main page
     /^contracts\//,  // Remove all contract vehicle pages
-    /^about\/caring-in-the-community$/,  // Empty page
-    /^about\/success-stories$/,  // Now on homepage
-    /^about\/why-fwg$/,  // Empty page
-    /^services\//,  // All services subdirectories are empty
-    /^careers\//,  // All careers subdirectories are empty
   ]
 
   return allSlugs.filter((slug: string) => {
