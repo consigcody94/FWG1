@@ -43,7 +43,7 @@ export function PageBlocks({ blocks }: PageBlocksProps) {
           return null;
         }
 
-        return <Component key={index} data={block} />;
+        return <Component key={index} data={block as any} />;
       })}
     </>
   );
