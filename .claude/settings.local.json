@@ -13,7 +13,22 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(pkill:*)",
-      "Bash(npm run dev:cms:*)"
+      "Bash(npm run dev:cms:*)",
+      "Skill(superpowers:using-git-worktrees)",
+      "Bash([ -f CLAUDE.md ])",
+      "Bash(git worktree add:*)",
+      "Bash(npm run test)",
+      "Skill(superpowers:writing-plans)",
+      "Skill(superpowers:subagent-driven-development)",
+      "Bash(git rev-parse:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git -C /home/cody/wealth/FWG/.worktrees/tina-cms-migration show 6ddc772c00dcfab1489f1ba10609df55a83677b4 --stat)",
+      "Bash(git -C /home/cody/wealth/FWG/.worktrees/tina-cms-migration diff 5642bad5dfedccbbc7156114218d0d4e100de8d0 6ddc772c00dcfab1489f1ba10609df55a83677b4 -- package.json)",
+      "Bash(git -C /home/cody/wealth/FWG/.worktrees/tina-cms-migration log --format='%h %s' --graph -10)",
+      "Bash(git -C /home/cody/wealth/FWG/.worktrees/tina-cms-migration show 6ddc772c00dcfab1489f1ba10609df55a83677b4 --name-status)",
+      "Bash(git -C /home/cody/wealth/FWG/.worktrees/tina-cms-migration log 6ddc772c00dcfab1489f1ba10609df55a83677b4 -1 --pretty=format:'%B')",
+      "Bash(npx @tinacms/cli@latest init:*)"
     ],
     "deny": [],
     "ask": []
