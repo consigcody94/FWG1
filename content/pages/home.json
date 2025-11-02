@@ -3,15 +3,14 @@
   "description": "Federal Working Group delivers cybersecurity, cloud modernization, and mission-critical IT consulting trusted by federal agencies since 2004.",
   "blocks": [
     {
-      "_template": "hero",
-      "title": "Welcome to Federal Working Group",
+      "title": "Federal Working Group",
       "subtitle": "Empowering Excellence Through Innovation, Collaboration, and Execution",
       "buttonText": "Access Portal",
       "buttonLink": "/employee-portal",
-      "backgroundImage": "https://i.imgur.com/85EwS5X.png"
+      "backgroundImage": "/assets/uploadshttps://i.imgur.com/85EwS5X.png",
+      "_template": "hero"
     },
     {
-      "_template": "stats",
       "items": [
         {
           "value": "20+",
@@ -29,71 +28,40 @@
           "value": "150+",
           "label": "Government Partners"
         }
-      ]
+      ],
+      "_template": "stats"
     },
     {
-      "_template": "content",
-      "body": {
-        "type": "root",
-        "children": [
-          {
-            "type": "h2",
-            "children": [
-              {
-                "type": "text",
-                "text": "About Federal Working Group"
-              }
-            ]
-          },
-          {
-            "type": "p",
-            "children": [
-              {
-                "type": "text",
-                "text": "Federal Working Group (FWG) is a premier provider of innovative IT solutions and management consulting services to federal agencies and commercial clients."
-              }
-            ]
-          },
-          {
-            "type": "p",
-            "children": [
-              {
-                "type": "text",
-                "text": "Since 2004, we have been at the forefront of delivering cutting-edge technology solutions that drive mission success and operational excellence."
-              }
-            ]
-          }
-        ]
-      }
+      "body": "\\[object Object]\n",
+      "_template": "content"
     },
     {
-      "_template": "services",
       "heading": "Services & Solutions",
       "services": [
         {
           "title": "Business Performance Management",
           "description": "Strategic planning, process optimization, and performance analytics to drive organizational excellence.",
-          "icon": "/assets/service-bpm.jpg"
+          "icon": "/assets/uploads/assets/service-bpm.jpg"
         },
         {
           "title": "IT Infrastructure, Technologies & Solutions",
           "description": "Cloud computing, data center management, network architecture, and IT modernization services.",
-          "icon": "/assets/service-cloud.png"
+          "icon": "/assets/uploads/assets/service-cloud.png"
         },
         {
           "title": "Enterprise Architecture",
           "description": "Comprehensive enterprise architecture planning, design, and implementation aligned with business goals.",
-          "icon": "/assets/service-enterprise.jpg"
+          "icon": "/assets/uploads/assets/service-enterprise.jpg"
         },
         {
           "title": "IT Strategy, Operations & Security",
           "description": "Cybersecurity, IT governance, risk management, and operational excellence frameworks.",
-          "icon": "/assets/service-security.jpg"
+          "icon": "/assets/uploads/assets/service-security.jpg"
         }
-      ]
+      ],
+      "_template": "services"
     },
     {
-      "_template": "testimonials",
       "heading": "Client Success Stories",
       "testimonials": [
         {
@@ -111,14 +79,15 @@
           "author": "Michael Chen",
           "role": "Program Manager, Veterans Affairs"
         }
-      ]
+      ],
+      "_template": "testimonials"
     },
     {
-      "_template": "cta",
       "heading": "Discover Our Full Capabilities",
       "text": "Download our comprehensive capabilities statement to learn more about how FWG can support your mission.",
       "buttonText": "Download Capabilities Statement",
-      "buttonLink": "/assets/FWGCap.pdf"
+      "buttonLink": "/assets/FWGCap.pdf",
+      "_template": "cta"
     }
   ]
 }
