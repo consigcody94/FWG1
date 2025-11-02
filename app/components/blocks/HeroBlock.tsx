@@ -8,8 +8,8 @@ interface HeroBlockProps {
     buttonText?: string;
     buttonLink?: string;
     backgroundImage?: string;
-    backgroundColor?: string;
-    textColor?: string;
+    backgroundColor?: any;
+    textColor?: any;
     alignment?: string;
   };
 }
@@ -19,16 +19,20 @@ export function HeroBlock({ data }: HeroBlockProps) {
   const textAlign = alignment === "center" ? "text-center" : alignment === "right" ? "text-right" : "text-left";
   const justifyContent = alignment === "center" ? "justify-center" : alignment === "right" ? "justify-end" : "justify-start";
 
+  // Extract color values from Sanity color objects
+  const bgColor = data.backgroundColor?.hex || data.backgroundColor;
+  const textColor = data.textColor?.hex || data.textColor;
+
   return (
     <section
       className="relative overflow-hidden text-white"
       style={{
         backgroundImage: data.backgroundImage ? `url(${data.backgroundImage})` : undefined,
-        backgroundColor: data.backgroundColor || (data.backgroundImage ? undefined : '#1e40af'),
+        backgroundColor: bgColor || (data.backgroundImage ? undefined : '#1e40af'),
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        color: data.textColor || 'white',
+        color: textColor || 'white',
       }}
     >
       {data.backgroundImage && <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />}

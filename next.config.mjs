@@ -50,14 +50,22 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  output: 'export',
+  // Removed output: 'export' to support Sanity Studio (requires dynamic features)
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   compress: true,
   poweredByHeader: false,
-  
+
+  // Empty turbopack config to silence Next.js 16 warning
+  turbopack: {},
+
   // Add security headers
   async headers() {
     return [
@@ -67,13 +75,15 @@ const nextConfig = {
       },
     ];
   },
-  
+
   // Environment variables validation
   env: {
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.federalworking.com',
+    NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
   },
-  
+
   // Webpack optimizations
   webpack: (config) => {
     // Optimize bundle size
@@ -81,7 +91,7 @@ const nextConfig = {
       ...config.optimization,
       moduleIds: 'deterministic',
     };
-    
+
     return config;
   },
 };

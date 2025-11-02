@@ -18,7 +18,8 @@ export const Blocks = {
 
 interface PageBlocksProps {
   blocks?: Array<{
-    __typename: string;
+    _type: string;
+    _key: string;
     [key: string]: any;
   }>;
 }
@@ -34,15 +35,15 @@ export function PageBlocks({ blocks }: PageBlocksProps) {
 
   return (
     <>
-      {blocks.map((block, index) => {
-        // Extract block type from __typename (e.g., "PagesBlocksHero" -> "hero")
-        const blockType = block.__typename?.replace("PagesBlocks", "").toLowerCase();
+      {blocks.map((block) => {
+        // Sanity uses _type directly (e.g., "hero", "stats", etc.)
+        const blockType = block._type;
         const Component = Blocks[blockType as keyof typeof Blocks];
 
         if (!Component) {
           console.warn(`No component found for block type: ${blockType}`, block);
           return (
-            <div key={index} className="border-2 border-red-500 p-4 m-4">
+            <div key={block._key} className="border-2 border-red-500 p-4 m-4">
               <p className="text-red-600">Unknown block type: {blockType}</p>
               <pre className="text-xs">{JSON.stringify(block, null, 2)}</pre>
             </div>
@@ -50,7 +51,7 @@ export function PageBlocks({ blocks }: PageBlocksProps) {
         }
 
         // Pass the entire block as data - components will extract what they need
-        return <Component key={index} data={block as any} />;
+        return <Component key={block._key} data={block as any} />;
       })}
     </>
   );

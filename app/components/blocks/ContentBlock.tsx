@@ -1,11 +1,10 @@
-import { TinaMarkdown } from "tinacms/dist/rich-text";
-import { components } from "./RichTextComponents";
+import { PortableText } from '@portabletext/react'
 
 interface ContentBlockProps {
   data: {
     body?: any;
-    backgroundColor?: string;
-    textColor?: string;
+    backgroundColor?: any;
+    textColor?: any;
     maxWidth?: string;
   };
 }
@@ -22,17 +21,21 @@ export function ContentBlock({ data }: ContentBlockProps) {
 
   const widthClass = maxWidthClasses[data.maxWidth as keyof typeof maxWidthClasses] || "max-w-4xl";
 
+  // Extract color values from Sanity color objects
+  const bgColor = data.backgroundColor?.hex || data.backgroundColor;
+  const textColor = data.textColor?.hex || data.textColor;
+
   return (
     <section
       className="py-24"
       style={{
-        backgroundColor: data.backgroundColor || 'white',
-        color: data.textColor || undefined,
+        backgroundColor: bgColor || 'white',
+        color: textColor || undefined,
       }}
     >
       <div className={`mx-auto ${widthClass} px-6`}>
-        <div className="prose prose-lg prose-slate max-w-none" data-tina-field="body">
-          <TinaMarkdown content={data.body} components={components} />
+        <div className="prose prose-lg prose-slate max-w-none">
+          <PortableText value={data.body} />
         </div>
       </div>
     </section>

@@ -1,0 +1,33 @@
+// Document types
+import { pageType } from './page'
+import { navigationType } from './navigation'
+import { settingsType } from './settings'
+import { contactType } from './contact'
+import { jobType } from './job'
+
+// Block types
+import { heroBlock } from './blocks/hero'
+import { statsBlock } from './blocks/stats'
+import { servicesBlock } from './blocks/services'
+import { testimonialsBlock } from './blocks/testimonials'
+import { contentBlock } from './blocks/content'
+import { teamBlock } from './blocks/team'
+import { ctaBlock } from './blocks/cta'
+
+export const schemas = [
+  // Document types
+  pageType,
+  navigationType,
+  settingsType,
+  contactType,
+  jobType,
+
+  // Block types
+  heroBlock,
+  statsBlock,
+  servicesBlock,
+  testimonialsBlock,
+  contentBlock,
+  teamBlock,
+  ctaBlock,
+]

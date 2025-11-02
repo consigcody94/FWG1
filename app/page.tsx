@@ -1,15 +1,11 @@
-import client from "@/tina/__generated__/client";
-import { TinaPage } from "./components/TinaPage";
+import { getPage } from "@/lib/sanity.queries";
+import { SanityPage } from "./components/SanityPage";
 
 export default async function Home() {
-  // Fetch page data from Tina
-  const pageResponse = await client.queries.pages({ relativePath: "home.json" });
+  // Fetch page data from Sanity
+  const page = await getPage("home");
 
-  return (
-    <TinaPage
-      data={pageResponse.data}
-      query={pageResponse.query}
-      variables={pageResponse.variables}
-    />
-  );
+  return <SanityPage page={page} />;
 }
+
+export const revalidate = 60; // Revalidate every 60 seconds

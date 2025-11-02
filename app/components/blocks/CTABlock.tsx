@@ -7,8 +7,8 @@ interface CTABlockProps {
     text?: string;
     buttonText?: string;
     buttonLink?: string;
-    backgroundColor?: string;
-    textColor?: string;
+    backgroundColor?: any;
+    textColor?: any;
     buttonStyle?: string;
     alignment?: string;
   };
@@ -27,12 +27,16 @@ export function CTABlock({ data }: CTABlockProps) {
 
   const buttonClass = buttonStyles[data.buttonStyle as keyof typeof buttonStyles] || buttonStyles.solid;
 
+  // Extract color values from Sanity color objects
+  const bgColor = data.backgroundColor?.hex || data.backgroundColor;
+  const textColor = data.textColor?.hex || data.textColor;
+
   return (
     <section
       className="py-24"
       style={{
-        background: data.backgroundColor || 'linear-gradient(to right, #2563eb, #7c3aed)',
-        color: data.textColor || 'white',
+        background: bgColor || 'linear-gradient(to right, #2563eb, #7c3aed)',
+        color: textColor || 'white',
       }}
     >
       <ScrollReveal>
