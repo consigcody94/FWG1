@@ -1,12 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "./components/contact-form";
-import { getSiteContent, getContactInfo } from "@/lib/cms-connector";
+// TODO: Replace with Tina CMS data fetching
+// import { getSiteContent, getContactInfo } from "@/lib/cms-connector";
 
 export default async function Home() {
+  // TODO: Replace with Tina CMS data fetching
   // Get content from CMS
-  const cmsContent = await getSiteContent();
-  const contactInfo = await getContactInfo();
+  // const cmsContent = await getSiteContent();
+  // const contactInfo = await getContactInfo();
+  const cmsContent: any = {};
+  const contactInfo = {
+    address: "1234 Main Street\nWashington, DC 20001",
+    phone: "(202) 555-0100",
+    email: "info@federalworkinggroup.com"
+  };
 
   // Use CMS content with fallbacks
   const hero = cmsContent.hero || {
@@ -182,7 +190,7 @@ export default async function Home() {
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-6xl px-6 py-12">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat) => (
+              {stats.map((stat: any) => (
                 <div
                   key={stat.label}
                   className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center shadow-sm"
@@ -204,7 +212,7 @@ export default async function Home() {
             </h2>
             <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-slate-900" />
             <div className="mt-8 space-y-5 text-left text-base leading-relaxed text-slate-600">
-              {aboutSection.content.split("\n\n").map((paragraph, index) => (
+              {aboutSection.content.split("\n\n").map((paragraph: string, index: number) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
@@ -226,7 +234,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-2">
-              {services.map((service) => (
+              {services.map((service: any) => (
                 <div
                   key={service.title}
                   className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md"
@@ -269,7 +277,7 @@ export default async function Home() {
               <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-slate-900" />
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {coreValues.map((value) => (
+              {coreValues.map((value: any) => (
                 <div
                   key={value.title}
                   className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
@@ -298,7 +306,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {testimonials.map((testimonial) => (
+              {testimonials.map((testimonial: any) => (
                 <div
                   key={testimonial.author}
                   className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
@@ -330,7 +338,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {certifications.map((cert) => (
+              {certifications.map((cert: any) => (
                 <div
                   key={cert.title}
                   className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center shadow-sm"
@@ -360,7 +368,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {contractVehicles.map((vehicle) => (
+              {contractVehicles.map((vehicle: any) => (
                 <div
                   key={vehicle.title}
                   className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm"
@@ -390,7 +398,7 @@ export default async function Home() {
             </div>
             <div className="mt-12 grid gap-10 md:grid-cols-[1.25fr_0.75fr] md:items-center">
               <div className="grid gap-6 sm:grid-cols-2">
-                {careerBenefits.map((benefit) => (
+                {careerBenefits.map((benefit: any) => (
                   <div
                     key={benefit.title}
                     className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center shadow-sm"
