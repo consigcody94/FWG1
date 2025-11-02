@@ -28,8 +28,9 @@ This document outlines the complete redesign and restructuring of the Federal Wo
 - **Framework**: Next.js 14.2.5
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
+- **Content Management**: Tina CMS (Cloud)
 - **Font**: Quantico (Google Fonts)
-- **Deployment**: Static site generation with `next export`
+- **Deployment**: Static site generation with `next export` via Netlify
 - **Development Server**: Port 3001
 
 ---
@@ -111,6 +112,19 @@ app/
 - Canonical URLs
 - Open Graph and Twitter Card metadata
 
+### 6. Content Management System (Tina CMS)
+- **Visual Editing**: Inline content editing with real-time preview
+- **Git-Based**: Content stored as JSON/Markdown files in GitHub repository
+- **Type-Safe**: Auto-generated TypeScript types and GraphQL schema
+- **Authentication**: Tina Cloud handles authentication (up to 2 users on free tier)
+- **Admin Interface**: Accessible at `/admin` route
+- **Collections**:
+  - **Pages**: Homepage content (hero, stats, services, testimonials, etc.)
+  - **Contact**: Contact information and hours
+  - **Jobs**: Job postings with rich text descriptions
+
+**CMS Access**: https://gentle-biscochitos-7940a8.netlify.app/admin
+
 ---
 
 ## Technical Implementations
@@ -176,6 +190,18 @@ Implemented smart dropdown behavior with:
 **Problem**: No way to access sub-pages from main navigation
 **Solution**: Implemented dropdown menus showing all sub-pages on hover
 
+### 6. Content Management System Migration (November 2025)
+**Problem**: Netlify CMS stopped working due to deprecated Netlify Identity service
+**Solution**: Migrated to Tina CMS with the following approach:
+- Removed all Netlify CMS files and dependencies
+- Installed Tina CMS and configured three collections (pages, contact, jobs)
+- Set up Tina Cloud for authentication and Git operations (free tier, 2 users)
+- Created admin interface at `/admin` route using iframe wrapper
+- Updated build script to generate Tina admin files during deployment
+- Configured environment variables in Netlify for production
+- Resolved static export compatibility by removing API routes (Tina Cloud handles backend)
+- Fixed production deployment by adding `tinacms build` step to build script
+
 ---
 
 ## File Structure
@@ -190,6 +216,8 @@ portal/
 │   │   ├── our-clients/page.tsx
 │   │   ├── success-stories/page.tsx
 │   │   └── caring-in-the-community/page.tsx
+│   ├── admin/
+│   │   └── page.tsx      # Tina CMS admin interface wrapper
 │   ├── careers/
 │   │   ├── page.tsx
 │   │   ├── life-at-fwg/page.tsx
@@ -219,11 +247,23 @@ portal/
 │   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
+├── content/              # CMS content (JSON/Markdown)
+│   ├── contact-info.json
+│   ├── site-content.json
+│   └── jobs/            # Job postings
+│       └── *.md
+├── tina/
+│   ├── config.ts        # Tina CMS configuration
+│   └── __generated__/   # Auto-generated types and schema
 ├── public/
+│   ├── admin/           # Tina admin interface (generated)
+│   │   ├── index.html
+│   │   └── assets/
 │   ├── assets/
-│   │   └── (images)
+│   │   └── uploads/     # CMS uploaded media
 │   └── fwg_logo-removebg-preview.png
-├── out/                  # Built static site
+├── out/                 # Built static site
+├── .env.example         # Environment variable template
 ├── next.config.js
 ├── package.json
 ├── tailwind.config.ts
@@ -266,17 +306,35 @@ npm run dev
 # Runs on http://localhost:3001
 ```
 
+To access the CMS admin in development:
+1. Set environment variables in `.env.local` (see `.env.example`)
+2. Visit `http://localhost:3000/admin`
+
 ### Production Build
 ```bash
 npm run build
-# Generates static files in /out directory
+# 1. Runs tinacms build to generate admin interface
+# 2. Runs next build to generate static files in /out directory
 ```
 
+### Build Process
+The build script runs two commands sequentially:
+1. `npx tinacms build --skip-cloud-checks` - Generates admin interface files in `public/admin/`
+2. `next build` - Builds Next.js static export
+
 ### Build Output
-- 26 static HTML pages
+- 26+ static HTML pages (including /admin)
+- Tina CMS admin interface
 - Optimized images and assets
 - CSS bundles (~87.2 kB shared)
 - JavaScript chunks (prerendered as static content)
+
+### Environment Variables (Netlify)
+Required for production deployment:
+- `NEXT_PUBLIC_TINA_CLIENT_ID` - Tina Cloud client ID
+- `TINA_TOKEN` - Tina Cloud read/write token
+- `NEXT_PUBLIC_TINA_BRANCH` - Git branch (usually "main")
+- `NEXTAUTH_SECRET` - NextAuth secret for authentication
 
 ---
 
@@ -322,6 +380,8 @@ npm run build
 4. Consider adding breadcrumb navigation for sub-pages
 5. Add image optimization and lazy loading
 6. Implement analytics tracking
+7. Integrate Tina CMS data into frontend pages (currently CMS manages content but pages use static data)
+8. Add more content types to Tina CMS (services, about pages, etc.)
 
 ### Accessibility Improvements
 1. Add ARIA labels for dropdown menus
@@ -350,6 +410,20 @@ Each page is a self-contained TypeScript React component. Edit the corresponding
 
 ### Logo Changes
 Replace `public/fwg_logo-removebg-preview.png` with new logo file.
+
+### Managing CMS Content
+1. Access admin interface at https://gentle-biscochitos-7940a8.netlify.app/admin
+2. Sign in with GitHub account (must have repository access)
+3. Edit content visually in the admin interface
+4. Changes are committed directly to the GitHub repository
+5. Netlify automatically rebuilds and deploys when content changes
+
+### CMS Configuration
+To modify CMS schema or add new collections, edit:
+```
+tina/config.ts
+```
+After changes, run `npm run build` to regenerate TypeScript types.
 
 ---
 
