@@ -16,12 +16,16 @@ export async function getPage(slug: string) {
         _type == "hero" => {
           title,
           subtitle,
+          badge,
           buttonText,
           buttonLink,
+          secondaryButton,
           "backgroundImage": backgroundImage.asset->url,
           backgroundColor,
           textColor,
-          alignment
+          alignment,
+          height,
+          overlayPattern
         },
         // Video Hero block
         _type == "videoHero" => {

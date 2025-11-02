@@ -17,6 +17,12 @@ export const heroBlock = defineType({
       rows: 3,
     }),
     defineField({
+      name: 'badge',
+      title: 'Badge/Label (optional)',
+      type: 'string',
+      description: 'Small label above title (e.g., "Since 2004")',
+    }),
+    defineField({
       name: 'buttonText',
       title: 'Button Text',
       type: 'string',
@@ -25,6 +31,15 @@ export const heroBlock = defineType({
       name: 'buttonLink',
       title: 'Button Link',
       type: 'string',
+    }),
+    defineField({
+      name: 'secondaryButton',
+      title: 'Secondary Button (optional)',
+      type: 'object',
+      fields: [
+        { name: 'text', type: 'string', title: 'Button Text' },
+        { name: 'link', type: 'string', title: 'Button Link' },
+      ],
     }),
     defineField({
       name: 'backgroundImage',
@@ -57,6 +72,34 @@ export const heroBlock = defineType({
         ],
         layout: 'radio',
       },
+    }),
+    defineField({
+      name: 'height',
+      title: 'Section Height',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Auto', value: 'auto' },
+          { title: 'Medium (60vh)', value: '60vh' },
+          { title: 'Large (80vh)', value: '80vh' },
+          { title: 'Full Screen (100vh)', value: '100vh' },
+        ],
+      },
+      initialValue: '80vh',
+    }),
+    defineField({
+      name: 'overlayPattern',
+      title: 'Overlay Pattern',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'None', value: 'none' },
+          { title: 'Grid', value: 'grid' },
+          { title: 'Diagonal Lines', value: 'diagonal' },
+          { title: 'Dots', value: 'dots' },
+        ],
+      },
+      initialValue: 'none',
     }),
   ],
   preview: {
