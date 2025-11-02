@@ -44,6 +44,5 @@ next-env.d.ts
 *.Identifier
 
 # Tina CMS
-.tina/__generated__
+tina/__generated__
 .env.local
-# Trigger Tina Cloud indexing
