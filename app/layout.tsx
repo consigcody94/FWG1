@@ -7,8 +7,8 @@ import { SkipNavigation } from "./components/skip-navigation";
 import { CookieConsent } from "./components/cookie-consent";
 import { GoogleAnalytics } from "./components/google-analytics";
 import NetlifyIdentityLoader from "./components/netlify-identity-loader";
-import { VisualEditing } from "./components/VisualEditing";
-import { draftMode } from "next/headers";
+// import { VisualEditing } from "./components/VisualEditing";
+// import { draftMode } from "next/headers";
 
 const quantico = Quantico({
   subsets: ["latin"],
@@ -102,12 +102,12 @@ const organizationJsonLd = {
   foundingDate: "2004",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const draft = await draftMode()
+  // const draft = await draftMode()
 
   return (
     <html lang="en">
@@ -130,7 +130,7 @@ export default async function RootLayout({
           }}
         />
         <NetlifyIdentityLoader />
-        {draft.isEnabled && <VisualEditing />}
+        {/* {draft.isEnabled && <VisualEditing />} */}
       </body>
     </html>
   );

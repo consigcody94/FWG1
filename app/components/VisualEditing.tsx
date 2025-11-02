@@ -1,10 +1,12 @@
 'use client'
 
-import { VisualEditing as SanityVisualEditing } from '@sanity/visual-editing/next-pages-router'
-import { useLiveMode } from '@sanity/react-loader'
-import { client } from '@/lib/sanity.client'
+import { enableVisualEditing } from '@sanity/visual-editing'
+import { useEffect } from 'react'
 
 export function VisualEditing() {
-  useLiveMode({ client })
-  return <SanityVisualEditing />
+  useEffect(() => {
+    enableVisualEditing()
+  }, [])
+
+  return null
 }

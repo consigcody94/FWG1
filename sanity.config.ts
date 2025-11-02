@@ -61,17 +61,11 @@ export default defineConfig({
               .child(S.documentTypeList('job').title('All Jobs')),
           ]),
     }),
-    presentationTool({
-      previewUrl: {
-        origin: PREVIEW_URL,
-        draftMode: {
-          enable: '/api/draft',
-        },
-      },
-      name: 'editor',
-      title: 'Visual Editor',
-      icon: () => '✨',
-    }),
+    // presentationTool commented out due to TypeScript compatibility issues
+    // Will be re-enabled after package updates
+    // presentationTool({
+    //   previewUrl: PREVIEW_URL,
+    // }),
     visionTool({
       defaultApiVersion: '2024-01-01',
     }),
@@ -90,36 +84,5 @@ export default defineConfig({
 
   schema: {
     types: schemas,
-  },
-
-  // Document actions
-  document: {
-    actions: (prev, context) => {
-      return prev
-    },
-  },
-
-  // Tools configuration
-  tools: (prev) => {
-    return prev.map((tool) => {
-      if (tool.name === 'editor') {
-        return {
-          ...tool,
-          options: {
-            ...tool.options,
-            defaultDocumentNode: (S: any, { schemaType }: any) => {
-              if (schemaType === 'page') {
-                return S.document().views([
-                  S.view.form(),
-                  S.view.component(() => null).title('Preview'),
-                ])
-              }
-              return S.document()
-            },
-          },
-        }
-      }
-      return tool
-    })
   },
 })
