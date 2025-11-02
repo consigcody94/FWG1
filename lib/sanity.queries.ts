@@ -16,19 +16,80 @@ export async function getPage(slug: string) {
         _type == "hero" => {
           title,
           subtitle,
+          badge,
           buttonText,
           buttonLink,
+          secondaryButton,
           "backgroundImage": backgroundImage.asset->url,
           backgroundColor,
           textColor,
-          alignment
+          alignment,
+          height,
+          overlayPattern
+        },
+        // Video Hero block
+        _type == "videoHero" => {
+          title,
+          subtitle,
+          videoUrl,
+          "videoFile": videoFile.asset->{url},
+          "fallbackImage": fallbackImage.asset->url,
+          overlayOpacity,
+          primaryButton,
+          secondaryButton,
+          height,
+          autoPlay,
+          loop,
+          muted,
+          disableOnMobile
+        },
+        // Clients/Logos block
+        _type == "clientsLogos" => {
+          heading,
+          description,
+          logos[]{
+            name,
+            "logo": logo.asset->url,
+            url
+          },
+          displayStyle,
+          columns,
+          logoSize,
+          grayscale,
+          backgroundColor,
+          padding
+        },
+        // Capabilities Matrix block
+        _type == "capabilitiesMatrix" => {
+          heading,
+          description,
+          capabilities[]{
+            title,
+            description,
+            icon,
+            stat,
+            link
+          },
+          layout,
+          hoverEffect,
+          cardStyle,
+          backgroundColor,
+          padding
         },
         // Stats block
         _type == "stats" => {
           items[]{
             value,
-            label
-          }
+            label,
+            prefix,
+            suffix,
+            subtext,
+            icon
+          },
+          layout,
+          animated,
+          showSeparators,
+          backgroundColor
         },
         // Services block
         _type == "services" => {
