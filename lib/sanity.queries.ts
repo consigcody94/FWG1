@@ -86,9 +86,24 @@ export async function getPage(slug: string) {
 
 // Fetch all page slugs for static generation
 export async function getAllPageSlugs() {
-  return client.fetch(
+  const allSlugs = await client.fetch(
     groq`*[_type == "page" && defined(slug.current)][].slug.current`
   )
+
+  // Exclude patterns for empty/unwanted pages
+  const excludePatterns = [
+    /^contracts$/,  // Remove contracts main page
+    /^contracts\//,  // Remove all contract vehicle pages
+    /^about\/caring-in-the-community$/,  // Empty page
+    /^about\/success-stories$/,  // Now on homepage
+    /^about\/why-fwg$/,  // Empty page
+    /^services\//,  // All services subdirectories are empty
+    /^careers\//,  // All careers subdirectories are empty
+  ]
+
+  return allSlugs.filter((slug: string) => {
+    return !excludePatterns.some(pattern => pattern.test(slug))
+  })
 }
 
 // Fetch navigation
