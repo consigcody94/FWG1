@@ -5,7 +5,6 @@
       "links": [
         { "label": "About", "href": "/about" },
         { "label": "Services", "href": "/services" },
-        { "label": "Contracts", "href": "/contracts" },
         { "label": "Careers", "href": "/careers" }
       ]
     },
