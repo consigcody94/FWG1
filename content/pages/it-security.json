@@ -1,0 +1,163 @@
+{
+  "title": "IT Security, Strategy and Operations - Federal Working Group",
+  "description": "Federal Working Group acts as a trusted advisor for customers to meet system and data security requirements and ensure compliance with FISMA, OMB A-130, and NIST SP 800 Series and FIPS guidelines.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h1",
+            "children": [
+              {
+                "type": "text",
+                "text": "IT Security, Strategy and Operations"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group acts as a trusted advisor for customers to meet system and data security requirements and ensure compliance with laws like FISMA, OMB A-130, and NIST SP 800 Series and FIPS guidelines."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Our expertise includes:"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Security Assessment Plans"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Contingency Planning"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Disaster Recovery"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Continuity of Operations"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Security Policies and Standard Operating Procedures"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Risk Assessment"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Vulnerability Analysis"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Information Security Management"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Security Testing & Evaluation"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "POA&M Management"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Security Infrastructure"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Key Benefit"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Our process balances operational and economic costs of protective measures against mission-related functions."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

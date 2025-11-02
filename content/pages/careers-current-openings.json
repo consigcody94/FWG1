@@ -1,0 +1,212 @@
+{
+  "title": "Current Openings - Federal Working Group",
+  "description": "View current job openings at Federal Working Group. We're hiring talented professionals across multiple locations including Washington DC, Tuscaloosa AL, and Suitland MD.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h1",
+            "children": [
+              {
+                "type": "text",
+                "text": "Current Openings"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "We are currently hiring for the following positions. Click on a position to learn more and apply."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "E-Discovery Analyst"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Washington, DC"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "IT Asset Manager"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Washington, DC"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Project Manager"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Washington, DC"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "IT Project Site Lead"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Tuscaloosa, AL"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Senior Project Online Analyst"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Washington, DC"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "System Administration"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Tuscaloosa, AL"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Help Desk Specialist"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Tuscaloosa, AL"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Network Engineer"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full Time - Tuscaloosa, AL"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "IT Security Specialist"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full-Time - Tuscaloosa, AL"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Enterprise Architect"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Full-Time - Suitland, MD"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

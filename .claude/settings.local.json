@@ -58,7 +58,21 @@
       "Bash(npx @tinacms/cli init:*)",
       "Bash(timeout 10 npx tinacms:*)",
       "Bash(tina/tina-lock.json)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(find:*)",
+      "Bash(for dir in e-discovery-analyst enterprise-architect help-desk-specialist it-asset-manager it-project-site-lead itsecurityspecialist network-engineer project-manager senior-project-online-analyst system-administration)",
+      "Bash(do echo \"=== $dir ===\")",
+      "Bash(head:*)",
+      "Bash(done)",
+      "Bash(for file in e-discovery-analyst enterprise-architect help-desk-specialist it-asset-manager it-project-site-lead itsecurityspecialist network-engineer project-manager senior-project-online-analyst system-administration)",
+      "Bash(do if [ -f \"/home/cody/wealth/FWG/content/pages/$file.json\" ])",
+      "Bash(then echo \"✓ $file.json\")",
+      "Bash(else echo \"✗ $file.json MISSING\")",
+      "Bash(fi)",
+      "Bash(for file in app/careers/*/page.tsx app/services/*/page.tsx app/contracts/*/page.tsx app/about/*/page.tsx)",
+      "Bash(do)",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(then)"
     ],
     "deny": [],
     "ask": []

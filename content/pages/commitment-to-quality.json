@@ -1,0 +1,95 @@
+{
+  "title": "Commitment to Quality - Federal Working Group",
+  "description": "Learn about Federal Working Group's comprehensive approach to quality through Quality Assurance, Quality Controls, and Quality Improvement.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h1",
+            "children": [
+              {
+                "type": "text",
+                "text": "Commitment to Quality"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "The Federal Working Group's commitment to quality is broken down into Quality Assurance, Quality Controls, and Quality Improvement."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Quality Assurance"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Quality Assurance is integrated into every phase of their management process."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Quality Controls"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Quality Controls are an essential part of each product and service they provide, emphasizing Security Management and Individual Accountability."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Quality Improvement"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Quality Improvement involves continuous assessment and adjustment of performance based on valid measures and results, using statistics to enhance product quality, manage risk, and improve efficiency."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "The company also highlights that quality is achieved through open communication, including program management reviews, customer meetings, and employee discussions and training sessions."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

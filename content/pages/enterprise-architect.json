@@ -1,0 +1,288 @@
+{
+  "title": "Enterprise Architect - Federal Working Group",
+  "description": "Join Federal Working Group as an Enterprise Architect in Suitland, MD. Full-time position with experience in cloud technology and security.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h1",
+            "children": [
+              {
+                "type": "text",
+                "text": "Enterprise Architect"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Suitland, MD | Full-Time"
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Job Description"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group Inc. is currently seeking an "
+              },
+              {
+                "type": "text",
+                "text": "Enterprise Architect",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": ". To ensure success as an Enterprise Architect, you should have extensive experience being cloud technology implementations and security standards. To be successful in this role, the candidate must have solid problem-solving skills, extensive knowledge of cloud computing technologies, understanding of system development/integrations, and familiarity with road mapping."
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Experience"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Experience in cloud technology, implementation, and security of newly designed systems as well as legacy within a cloud environment"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Experience with cloud technologies and understanding the implications of using IaaS, PaaS, SaaS, etc."
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Understanding and implementing best practices for large scale data ingestion, storage, and processing"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Knowledgeable on Hadoop including, but not limited to, and understanding of MapReduce, Spark, Hive, HBase, HDFS, and Kafka"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Excellent communication and organizational skills, and the ability to stay focused on completing tasks and meeting goals within a busy workspace"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Ability to interact with customers, ability to assess and gather customer requirements and turn them into appropriate implementations"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Responsibilities"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Supporting current infrastructure costing proposals, both hardware and software configurations for the existing systems GEO owns will be reviewed, identified, and presented to support cost estimation for infrastructure maintenance"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Producing detailed component specifications and translates these into detailed designs for implementation"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Ensuring that relevant technical strategies, policies, standards, and practices are applied correctly"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Providing advice on technical aspects of system development and integration, including but not limited to performance, scalability, and elasticity"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Evaluating and undertake impact analysis on major design options and assesses and manages associated risks"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Ensuring integration and consistency of solution designs to the overall holistic business mission and objectives, thereby the Enterprise Architecture Framework"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Supporting of Application assessments"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Required Qualifications"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "Bachelors Degree in business management or equivalent in relevant work experience"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "5+ years of industry experience in Enterprise Architecture"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "About"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group is a Northern Virginia-based small business committed to delivering value through trust and loyalty of our customers, retaining highly skilled and experienced professionals, practical application of structured management frameworks, and implementing current best practices."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group's core competencies are Agile IT Programs, Project Management Services, Enterprise Portfolio Management & Governance Services, Infrastructure Strategy & Data Center Supports, and IT Security, Strategy & Operations."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group was established in 2004 as a competitive and high-performing company. The organization over the year has successfully grown from 4 employees to over 100. In addition, to being recognized as an outstanding solutions provider, Federal Working Group also has a proven track record to exceed customers' expectations."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group, Inc. is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_template": "cta",
+      "headline": "Ready to Apply?",
+      "text": "Join our team and make a difference.",
+      "buttonText": "Apply Now",
+      "buttonLink": "/careers/apply"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Why FWG - Federal Working Group",
+  "description": "Discover why Federal Working Group is your trusted partner for state-of-the-art IT solutions and holistic service delivery.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h1",
+            "children": [
+              {
+                "type": "text",
+                "text": "Why FWG"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Empowering Client Effectiveness- Through State-of-the-Art IT Solutions:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " FWG's broad experience ensures our clients a total-system, holistic approach to project tasks, and approach which considers all dependencies, influences, and relationships, thereby resulting in the right solution, the first time."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Wholistic Service Delivery:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " Our corporate and technical capabilities, and our commitment to IT service management best practices, along with business partnership with leading technology vendors such and Microsoft, ServiceNow, Citrix and Amazon Web Services (AWS) enable us to deliver holistic service solutions that integrate seamlessly across all levels of our clients' operations, ensuring enhanced efficiency, scalability, and a superior user experience."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "High Preforming Professionals:",
+                "bold": true
+              },
+              {
+                "type": "text",
+                "text": " We leverage diverse and flexible strategies to recruit and engage full and part time multi-disciplined employees, consultants, and subcontractors in a collaborative approach to support customer requirements. We attract and retain top-tier talent, recruiting and building high-performance teams comprised of creative problem solvers with technical excellence."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

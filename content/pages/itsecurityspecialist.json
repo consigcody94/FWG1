@@ -1,0 +1,42 @@
+{
+  "title": "IT Security Specialist - Federal Working Group",
+  "description": "Join Federal Working Group as an IT Security Specialist in Tuscaloosa, AL. Full-time position with Windows and EDR expertise.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {"type": "h1", "children": [{"type": "text", "text": "IT Security Specialist"}]},
+          {"type": "p", "children": [{"type": "text", "text": "Tuscaloosa, AL | Full-Time"}]},
+          {"type": "h2", "children": [{"type": "text", "text": "Job Description"}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group Inc. is currently seeking an "}, {"type": "text", "text": "IT Security Specialist", "bold": true}, {"type": "text", "text": ". To ensure success as a IT Security Specialist, you should have experience in installing and configuring Windows operating systems on both physical and virtual machines, as well as administering Endpoint Detection and Response (EDR) systems and managing related issues. This role is critical to ensuring our IT infrastructure is secure, efficient, and well-maintained."}]},
+          {"type": "h2", "children": [{"type": "text", "text": "Key Responsibilities"}]},
+          {"type": "ul", "children": [
+            {"type": "li", "children": [{"type": "text", "text": "Install and Configure Windows Operating Systems:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Install, configure, and maintain Windows operating systems on physical and virtual machines."}]}, {"type": "li", "children": [{"type": "text", "text": "Ensure proper setup and integration with network infrastructure and security protocols."}]}, {"type": "li", "children": [{"type": "text", "text": "Perform routine updates, patches, and system upgrades to maintain security and performance."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Endpoint Detection and Response (EDR) Administration:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Manage and administer EDR solutions to monitor and protect endpoints."}]}, {"type": "li", "children": [{"type": "text", "text": "Configure and deploy EDR tools across various endpoints including desktops, laptops, and servers."}]}, {"type": "li", "children": [{"type": "text", "text": "Analyze alerts, investigate incidents, and respond to potential security threats."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Issue Management:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Diagnose and resolve issues related to Windows operating systems and EDR systems."}]}, {"type": "li", "children": [{"type": "text", "text": "Collaborate with other IT teams to address and resolve security incidents and vulnerabilities."}]}, {"type": "li", "children": [{"type": "text", "text": "Document and track issues, providing timely updates and resolution reports."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Security Best Practices:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Implement and enforce security policies and procedures to safeguard company data and systems."}]}, {"type": "li", "children": [{"type": "text", "text": "Monitor system performance and security logs to identify and address potential threats."}]}, {"type": "li", "children": [{"type": "text", "text": "Stay up-to-date with the latest security trends, threats, and technologies."}]}]}]}
+          ]},
+          {"type": "h2", "children": [{"type": "text", "text": "Documentation and Reporting"}]},
+          {"type": "ul", "children": [
+            {"type": "li", "children": [{"type": "text", "text": "Maintain accurate documentation of system configurations, changes, and security incidents."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Prepare reports on system performance, security incidents, and remediation efforts."}]}
+          ]},
+          {"type": "h2", "children": [{"type": "text", "text": "About"}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group is a Northern Virginia-based small business committed to delivering value through trust and loyalty of our customers, retaining highly skilled and experienced professionals, practical application of structured management frameworks, and implementing current best practices."}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group's core competencies are Agile IT Programs, Project Management Services, Enterprise Portfolio Management & Governance Services, Infrastructure Strategy & Data Center Supports, and IT Security, Strategy & Operations."}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group was established in 2004 as a competitive and high-performing company. The organization over the year has successfully grown from 4 employees to over 100. In addition, to being recognized as an outstanding solutions provider, Federal Working Group also has a proven track record to exceed customers' expectations."}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group, Inc. is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran."}]}
+        ]
+      }
+    },
+    {
+      "_template": "cta",
+      "headline": "Ready to Apply?",
+      "text": "Join our team and make a difference.",
+      "buttonText": "Apply Now",
+      "buttonLink": "/careers/apply"
+    }
+  ]
+}

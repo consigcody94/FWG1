@@ -1,0 +1,54 @@
+{
+  "title": "IT Project Site Lead - Federal Working Group",
+  "description": "Join Federal Working Group as an IT Project Site Lead in Tuscaloosa, AL. Full-time position managing IT teams and client relationships.",
+  "blocks": [
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {"type": "h1", "children": [{"type": "text", "text": "IT Project Site Lead"}]},
+          {"type": "p", "children": [{"type": "text", "text": "Tuscaloosa, AL | Full Time"}]},
+          {"type": "h2", "children": [{"type": "text", "text": "Job Description"}]},
+          {"type": "p", "children": [{"type": "text", "text": "We are seeking an experienced "}, {"type": "text", "text": "IT Contract Site Lead", "bold": true}, {"type": "text", "text": " to oversee a team of IT professionals and ensure the delivery of high-quality technical support and services at our designated site. The ideal candidate will manage daily operations, maintain strong client and stakeholder relationships, and ensure compliance with service level agreements (SLAs) and contractual obligations. This role requires strong leadership skills, technical expertise, and the ability to implement and maintain high service standards."}]},
+          {"type": "h2", "children": [{"type": "text", "text": "Key Responsibilities"}]},
+          {"type": "ul", "children": [
+            {"type": "li", "children": [{"type": "text", "text": "Team Leadership:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Supervise and lead a team of IT technicians, engineers, and support staff at the designated site."}]}, {"type": "li", "children": [{"type": "text", "text": "Provide guidance, mentorship, and support to ensure the team meets performance objectives and delivers exceptional service."}]}, {"type": "li", "children": [{"type": "text", "text": "Conduct regular performance reviews, set goals, and implement professional development opportunities."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Client Relationship Management:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Act as the primary point of contact for clients and stakeholders at the site."}]}, {"type": "li", "children": [{"type": "text", "text": "Build and maintain strong relationships with clients, understanding their needs and expectations."}]}, {"type": "li", "children": [{"type": "text", "text": "Address client issues and concerns promptly and professionally, ensuring high levels of client satisfaction."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Service Performance and Quality:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Monitor service performance metrics and identify areas for improvement."}]}, {"type": "li", "children": [{"type": "text", "text": "Implement corrective actions as needed to maintain service excellence."}]}, {"type": "li", "children": [{"type": "text", "text": "Conduct regular audits and quality assessments to verify compliance and identify opportunities for improvement."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Technical Support Oversight:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Oversee the resolution of IT incidents, service requests, and problems reported by users at the site."}]}, {"type": "li", "children": [{"type": "text", "text": "Coordinate with the central support team and external vendors to ensure timely resolution and minimize downtime."}]}, {"type": "li", "children": [{"type": "text", "text": "Ensure that technical support processes are followed and continuously improved."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Resource Management:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Manage IT resources, including equipment, software, and licenses, to support site operations effectively."}]}, {"type": "li", "children": [{"type": "text", "text": "Coordinate procurement, deployment, and maintenance activities to ensure optimal performance and reliability."}]}, {"type": "li", "children": [{"type": "text", "text": "Implement security measures and controls to protect sensitive information and maintain operational continuity."}]}]}]},
+            {"type": "li", "children": [{"type": "text", "text": "Coordination with COR:", "bold": true}, {"type": "ul", "children": [{"type": "li", "children": [{"type": "text", "text": "Work closely with the Contracting Officer's Representative (COR) to ensure adherence to service level agreements (SLAs) and compliance with contractual obligations."}]}, {"type": "li", "children": [{"type": "text", "text": "Report on performance targets and assist in the resolution of any contractual issues."}]}]}]}
+          ]},
+          {"type": "h2", "children": [{"type": "text", "text": "Qualifications"}]},
+          {"type": "ul", "children": [
+            {"type": "li", "children": [{"type": "text", "text": "Proven experience in IT leadership roles, preferably in a contract or service delivery environment."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Strong technical knowledge of IT systems, infrastructure, and support processes."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Excellent communication skills, with the ability to interact effectively with clients, team members, and senior management."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Demonstrated ability to manage teams, prioritize tasks, and solve complex problems in a fast-paced environment."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Familiarity with ITIL (Information Technology Infrastructure Library) framework and best practices is desired but not mandatory."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Relevant certifications (e.g., ITIL, CompTIA, Microsoft, Cisco, PMP) are desired but not mandatory."}]}
+          ]},
+          {"type": "h2", "children": [{"type": "text", "text": "Preferred Skills"}]},
+          {"type": "ul", "children": [
+            {"type": "li", "children": [{"type": "text", "text": "Experience with ITIL framework and best practices."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Certifications in relevant IT disciplines (e.g., ITIL, CompTIA, Microsoft, Cisco, PMP)."}]},
+            {"type": "li", "children": [{"type": "text", "text": "Ability to implement and manage security measures and controls."}]}
+          ]},
+          {"type": "h2", "children": [{"type": "text", "text": "About"}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group is a Northern Virginia-based small business committed to delivering value through trust and loyalty of our customers, retaining highly skilled and experienced professionals, practical application of structured management frameworks, and implementing current best practices."}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group's core competencies are Agile IT Programs, Project Management Services, Enterprise Portfolio Management & Governance Services, Infrastructure Strategy & Data Center Supports, and IT Security, Strategy & Operations."}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group was established in 2004 as a competitive and high-performing company. The organization over the year has successfully grown from 4 employees to over 100. In addition, to being recognized as an outstanding solutions provider, Federal Working Group also has a proven track record to exceed customers' expectations."}]},
+          {"type": "p", "children": [{"type": "text", "text": "Federal Working Group, Inc. is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran."}]}
+        ]
+      }
+    },
+    {
+      "_template": "cta",
+      "headline": "Ready to Apply?",
+      "text": "Join our team and make a difference.",
+      "buttonText": "Apply Now",
+      "buttonLink": "/careers/apply"
+    }
+  ]
+}
