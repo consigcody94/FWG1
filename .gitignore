@@ -42,3 +42,7 @@ yarn-error.log*
 next-env.d.ts
 .claude/settings.local.json
 *.Identifier
+
+# Tina CMS
+.tina/__generated__
+.env.local

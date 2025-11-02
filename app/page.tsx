@@ -2,12 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "./components/contact-form";
 import { ScrollReveal } from "./components/scroll-reveal";
-import { getSiteContent, getContactInfo } from "@/lib/cms-connector";
+// TODO: Replace with Tina CMS data fetching
+// import { getSiteContent, getContactInfo } from "@/lib/cms-connector";
 
 export default async function Home() {
+  // TODO: Replace with Tina CMS data fetching
   // Get content from CMS
-  const cmsContent = await getSiteContent();
-  const contactInfo = await getContactInfo();
+  // const cmsContent = await getSiteContent();
+  // const contactInfo = await getContactInfo();
+  const cmsContent: any = {};
+  const contactInfo = {
+    address: "1234 Main Street\nWashington, DC 20001",
+    phone: "(202) 555-0100",
+    email: "info@federalworkinggroup.com"
+  };
 
   // Use CMS content with fallbacks
   const hero = cmsContent.hero || {
@@ -161,7 +169,7 @@ export default async function Home() {
         <section className="relative -mt-20 pb-24">
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat, index) => (
+              {stats.map((stat: any, index: number) => (
                 <ScrollReveal key={stat.label} delay={index * 100} direction="up">
                   <div className="card-hover group rounded-2xl bg-white p-8 text-center shadow-xl">
                     <p className="gradient-text text-5xl font-bold">
@@ -186,7 +194,7 @@ export default async function Home() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="mt-10 space-y-6 text-left text-lg leading-relaxed text-slate-600">
-                {aboutSection.content.split("\n\n").map((paragraph, index) => (
+                {aboutSection.content.split("\n\n").map((paragraph: string, index: number) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
@@ -209,7 +217,7 @@ export default async function Home() {
               </div>
             </ScrollReveal>
             <div className="mt-16 grid gap-8 md:grid-cols-2">
-              {services.map((service, index) => (
+              {services.map((service: any, index: number) => (
                 <ScrollReveal key={service.title} delay={index * 100} direction="up">
                   <div className="card-hover group overflow-hidden rounded-3xl bg-white shadow-lg">
                     <div className="relative h-56 w-full overflow-hidden">
@@ -258,7 +266,7 @@ export default async function Home() {
               </div>
             </ScrollReveal>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
-              {coreValues.map((value, index) => (
+              {coreValues.map((value: any, index: number) => (
                 <ScrollReveal key={value.title} delay={index * 150} direction="up">
                   <div className="card-hover group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-purple-700 p-8 text-white shadow-xl">
                     <div className="shimmer absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -290,7 +298,7 @@ export default async function Home() {
               </div>
             </ScrollReveal>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <ScrollReveal key={testimonial.author} delay={index * 100}>
                   <div className="card-hover flex h-full flex-col rounded-3xl bg-white p-8 shadow-lg">
                     <div className="mb-6 text-4xl text-blue-600">"</div>
@@ -325,7 +333,7 @@ export default async function Home() {
               </div>
             </ScrollReveal>
             <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {certifications.map((cert, index) => (
+              {certifications.map((cert: any, index: number) => (
                 <ScrollReveal key={cert.title} delay={index * 80}>
                   <div className="card-hover group rounded-2xl border-2 border-blue-100 bg-gradient-to-br from-white to-blue-50 p-8 text-center shadow-md">
                     <div className="mb-3 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-2xl text-white">

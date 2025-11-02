@@ -1,0 +1,62 @@
+fragment PagesParts on Pages {
+  __typename
+  hero {
+    __typename
+    title
+    subtitle
+    buttonText
+    secondButtonText
+  }
+  stats {
+    __typename
+    value
+    label
+  }
+  about {
+    __typename
+    title
+    content
+  }
+  services {
+    __typename
+    title
+    description
+    image
+  }
+  coreValues {
+    __typename
+    title
+    description
+  }
+  testimonials {
+    __typename
+    quote
+    author
+    role
+  }
+  certifications {
+    __typename
+    title
+    subtitle
+  }
+}
+
+fragment ContactParts on Contact {
+  __typename
+  phone
+  email
+  address
+  hours
+}
+
+fragment JobsParts on Jobs {
+  __typename
+  title
+  location
+  department
+  type
+  description
+  requirements
+  salary
+  published
+}
