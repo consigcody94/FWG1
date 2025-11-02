@@ -12,29 +12,87 @@ export default defineConfig({
 
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "assets/uploads",
       publicFolder: "public",
     },
   },
 
   schema: {
     collections: [
+      // Homepage Content
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "homepage",
+        label: "🏠 Homepage",
+        path: "content",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        match: {
+          include: "site-content",
+        },
         fields: [
           {
             type: "string",
             name: "title",
-            label: "Title",
-            isTitle: true,
+            label: "Hero Title",
+          },
+          {
+            type: "string",
+            name: "subtitle",
+            label: "Hero Subtitle",
+          },
+        ],
+      },
+      // Contact Info
+      {
+        name: "contact",
+        label: "📞 Contact Info",
+        path: "content",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        match: {
+          include: "contact-info",
+        },
+        fields: [
+          {
+            type: "string",
+            name: "phone",
+            label: "Phone",
+          },
+          {
+            type: "string",
+            name: "email",
+            label: "Email",
+          },
+        ],
+      },
+      // Job Postings
+      {
+        name: "jobs",
+        label: "💼 Jobs",
+        path: "content/jobs",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Job Title",
             required: true,
+            isTitle: true,
           },
           {
             type: "rich-text",
             name: "body",
-            label: "Body",
+            label: "Description",
             isBody: true,
           },
         ],
