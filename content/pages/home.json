@@ -1,30 +1,124 @@
 {
-  "hero": {
-    "title": "Federal Working Group",
-    "subtitle": "Empowering Excellence Through Innovation, Collaboration, and Execution",
-    "buttonText": "Learn More",
-    "buttonLink": "/about"
-  },
-  "stats": [
+  "title": "Home - Federal Working Group",
+  "description": "Federal Working Group delivers cybersecurity, cloud modernization, and mission-critical IT consulting trusted by federal agencies since 2004.",
+  "blocks": [
     {
-      "value": "20+",
-      "label": "Years of Excellence"
+      "_template": "hero",
+      "title": "Welcome to Federal Working Group",
+      "subtitle": "Empowering Excellence Through Innovation, Collaboration, and Execution",
+      "buttonText": "Access Portal",
+      "buttonLink": "/employee-portal",
+      "backgroundImage": "https://i.imgur.com/85EwS5X.png"
     },
     {
-      "value": "500+",
-      "label": "Expert Professionals"
+      "_template": "stats",
+      "items": [
+        {
+          "value": "20+",
+          "label": "Years of Excellence"
+        },
+        {
+          "value": "500+",
+          "label": "Expert Professionals"
+        },
+        {
+          "value": "1000+",
+          "label": "Projects Completed"
+        },
+        {
+          "value": "150+",
+          "label": "Government Partners"
+        }
+      ]
     },
     {
-      "value": "1000+",
-      "label": "Projects Completed"
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "About Federal Working Group"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Federal Working Group (FWG) is a premier provider of innovative IT solutions and management consulting services to federal agencies and commercial clients."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "Since 2004, we have been at the forefront of delivering cutting-edge technology solutions that drive mission success and operational excellence."
+              }
+            ]
+          }
+        ]
+      }
     },
     {
-      "value": "150+",
-      "label": "Government Partners"
+      "_template": "services",
+      "heading": "Services & Solutions",
+      "services": [
+        {
+          "title": "Business Performance Management",
+          "description": "Strategic planning, process optimization, and performance analytics to drive organizational excellence.",
+          "icon": "/assets/service-bpm.jpg"
+        },
+        {
+          "title": "IT Infrastructure, Technologies & Solutions",
+          "description": "Cloud computing, data center management, network architecture, and IT modernization services.",
+          "icon": "/assets/service-cloud.png"
+        },
+        {
+          "title": "Enterprise Architecture",
+          "description": "Comprehensive enterprise architecture planning, design, and implementation aligned with business goals.",
+          "icon": "/assets/service-enterprise.jpg"
+        },
+        {
+          "title": "IT Strategy, Operations & Security",
+          "description": "Cybersecurity, IT governance, risk management, and operational excellence frameworks.",
+          "icon": "/assets/service-security.jpg"
+        }
+      ]
+    },
+    {
+      "_template": "testimonials",
+      "heading": "Client Success Stories",
+      "testimonials": [
+        {
+          "quote": "Federal Working Group's expertise in cybersecurity and cloud migration was instrumental in our successful transition.",
+          "author": "John Stevens",
+          "role": "CIO, Department of Defense"
+        },
+        {
+          "quote": "The enterprise architecture solutions provided by FWG transformed our IT landscape.",
+          "author": "Sarah Martinez",
+          "role": "IT Director, Homeland Security"
+        },
+        {
+          "quote": "FWG's business performance management solutions helped us optimize operations and achieve measurable results.",
+          "author": "Michael Chen",
+          "role": "Program Manager, Veterans Affairs"
+        }
+      ]
+    },
+    {
+      "_template": "cta",
+      "heading": "Discover Our Full Capabilities",
+      "text": "Download our comprehensive capabilities statement to learn more about how FWG can support your mission.",
+      "buttonText": "Download Capabilities Statement",
+      "buttonLink": "/assets/FWGCap.pdf"
     }
-  ],
-  "about": {
-    "title": "About Federal Working Group",
-    "content": "Federal Working Group (FWG) is a premier provider of innovative IT solutions and management consulting services to federal agencies and commercial clients.\n\nSince 2004, we have been at the forefront of delivering cutting-edge technology solutions that drive mission success and operational excellence."
-  }
+  ]
 }

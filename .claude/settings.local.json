@@ -57,7 +57,8 @@
       "Bash(NEXT_PUBLIC_TINA_CLIENT_ID=3e5bb2b1-9af5-4872-9350-3e07d890973f TINA_TOKEN=c830407a1b2b821f1439b277921ba197b3d78c2e NEXT_PUBLIC_TINA_BRANCH=main npx tinacms:*)",
       "Bash(npx @tinacms/cli init:*)",
       "Bash(timeout 10 npx tinacms:*)",
-      "Bash(tina/tina-lock.json)"
+      "Bash(tina/tina-lock.json)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

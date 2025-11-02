@@ -2,16 +2,18 @@ import { HeroBlock } from "./HeroBlock";
 import { StatsBlock } from "./StatsBlock";
 import { ContentBlock } from "./ContentBlock";
 import { CTABlock } from "./CTABlock";
+import { ServicesBlock } from "./ServicesBlock";
+import { TestimonialsBlock } from "./TestimonialsBlock";
+import { TeamBlock } from "./TeamBlock";
 
 export const Blocks = {
   hero: HeroBlock,
   stats: StatsBlock,
   content: ContentBlock,
   cta: CTABlock,
-  // Add more blocks as needed
-  services: ({ data }: any) => <div>Services Block (TODO)</div>,
-  testimonials: ({ data }: any) => <div>Testimonials Block (TODO)</div>,
-  team: ({ data }: any) => <div>Team Block (TODO)</div>,
+  services: ServicesBlock,
+  testimonials: TestimonialsBlock,
+  team: TeamBlock,
 };
 
 interface PageBlocksProps {
