@@ -208,6 +208,46 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "contact",
+        label: "📞 Contact Information",
+        path: "content",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        match: {
+          include: "contact-info",
+        },
+        fields: [
+          {
+            type: "string",
+            name: "phone",
+            label: "Phone Number",
+          },
+          {
+            type: "string",
+            name: "email",
+            label: "Email Address",
+          },
+          {
+            type: "string",
+            name: "address",
+            label: "Office Address",
+            ui: {
+              component: "textarea",
+            },
+          },
+          {
+            type: "string",
+            name: "hours",
+            label: "Office Hours",
+          },
+        ],
+      },
     ],
   },
 });
