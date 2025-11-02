@@ -80,8 +80,16 @@ export async function getPage(slug: string) {
         _type == "stats" => {
           items[]{
             value,
-            label
-          }
+            label,
+            prefix,
+            suffix,
+            subtext,
+            icon
+          },
+          layout,
+          animated,
+          showSeparators,
+          backgroundColor
         },
         // Services block
         _type == "services" => {
