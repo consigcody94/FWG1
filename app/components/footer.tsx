@@ -1,77 +1,155 @@
 import Link from "next/link";
 import Image from "next/image";
 import { primaryNavigation } from "./site-config";
+import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-100">
-      <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="relative h-10 w-auto border-white/20">
-                <Image src="/fwg_logo-removebg-preview.png" alt="Federal Working Group" width={80} height={40} className="object-contain" />
+    <footer className="relative bg-black/95 text-white border-t border-white/10">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-12 md:grid-cols-4">
+          {/* Company Info */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-3 group">
+              <span className="relative h-12 w-auto">
+                <Image
+                  src="/fwg_logo-removebg-preview.png"
+                  alt="Federal Working Group"
+                  width={100}
+                  height={48}
+                  className="object-contain transition-transform group-hover:scale-105"
+                />
               </span>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em]">Federal Working Group</p>
             </div>
-            <p className="mt-4 text-sm text-slate-300">Excellence in federal IT solutions since 2004</p>
-            <div className="mt-4 flex gap-3 text-sm text-slate-300">
-              <Link href="https://www.linkedin.com/company/federal-working-group" target="_blank" rel="noreferrer">
-                LinkedIn
+            <p className="mt-4 text-sm font-bold uppercase tracking-[0.3em] text-blue-400">
+              Federal Working Group
+            </p>
+            <p className="mt-2 text-sm text-gray-400">
+              Excellence in federal IT solutions since 2004
+            </p>
+
+            {/* Social Links */}
+            <div className="mt-6 flex gap-4">
+              <Link
+                href="https://www.linkedin.com/company/federal-working-group"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 rounded-full bg-white/5 hover:bg-blue-600 transition-all hover:scale-110 glow-blue"
+              >
+                <Linkedin className="w-5 h-5" />
               </Link>
-              <Link href="https://twitter.com/federalworking" target="_blank" rel="noreferrer">
-                Twitter
+              <Link
+                href="https://twitter.com/federalworking"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 rounded-full bg-white/5 hover:bg-blue-600 transition-all hover:scale-110 glow-blue"
+              >
+                <Twitter className="w-5 h-5" />
               </Link>
             </div>
           </div>
+
+          {/* Navigate */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.2em]">Navigate</h4>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
+            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white mb-6">Navigate</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
               {primaryNavigation.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href}>{item.label}</Link>
+                  <Link
+                    href={item.href}
+                    className="hover:text-blue-400 transition-colors hover:translate-x-1 inline-block"
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Contact Info */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.2em]">Resources</h4>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              <li>
-                <Link href="#">Privacy Policy</Link>
+            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white mb-6">Contact</h4>
+            <ul className="space-y-4 text-sm text-gray-400">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                <span>Washington, DC Metro Area</span>
               </li>
-              <li>
-                <Link href="#">Terms of Service</Link>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <Link href="tel:+1-555-555-5555" className="hover:text-blue-400 transition-colors">
+                  (555) 555-5555
+                </Link>
               </li>
-              <li>
-                <Link href="#">Accessibility</Link>
-              </li>
-              <li>
-                <Link href="#">Site Map</Link>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <Link href="mailto:info@federalworkinggroup.com" className="hover:text-blue-400 transition-colors">
+                  info@federalworkinggroup.com
+                </Link>
               </li>
             </ul>
           </div>
+
+          {/* Employee Portal */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.2em]">Employee Portal</h4>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
+            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white mb-6">Employee Portal</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
               <li>
-                <Link href="/employee-portal">Portal Login</Link>
+                <Link
+                  href="/employee-portal"
+                  className="hover:text-blue-400 transition-colors hover:translate-x-1 inline-block"
+                >
+                  Portal Login
+                </Link>
               </li>
               <li>
-                <Link href="#">Employee Resources</Link>
+                <Link
+                  href="#"
+                  className="hover:text-blue-400 transition-colors hover:translate-x-1 inline-block"
+                >
+                  Employee Resources
+                </Link>
               </li>
               <li>
-                <Link href="#">IT Support</Link>
+                <Link
+                  href="#"
+                  className="hover:text-blue-400 transition-colors hover:translate-x-1 inline-block"
+                >
+                  IT Support
+                </Link>
               </li>
               <li>
-                <Link href="#">HR Portal</Link>
+                <Link
+                  href="#"
+                  className="hover:text-blue-400 transition-colors hover:translate-x-1 inline-block"
+                >
+                  HR Portal
+                </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-400">
-          <p>&copy; 2004-2025 Federal Working Group. All rights reserved.</p>
-          <p>Site designed and guarded by <Link href="https://www.sentinelowl.org/web-dev" target="_blank" rel="noreferrer" className="underline">Sentinel Owl</Link>.</p>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <p>&copy; 2004-{new Date().getFullYear()} Federal Working Group. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
+              <Link href="#" className="hover:text-blue-400 transition-colors">Terms of Service</Link>
+              <Link href="#" className="hover:text-blue-400 transition-colors">Accessibility</Link>
+            </div>
+            <p>
+              Site designed and guarded by{" "}
+              <Link
+                href="https://www.sentinelowl.org/web-dev"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+              >
+                Sentinel Owl
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

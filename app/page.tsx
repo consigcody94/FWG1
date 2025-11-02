@@ -2,92 +2,38 @@
 
 import { AnimatedBackground } from "./components/effects/AnimatedBackground";
 import { FloatingParticles } from "./components/effects/FloatingParticles";
+import { VideoHero } from "./components/effects/VideoHero";
 import { ParallaxSection } from "./components/effects/ParallaxSection";
 import { GlassCard } from "./components/ui/GlassCard";
 import { StatsBlock } from "./components/blocks/StatsBlock";
 import { TestimonialsBlock } from "./components/blocks/TestimonialsBlock";
 import { CTABlock } from "./components/blocks/CTABlock";
-import { motion } from "framer-motion";
-import { Shield, Cloud, Network, TrendingUp, ArrowRight, Award, Users, CheckCircle2, Building2 } from "lucide-react";
-import Link from "next/link";
+import { Shield, Cloud, Network, TrendingUp } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="bg-black text-white min-h-screen relative overflow-hidden">
-      {/* Advanced Background Effects */}
-      <AnimatedBackground />
-      <FloatingParticles count={40} />
+      {/* Advanced Background Effects (only for non-video sections) */}
+      <div className="absolute inset-0 -z-10" style={{ top: '100vh' }}>
+        <AnimatedBackground />
+        <FloatingParticles count={40} />
+      </div>
 
-      {/* HERO SECTION - Dramatic Full Height */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
-        <ParallaxSection speed={-0.2} className="w-full max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            {/* Badge */}
-            <motion.div
-              className="inline-block mb-8 px-6 py-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full"
-              whileHover={{ scale: 1.05, borderColor: "rgba(59, 130, 246, 0.6)" }}
-            >
-              <span className="text-sm font-bold tracking-wider text-blue-300">
-                SINCE 2004 • TRUSTED BY FEDERAL AGENCIES
-              </span>
-            </motion.div>
-
-            {/* Main Title with Gradient & Glow */}
-            <h1 className="text-8xl md:text-9xl font-black mb-6 gradient-text-animated leading-none">
-              FEDERAL
-              <br />
-              WORKING GROUP
-            </h1>
-
-            {/* Subtitle with Glow */}
-            <p className="text-2xl md:text-3xl mb-12 text-gray-300 max-w-4xl mx-auto text-glow-blue font-light">
-              Empowering Excellence Through Innovation, Collaboration, and Execution
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/services">
-                <motion.div
-                  className="group px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full font-bold text-lg hover-glow flex items-center gap-3 cursor-pointer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Explore Our Capabilities
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.div>
-              </Link>
-              <Link href="/employee-portal">
-                <motion.div
-                  className="px-10 py-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full font-bold text-lg hover-lift cursor-pointer"
-                  whileHover={{ scale: 1.05, borderColor: "rgba(255, 255, 255, 0.3)" }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Access Employee Portal
-                </motion.div>
-              </Link>
-            </div>
-          </motion.div>
-        </ParallaxSection>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-blue-500/50 rounded-full flex justify-center p-2">
-            <motion.div
-              className="w-1 h-2 bg-blue-500 rounded-full"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
-      </section>
+      {/* VIDEO HERO - Cinematic Full Height */}
+      <VideoHero
+        videoSrc="/assets/video1.mp4"
+        title="FEDERAL WORKING GROUP"
+        subtitle="Empowering Excellence Through Innovation, Collaboration, and Execution"
+        badge="SINCE 2004 • TRUSTED BY FEDERAL AGENCIES"
+        primaryCTA={{
+          text: "Explore Our Capabilities",
+          link: "/services",
+        }}
+        secondaryCTA={{
+          text: "Access Employee Portal",
+          link: "/employee-portal",
+        }}
+      />
 
       {/* ANIMATED STATS */}
       <ParallaxSection speed={0.1}>

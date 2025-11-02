@@ -46,31 +46,31 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3" aria-label="Federal Working Group home" onClick={closeMobileMenu}>
-          <span className="relative h-12 w-auto border-slate-200 bg-white">
-            <Image src="/fwg_logo-removebg-preview.png" alt="Federal Working Group Logo" width={100} height={48} className="object-contain" />
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-black/90 backdrop-blur-xl shadow-2xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Link href="/" className="flex items-center gap-3 group" aria-label="Federal Working Group home" onClick={closeMobileMenu}>
+          <span className="relative h-12 w-auto">
+            <Image src="/fwg_logo-removebg-preview.png" alt="Federal Working Group Logo" width={100} height={48} className="object-contain transition-transform group-hover:scale-105" />
           </span>
           <div className="leading-tight">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-600">Federal Working Group</p>
-            <p className="text-xs text-slate-500">Excellence in federal IT solutions since 2004</p>
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-400 group-hover:text-blue-300 transition-colors">Federal Working Group</p>
+            <p className="text-xs text-gray-400">Excellence in federal IT solutions since 2004</p>
           </div>
         </Link>
 
         {/* Hamburger Menu Button - Mobile Only */}
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col gap-1.5 p-2 hover:bg-white/5 rounded transition-colors"
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
         >
-          <span className={`w-6 h-0.5 bg-slate-900 transition-all ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-6 h-0.5 bg-slate-900 transition-all ${mobileMenuOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-6 h-0.5 bg-slate-900 transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-blue-400 transition-all ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-blue-400 transition-all ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+          <span className={`w-6 h-0.5 bg-blue-400 transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-gray-300 md:flex">
           {primaryNavigation.map((item) => {
             const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
             const hasSubItems = item.subItems && item.subItems.length > 0;
@@ -85,7 +85,7 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`transition hover:text-slate-900 py-2 ${isActive ? "text-slate-900" : ""}`}
+                    className={`transition hover:text-white py-2 ${isActive ? "text-blue-400 font-semibold" : ""}`}
                   >
                     {item.label}
                   </Link>
@@ -95,12 +95,12 @@ export function Header() {
                       onMouseEnter={() => handleMouseEnter(item.label)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <div className="rounded-lg border border-slate-200 bg-white shadow-lg py-2">
+                      <div className="rounded-lg border border-white/10 bg-black/95 backdrop-blur-xl shadow-2xl py-2 glow-blue">
                         {item.subItems!.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                            className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                           >
                             {subItem.label}
                           </Link>
@@ -116,7 +116,7 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`transition hover:text-slate-900 ${isActive ? "text-slate-900" : ""}`}
+                className={`transition hover:text-white ${isActive ? "text-blue-400 font-semibold" : ""}`}
               >
                 {item.label}
               </Link>
@@ -125,7 +125,7 @@ export function Header() {
           <Search />
           <Link
             href="/employee-portal"
-            className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+            className="rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105"
           >
             Employee Portal
           </Link>
@@ -134,20 +134,20 @@ export function Header() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white">
-          <nav className="mx-auto max-w-6xl px-6 py-4">
+        <div className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl">
+          <nav className="mx-auto max-w-7xl px-6 py-4">
             {primaryNavigation.map((item) => {
               const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
               const hasSubItems = item.subItems && item.subItems.length > 0;
 
               return (
-                <div key={item.label} className="border-b border-slate-100 last:border-0">
+                <div key={item.label} className="border-b border-white/10 last:border-0">
                   <div className="flex items-center justify-between py-3">
                     <Link
                       href={item.href}
                       onClick={closeMobileMenu}
-                      className={`text-base font-medium transition hover:text-slate-900 ${
-                        isActive ? "text-slate-900" : "text-slate-600"
+                      className={`text-base font-medium transition hover:text-white ${
+                        isActive ? "text-blue-400" : "text-gray-300"
                       }`}
                     >
                       {item.label}
@@ -155,7 +155,7 @@ export function Header() {
                     {hasSubItems && (
                       <button
                         onClick={() => toggleMobileSubMenu(item.label)}
-                        className="p-2 text-slate-600"
+                        className="p-2 text-gray-300 hover:text-white"
                         aria-label={`Toggle ${item.label} submenu`}
                       >
                         <svg
@@ -178,7 +178,7 @@ export function Header() {
                           key={subItem.href}
                           href={subItem.href}
                           onClick={closeMobileMenu}
-                          className="block py-2 text-sm text-slate-600 hover:text-slate-900"
+                          className="block py-2 text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           {subItem.label}
                         </Link>
@@ -192,7 +192,7 @@ export function Header() {
               <Link
                 href="/employee-portal"
                 onClick={closeMobileMenu}
-                className="block w-full text-center rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+                className="block w-full text-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-3 text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-blue-500/50"
               >
                 Employee Portal
               </Link>
