@@ -22,16 +22,6 @@ export const primaryNavigation = [
     ]
   },
   {
-    label: "Contract Vehicles",
-    href: "/contracts",
-    subItems: [
-      { label: "CIOSP3", href: "/contracts/ciosp3" },
-      { label: "GSA MAS 54151S", href: "/contracts/gsa-mas-54151s" },
-      { label: "CTO EA", href: "/contracts/ctoea" },
-      { label: "USAC", href: "/contracts/usac" },
-    ]
-  },
-  {
     label: "Careers",
     href: "/careers",
     subItems: [
