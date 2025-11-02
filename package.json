@@ -13,6 +13,7 @@
     "audit:fix": "npm audit fix"
   },
   "dependencies": {
+    "@tinacms/datalayer": "^1.4.1",
     "@vercel/analytics": "^1.1.1",
     "clsx": "^2.0.0",
     "focus-trap-react": "^10.2.3",
