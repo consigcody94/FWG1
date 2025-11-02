@@ -1,7 +1,7 @@
-import { defineConfig } from "tinacms";
+import { defineConfig, type Template } from "tinacms";
 
 // Reusable component blocks for page builder
-const pageBlocks = [
+const pageBlocks: Template[] = [
   {
     name: "hero",
     label: "Hero Section",
