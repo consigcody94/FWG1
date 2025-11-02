@@ -1,6 +1,7 @@
 import { HeroBlock } from "./HeroBlock";
 import { VideoHeroBlock } from "./VideoHeroBlock";
 import { ClientsLogosBlock } from "./ClientsLogosBlock";
+import { CapabilitiesMatrixBlock } from "./CapabilitiesMatrixBlock";
 import { StatsBlock } from "./StatsBlock";
 import { ContentBlock } from "./ContentBlock";
 import { CTABlock } from "./CTABlock";
@@ -12,6 +13,7 @@ export const Blocks = {
   hero: HeroBlock,
   videoHero: VideoHeroBlock,
   clientsLogos: ClientsLogosBlock,
+  capabilitiesMatrix: CapabilitiesMatrixBlock,
   stats: StatsBlock,
   content: ContentBlock,
   cta: CTABlock,

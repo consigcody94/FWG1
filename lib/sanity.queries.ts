@@ -55,6 +55,23 @@ export async function getPage(slug: string) {
           backgroundColor,
           padding
         },
+        // Capabilities Matrix block
+        _type == "capabilitiesMatrix" => {
+          heading,
+          description,
+          capabilities[]{
+            title,
+            description,
+            icon,
+            stat,
+            link
+          },
+          layout,
+          hoverEffect,
+          cardStyle,
+          backgroundColor,
+          padding
+        },
         // Stats block
         _type == "stats" => {
           items[]{
