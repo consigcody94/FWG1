@@ -5,6 +5,8 @@ import { CTABlock } from "./CTABlock";
 import { ServicesBlock } from "./ServicesBlock";
 import { TestimonialsBlock } from "./TestimonialsBlock";
 import { TeamBlock } from "./TeamBlock";
+import { ClientsBlock } from "./ClientsBlock";
+import { SuccessStoriesBlock } from "./SuccessStoriesBlock";
 
 export const Blocks = {
   hero: HeroBlock,
@@ -14,6 +16,8 @@ export const Blocks = {
   services: ServicesBlock,
   testimonials: TestimonialsBlock,
   team: TeamBlock,
+  clients: ClientsBlock,
+  successStories: SuccessStoriesBlock,
 };
 
 interface PageBlocksProps {

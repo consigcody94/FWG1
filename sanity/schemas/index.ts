@@ -13,6 +13,8 @@ import { testimonialsBlock } from './blocks/testimonials'
 import { contentBlock } from './blocks/content'
 import { teamBlock } from './blocks/team'
 import { ctaBlock } from './blocks/cta'
+import { clientsBlock } from './blocks/clients'
+import { successStoriesBlock } from './blocks/successStories'
 
 export const schemas = [
   // Document types
@@ -30,4 +32,6 @@ export const schemas = [
   contentBlock,
   teamBlock,
   ctaBlock,
+  clientsBlock,
+  successStoriesBlock,
 ]

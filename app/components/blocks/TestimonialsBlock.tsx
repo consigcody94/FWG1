@@ -17,7 +17,7 @@ export function TestimonialsBlock({ data }: TestimonialsBlockProps) {
   if (!data.testimonials || data.testimonials.length === 0) return null;
 
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-24">
+    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-24 pb-32">
       <div className="mx-auto max-w-6xl px-6">
         {data.heading && (
           <ScrollReveal>
