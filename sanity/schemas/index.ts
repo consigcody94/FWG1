@@ -7,6 +7,7 @@ import { jobType } from './job'
 
 // Block types
 import { heroBlock } from './blocks/hero'
+import { videoHeroBlock } from './blocks/video-hero'
 import { statsBlock } from './blocks/stats'
 import { servicesBlock } from './blocks/services'
 import { testimonialsBlock } from './blocks/testimonials'
@@ -26,6 +27,7 @@ export const schemas = [
 
   // Block types
   heroBlock,
+  videoHeroBlock,
   statsBlock,
   servicesBlock,
   testimonialsBlock,
