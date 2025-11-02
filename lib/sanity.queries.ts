@@ -1,9 +1,14 @@
 import { client } from './sanity.client'
+import { draftClient } from './sanity.client.draft'
 import { groq } from 'next-sanity'
+import { draftMode } from 'next/headers'
 
 // Fetch a single page by slug
 export async function getPage(slug: string) {
-  return client.fetch(
+  const draft = await draftMode()
+  const sanityClient = draft.isEnabled ? draftClient : client
+
+  return sanityClient.fetch(
     groq`*[_type == "page" && slug.current == $slug][0]{
       _id,
       title,
@@ -86,7 +91,10 @@ export async function getPage(slug: string) {
 
 // Fetch all page slugs for static generation
 export async function getAllPageSlugs() {
-  return client.fetch(
+  const draft = await draftMode()
+  const sanityClient = draft.isEnabled ? draftClient : client
+
+  return sanityClient.fetch(
     groq`*[_type == "page" && defined(slug.current)][].slug.current`
   )
 }
