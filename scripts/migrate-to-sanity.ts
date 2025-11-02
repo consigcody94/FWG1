@@ -61,10 +61,12 @@ const slugMap: Record<string, string> = {
 }
 
 function transformBlock(block: any) {
-  const { __typename, ...rest } = block
+  const { __typename, _template, ...rest } = block
 
-  // Extract block type from __typename (e.g., "PagesBlocksHero" -> "hero")
-  const _type = __typename?.replace('PagesBlocks', '').toLowerCase() || 'unknown'
+  // Use _template from JSON or __typename from Tina GraphQL
+  // _template is the field name in the original JSON files
+  // __typename would be from Tina GraphQL (e.g., "PagesBlocksHero" -> "hero")
+  const _type = _template || __typename?.replace('PagesBlocks', '').toLowerCase() || 'unknown'
 
   return {
     _type,
