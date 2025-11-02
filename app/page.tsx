@@ -8,6 +8,7 @@ import { GlassCard } from "./components/ui/GlassCard";
 import { StatsBlock } from "./components/blocks/StatsBlock";
 import { TestimonialsBlock } from "./components/blocks/TestimonialsBlock";
 import { CTABlock } from "./components/blocks/CTABlock";
+import { motion } from "framer-motion";
 import { Shield, Cloud, Network, TrendingUp } from "lucide-react";
 
 export default function Home() {
