@@ -94,10 +94,6 @@ const pageBlocks: Template[] = [
         name: "body",
         label: "Content",
         isBody: true,
-        toolbarOverride: {
-          // Enable ALL formatting options
-          type: "full",
-        },
         templates: [
           {
             name: "Callout",

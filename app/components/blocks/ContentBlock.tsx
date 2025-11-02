@@ -1,4 +1,5 @@
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { components } from "./RichTextComponents";
 
 interface ContentBlockProps {
   data: {
@@ -31,7 +32,7 @@ export function ContentBlock({ data }: ContentBlockProps) {
     >
       <div className={`mx-auto ${widthClass} px-6`}>
         <div className="prose prose-lg prose-slate max-w-none" data-tina-field="body">
-          <TinaMarkdown content={data.body} />
+          <TinaMarkdown content={data.body} components={components} />
         </div>
       </div>
     </section>
