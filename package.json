@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx tinacms build && next build",
+    "build": "npx tinacms build --skip-cloud-checks && next build",
+    "build:local": "npx tinacms build && next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
