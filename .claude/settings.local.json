@@ -73,7 +73,8 @@
       "Bash(do)",
       "Bash(if [ -f \"$file\" ])",
       "Bash(then)",
-      "Bash(npx sanity:*)"
+      "Bash(npx sanity:*)",
+      "Bash(npx tsx:*)"
     ],
     "deny": [],
     "ask": []
