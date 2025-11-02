@@ -45,7 +45,19 @@
       "Bash(git merge:*)",
       "Bash(git rm:*)",
       "Bash(gh pr view:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(npx @tinacms/cli build:*)",
+      "Bash(NEXT_PUBLIC_TINA_CLIENT_ID=de0a64d4-f53d-464c-913f-def21642093c TINA_TOKEN=c5f28e62110d717bfa917de48b1a7ee299b05730 NEXT_PUBLIC_TINA_BRANCH=main npm run build:*)",
+      "WebSearch",
+      "WebFetch(domain:tina.io)",
+      "Bash(.gitignore)",
+      "Bash(gh api:*)",
+      "Bash(xargs:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(NEXT_PUBLIC_TINA_CLIENT_ID=3e5bb2b1-9af5-4872-9350-3e07d890973f TINA_TOKEN=c830407a1b2b821f1439b277921ba197b3d78c2e NEXT_PUBLIC_TINA_BRANCH=main npx tinacms:*)",
+      "Bash(npx @tinacms/cli init:*)",
+      "Bash(timeout 10 npx tinacms:*)",
+      "Bash(tina/tina-lock.json)"
     ],
     "deny": [],
     "ask": []
