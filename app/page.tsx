@@ -211,20 +211,18 @@ export default function Home() {
       </ParallaxSection>
 
       {/* PREMIUM CTA - Bold Call to Action */}
-      <ParallaxSection speed={0.25}>
-        <CTABlock
-          data={{
-            heading: "Discover Our Full Capabilities",
-            text: "Download our comprehensive capabilities statement to learn how Federal Working Group can accelerate your mission success.",
-            buttonText: "Download Capabilities Statement",
-            buttonLink: "/assets/FWGCap.pdf",
-            backgroundColor: { hex: "#1E40AF" },
-            textColor: { hex: "#FFFFFF" },
-            buttonStyle: "solid",
-            alignment: "center",
-          }}
-        />
-      </ParallaxSection>
+      <CTABlock
+        data={{
+          heading: "Discover Our Full Capabilities",
+          text: "Download our comprehensive capabilities statement to learn how Federal Working Group can accelerate your mission success.",
+          buttonText: "Download Capabilities Statement",
+          buttonLink: "/assets/FWGCap.pdf",
+          backgroundColor: { hex: "#1E40AF" },
+          textColor: { hex: "#FFFFFF" },
+          buttonStyle: "solid",
+          alignment: "center",
+        }}
+      />
     </div>
   );
 }
