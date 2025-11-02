@@ -23,6 +23,22 @@ export async function getPage(slug: string) {
           textColor,
           alignment
         },
+        // Video Hero block
+        _type == "videoHero" => {
+          title,
+          subtitle,
+          videoUrl,
+          "videoFile": videoFile.asset->{url},
+          "fallbackImage": fallbackImage.asset->url,
+          overlayOpacity,
+          primaryButton,
+          secondaryButton,
+          height,
+          autoPlay,
+          loop,
+          muted,
+          disableOnMobile
+        },
         // Stats block
         _type == "stats" => {
           items[]{
