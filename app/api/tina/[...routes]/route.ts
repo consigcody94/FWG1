@@ -1,20 +1,15 @@
-import { TinaNodeBackend, LocalBackendAuthProvider } from "@tinacms/datalayer";
-import { TinaAuthJSOptions, AuthJsBackendAuthProvider } from "tinacms-authjs";
-import databaseClient from "../../../../tina/__generated__/databaseClient";
+import { NextRequest } from "next/server";
 
-const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
+export async function GET(request: NextRequest) {
+  return new Response(JSON.stringify({ message: "Tina API - use local mode" }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
-const handler = TinaNodeBackend({
-  authProvider: isLocal
-    ? LocalBackendAuthProvider()
-    : AuthJsBackendAuthProvider({
-        authOptions: TinaAuthJSOptions({
-          databaseClient: databaseClient,
-          secret: process.env.NEXTAUTH_SECRET,
-        }),
-      }),
-  databaseClient,
-});
-
-export const GET = handler;
-export const POST = handler;
+export async function POST(request: NextRequest) {
+  return new Response(JSON.stringify({ message: "Tina API - use local mode" }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
+}
