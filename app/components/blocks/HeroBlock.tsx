@@ -8,36 +8,45 @@ interface HeroBlockProps {
     buttonText?: string;
     buttonLink?: string;
     backgroundImage?: string;
+    backgroundColor?: string;
+    textColor?: string;
+    alignment?: string;
   };
 }
 
 export function HeroBlock({ data }: HeroBlockProps) {
+  const alignment = data.alignment || "left";
+  const textAlign = alignment === "center" ? "text-center" : alignment === "right" ? "text-right" : "text-left";
+  const justifyContent = alignment === "center" ? "justify-center" : alignment === "right" ? "justify-end" : "justify-start";
+
   return (
     <section
       className="relative overflow-hidden text-white"
       style={{
-        backgroundImage: data.backgroundImage ? `url(${data.backgroundImage})` : 'url(https://i.imgur.com/85EwS5X.png)',
+        backgroundImage: data.backgroundImage ? `url(${data.backgroundImage})` : undefined,
+        backgroundColor: data.backgroundColor || (data.backgroundImage ? undefined : '#1e40af'),
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        color: data.textColor || 'white',
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
+      {data.backgroundImage && <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />}
       <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-32">
-        <div className="space-y-6 text-center md:text-left">
+        <div className={`space-y-6 ${textAlign}`}>
           <h1 className="text-5xl font-bold leading-tight md:text-6xl lg:text-7xl" data-tina-field="title">
             {data.title || "Welcome"}
           </h1>
           {data.subtitle && (
-            <p className="text-xl text-blue-100 md:text-2xl" data-tina-field="subtitle">
+            <p className="text-xl md:text-2xl" data-tina-field="subtitle" style={{ opacity: 0.9 }}>
               {data.subtitle}
             </p>
           )}
           {data.buttonText && data.buttonLink && (
-            <div className="flex justify-center md:justify-start">
+            <div className={`flex ${justifyContent}`}>
               <Link
                 href={data.buttonLink}
-                className="btn-primary inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold text-white transition"
+                className="btn-primary inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition hover:scale-105"
                 data-tina-field="buttonText"
               >
                 {data.buttonText}

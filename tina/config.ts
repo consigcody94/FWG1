@@ -11,6 +11,25 @@ const pageBlocks: Template[] = [
       { type: "string", name: "buttonText", label: "Button Text" },
       { type: "string", name: "buttonLink", label: "Button Link" },
       { type: "image", name: "backgroundImage", label: "Background Image" },
+      {
+        type: "string",
+        name: "backgroundColor",
+        label: "Background Color (if no image)",
+        ui: { component: "color" }
+      },
+      {
+        type: "string",
+        name: "textColor",
+        label: "Text Color",
+        ui: { component: "color" },
+        description: "Override default text color"
+      },
+      {
+        type: "string",
+        name: "alignment",
+        label: "Text Alignment",
+        options: ["left", "center", "right"],
+      },
     ],
   },
   {
@@ -70,7 +89,56 @@ const pageBlocks: Template[] = [
     name: "content",
     label: "Rich Content",
     fields: [
-      { type: "rich-text", name: "body", label: "Content", isBody: true },
+      {
+        type: "rich-text",
+        name: "body",
+        label: "Content",
+        isBody: true,
+        toolbarOverride: {
+          // Enable ALL formatting options
+          type: "full",
+        },
+        templates: [
+          {
+            name: "Callout",
+            label: "Callout Box",
+            fields: [
+              { type: "string", name: "type", label: "Type", options: ["info", "warning", "success", "error"] },
+              { type: "string", name: "title", label: "Title" },
+              { type: "rich-text", name: "content", label: "Content" },
+            ],
+          },
+          {
+            name: "Button",
+            label: "Button",
+            inline: true,
+            fields: [
+              { type: "string", name: "text", label: "Button Text" },
+              { type: "string", name: "url", label: "Link URL" },
+              { type: "string", name: "style", label: "Style", options: ["primary", "secondary", "outline"] },
+            ],
+          },
+        ],
+      },
+      {
+        type: "string",
+        name: "backgroundColor",
+        label: "Section Background Color",
+        ui: { component: "color" }
+      },
+      {
+        type: "string",
+        name: "textColor",
+        label: "Text Color",
+        ui: { component: "color" }
+      },
+      {
+        type: "string",
+        name: "maxWidth",
+        label: "Max Width",
+        options: ["narrow", "medium", "wide", "full"],
+        description: "Content container width"
+      },
     ],
   },
   {
@@ -101,6 +169,30 @@ const pageBlocks: Template[] = [
       { type: "string", name: "text", label: "Text", ui: { component: "textarea" } },
       { type: "string", name: "buttonText", label: "Button Text" },
       { type: "string", name: "buttonLink", label: "Button Link" },
+      {
+        type: "string",
+        name: "backgroundColor",
+        label: "Background Color",
+        ui: { component: "color" }
+      },
+      {
+        type: "string",
+        name: "textColor",
+        label: "Text Color",
+        ui: { component: "color" }
+      },
+      {
+        type: "string",
+        name: "buttonStyle",
+        label: "Button Style",
+        options: ["solid", "outline", "ghost"],
+      },
+      {
+        type: "string",
+        name: "alignment",
+        label: "Text Alignment",
+        options: ["left", "center", "right"],
+      },
     ],
   },
 ];
