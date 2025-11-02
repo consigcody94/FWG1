@@ -39,6 +39,22 @@ export async function getPage(slug: string) {
           muted,
           disableOnMobile
         },
+        // Clients/Logos block
+        _type == "clientsLogos" => {
+          heading,
+          description,
+          logos[]{
+            name,
+            "logo": logo.asset->url,
+            url
+          },
+          displayStyle,
+          columns,
+          logoSize,
+          grayscale,
+          backgroundColor,
+          padding
+        },
         // Stats block
         _type == "stats" => {
           items[]{
