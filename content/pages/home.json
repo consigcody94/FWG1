@@ -11,27 +11,6 @@
       "_template": "hero"
     },
     {
-      "items": [
-        {
-          "value": "20+",
-          "label": "Years of Excellence"
-        },
-        {
-          "value": "500+",
-          "label": "Expert Professionals"
-        },
-        {
-          "value": "1000+",
-          "label": "Projects Completed"
-        },
-        {
-          "value": "150+",
-          "label": "Government Partners"
-        }
-      ],
-      "_template": "stats"
-    },
-    {
       "heading": "Services & Solutions",
       "services": [
         {
@@ -56,6 +35,27 @@
         }
       ],
       "_template": "services"
+    },
+    {
+      "items": [
+        {
+          "value": "20+",
+          "label": "Years of Excellence"
+        },
+        {
+          "value": "500+",
+          "label": "Expert Professionals"
+        },
+        {
+          "value": "1000+",
+          "label": "Projects Completed"
+        },
+        {
+          "value": "150+",
+          "label": "Government Partners"
+        }
+      ],
+      "_template": "stats"
     },
     {
       "heading": "Client Success Stories",
