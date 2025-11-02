@@ -1,0 +1,76 @@
+{
+  "title": "Demo Page - Visual Editing",
+  "description": "This demo page shows Tina's visual editing in action",
+  "blocks": [
+    {
+      "_template": "hero",
+      "title": "Welcome to Tina Visual Editing",
+      "subtitle": "Click any text to edit it in real-time!",
+      "buttonText": "Get Started",
+      "buttonLink": "/about"
+    },
+    {
+      "_template": "stats",
+      "items": [
+        {
+          "value": "20+",
+          "label": "Years of Excellence"
+        },
+        {
+          "value": "500+",
+          "label": "Expert Professionals"
+        },
+        {
+          "value": "1000+",
+          "label": "Projects Completed"
+        },
+        {
+          "value": "150+",
+          "label": "Government Partners"
+        }
+      ]
+    },
+    {
+      "_template": "content",
+      "body": {
+        "type": "root",
+        "children": [
+          {
+            "type": "h2",
+            "children": [
+              {
+                "type": "text",
+                "text": "Try Visual Editing"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "This content is editable! Click on any text to edit it directly. Your changes will appear in real-time as you type."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "children": [
+              {
+                "type": "text",
+                "text": "You can add formatting, links, images, and more using the rich text editor."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_template": "cta",
+      "heading": "Ready to Experience Tina?",
+      "text": "Start editing this page now and see your changes in real-time!",
+      "buttonText": "Go to Admin",
+      "buttonLink": "/admin"
+    }
+  ]
+}
