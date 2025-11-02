@@ -1,15 +1,11 @@
 {
   "hero": {
-    "title": "FWG",
+    "title": "FWG 2026",
     "subtitle": "Empowering Excellence Through Innovation, Collaboration, and Execution",
     "buttonText": "Access Portal",
     "secondButtonText": "Explore Services"
   },
   "stats": [
-    {
-      "value": "20",
-      "label": "Years of Excellence"
-    },
     {
       "value": "500",
       "label": "Expert Professionals"

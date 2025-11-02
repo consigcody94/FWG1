@@ -40,6 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.claude/settings.local.json
+*.Identifier
 
 # Tina CMS
 .tina/__generated__
