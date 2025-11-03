@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 {/* Address */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                  <div className="p-3 bg-blue-600 rounded-lg">
+                  <div className="p-3 bg-blue-800 rounded-lg">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                       href="https://maps.google.com/?q=7918+Jones+Branch+Drive+McLean+VA+22102"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-3 text-blue-600 hover:text-blue-700 font-semibold"
+                      className="inline-block mt-3 text-blue-800 hover:text-blue-800 font-semibold"
                     >
                       Get Directions →
                     </Link>
@@ -62,14 +62,14 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                  <div className="p-3 bg-blue-600 rounded-lg">
+                  <div className="p-3 bg-blue-800 rounded-lg">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 mb-2">Email</h3>
                     <Link
                       href="mailto:info@federalworkinggroup.com"
-                      className="text-slate-600 hover:text-blue-600 transition-colors"
+                      className="text-slate-600 hover:text-blue-800 transition-colors"
                     >
                       info@federalworkinggroup.com
                     </Link>
@@ -78,7 +78,7 @@ export default function ContactPage() {
 
                 {/* Business Hours */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                  <div className="p-3 bg-blue-600 rounded-lg">
+                  <div className="p-3 bg-blue-800 rounded-lg">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 </p>
                 <Link
                   href="/employee-portal"
-                  className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"
+                  className="inline-block px-6 py-3 bg-blue-800 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors"
                 >
                   Access Employee Portal
                 </Link>
@@ -146,7 +146,7 @@ export default function ContactPage() {
             </p>
             <Link
               href="/assets/FWGCap.pdf"
-              className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-lg hover:scale-105"
+              className="inline-block px-8 py-4 bg-blue-800 text-white rounded-full font-bold text-lg hover:bg-blue-800 transition-all hover:shadow-lg hover:scale-105"
             >
               Download Capabilities Statement
             </Link>

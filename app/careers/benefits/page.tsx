@@ -40,7 +40,7 @@ export default function BenefitsPage() {
         "Access to online learning platforms and courses",
         "Mentorship and career development programs"
       ],
-      color: "from-blue-500 to-indigo-500"
+      color: "from-blue-700 to-indigo-500"
     },
     {
       icon: Clock,
@@ -106,7 +106,7 @@ export default function BenefitsPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ export default function BenefitsPage() {
                 className="bg-white p-8 rounded-xl shadow-lg text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-blue-600" />
+                  <item.icon className="w-8 h-8 text-blue-800" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
                 <p className="text-slate-600">{item.description}</p>
@@ -207,7 +207,7 @@ export default function BenefitsPage() {
                   <ul className="space-y-3">
                     {category.items.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-slate-700">{item}</span>
                       </li>
                     ))}
@@ -229,28 +229,28 @@ export default function BenefitsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <TrendingUp className="w-16 h-16 text-blue-400 mb-6" />
+              <TrendingUp className="w-16 h-16 text-blue-600 mb-6" />
               <h2 className="text-4xl font-black mb-6">Retirement Planning</h2>
               <p className="text-xl text-white/90 mb-6">
                 We're committed to helping you build a secure financial future through our comprehensive 401(k) retirement program.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
                     <p className="font-bold text-lg">Company Matching</p>
                     <p className="text-white/80">Generous employer match on your contributions</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
                     <p className="font-bold text-lg">Investment Options</p>
                     <p className="text-white/80">Diverse portfolio options to match your risk tolerance</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
                     <p className="font-bold text-lg">Financial Guidance</p>
                     <p className="text-white/80">Access to professional financial advisors</p>
@@ -283,7 +283,7 @@ export default function BenefitsPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Users className="w-6 h-6 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <Users className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold">Referral Bonuses</p>
                     <p className="text-sm text-white/80">Rewards for bringing talented people to our team</p>
@@ -304,7 +304,7 @@ export default function BenefitsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Gift className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+            <Gift className="w-16 h-16 text-blue-800 mx-auto mb-6" />
             <h2 className="text-4xl font-black mb-6 text-slate-900">Join Our Team</h2>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
               Ready to enjoy these benefits while making an impact on federal IT modernization? Explore our current openings and apply today.
@@ -312,13 +312,13 @@ export default function BenefitsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/careers/current-openings"
-                className="px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-lg hover:scale-105"
+                className="px-8 py-4 bg-blue-800 text-white rounded-full font-bold text-lg hover:bg-blue-800 transition-all hover:shadow-lg hover:scale-105"
               >
                 View Current Openings
               </Link>
               <Link
                 href="/careers/apply"
-                className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-full font-bold text-lg hover:bg-blue-50 transition-all"
+                className="px-8 py-4 bg-white text-blue-800 border-2 border-blue-800 rounded-full font-bold text-lg hover:bg-blue-50 transition-all"
               >
                 Learn How to Apply
               </Link>

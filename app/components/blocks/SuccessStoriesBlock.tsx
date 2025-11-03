@@ -78,14 +78,14 @@ export function SuccessStoriesBlock({ data }: SuccessStoriesBlockProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-24 pb-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 md:text-5xl" data-tina-field="heading">
               {data.heading || "Success Stories"}
             </h2>
-            <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-600 to-purple-600" />
+            <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-900 to-purple-600" />
             {data.subtitle && (
               <p className="mt-6 text-xl text-slate-600" data-tina-field="subtitle">
                 {data.subtitle}
@@ -97,10 +97,10 @@ export function SuccessStoriesBlock({ data }: SuccessStoriesBlockProps) {
         <div className="space-y-6">
           {stories.map((story, index) => (
             <ScrollReveal key={index} delay={index * 100}>
-              <div className="card-hover rounded-3xl bg-white shadow-lg overflow-hidden">
+              <div className="card-hover rounded-2xl md:rounded-3xl bg-white/90 backdrop-blur-xl shadow-lg overflow-hidden">
                 <button
                   onClick={() => toggleStory(index)}
-                  className="w-full p-8 text-left flex items-start gap-6 hover:bg-slate-50 transition-colors"
+                  className="w-full p-4 md:p-8 text-left flex items-start gap-3 md:gap-6 hover:bg-slate-50 transition-colors"
                 >
                   {story.logo && (
                     <div className="relative h-16 w-16 flex-shrink-0">
@@ -113,30 +113,30 @@ export function SuccessStoriesBlock({ data }: SuccessStoriesBlockProps) {
                     </div>
                   )}
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-3" data-tina-field={`stories.${index}.client`}>
+                    <h3 className="text-lg md:text-2xl font-bold text-slate-900 mb-2 md:mb-3" data-tina-field={`stories.${index}.client`}>
                       {story.client}
                     </h3>
-                    <p className="text-slate-600 leading-relaxed" data-tina-field={`stories.${index}.summary`}>
+                    <p className="text-sm md:text-base text-slate-600 leading-relaxed" data-tina-field={`stories.${index}.summary`}>
                       {story.summary}
                     </p>
                   </div>
                   <div className="flex-shrink-0 mt-2">
                     {expandedIndex === index ? (
-                      <ChevronUp className="h-6 w-6 text-blue-600" />
+                      <ChevronUp className="h-6 w-6 text-blue-800" />
                     ) : (
-                      <ChevronDown className="h-6 w-6 text-blue-600" />
+                      <ChevronDown className="h-6 w-6 text-blue-800" />
                     )}
                   </div>
                 </button>
 
                 {expandedIndex === index && (
-                  <div className="px-8 pb-8 pt-0">
-                    <div className="border-t border-slate-200 pt-6">
-                      <h4 className="text-lg font-semibold text-slate-900 mb-4">Our team:</h4>
+                  <div className="px-4 md:px-8 pb-4 md:pb-8 pt-0">
+                    <div className="border-t border-slate-200 pt-4 md:pt-6">
+                      <h4 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4">Our team:</h4>
                       <ul className="space-y-3">
                         {story.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex gap-3" data-tina-field={`stories.${index}.details.${detailIndex}`}>
-                            <span className="text-blue-600 font-bold flex-shrink-0">•</span>
+                            <span className="text-blue-800 font-bold flex-shrink-0">•</span>
                             <span className="text-slate-600 leading-relaxed">{detail}</span>
                           </li>
                         ))}

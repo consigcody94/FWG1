@@ -73,7 +73,7 @@ export function ClientsBlock({ data }: ClientsBlockProps) {
             <h2 className="text-4xl font-bold text-slate-900 md:text-5xl" data-tina-field="heading">
               {data.heading || "Our Trusted Federal Agency Clients"}
             </h2>
-            <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-600 to-purple-600" />
+            <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-900 to-purple-600" />
             {data.subtitle && (
               <p className="mt-6 text-xl text-slate-600" data-tina-field="subtitle">
                 {data.subtitle}
@@ -98,7 +98,7 @@ export function ClientsBlock({ data }: ClientsBlockProps) {
                   {client.name}
                 </h3>
                 {client.website && (
-                  <p className="mt-2 text-xs text-blue-600 font-medium" data-tina-field={`clients.${index}.website`}>
+                  <p className="mt-2 text-xs text-blue-800 font-medium" data-tina-field={`clients.${index}.website`}>
                     {client.website}
                   </p>
                 )}

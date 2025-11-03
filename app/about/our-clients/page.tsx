@@ -85,7 +85,7 @@ export default function OurClientsPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export default function OurClientsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
               >
-                <div className="group bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-600 hover:shadow-2xl transition-all duration-300 h-full flex flex-col items-center justify-center text-center">
+                <div className="group bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full flex flex-col items-center justify-center text-center">
                   {/* Agency Seal/Logo */}
                   <div className="w-24 h-24 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative">
                     {client.logo ? (
@@ -138,7 +138,7 @@ export default function OurClientsPage() {
                         className="object-contain"
                       />
                     ) : (
-                      <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
+                      <div className="w-24 h-24 bg-gradient-to-br from-blue-900 to-blue-900 rounded-full flex items-center justify-center">
                         <div className="text-white font-black text-sm leading-tight text-center px-2">
                           {client.abbreviation}
                         </div>
@@ -146,7 +146,7 @@ export default function OurClientsPage() {
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
                     {client.name}
                   </h3>
 
@@ -154,7 +154,7 @@ export default function OurClientsPage() {
                     href={`https://${client.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700 text-sm font-semibold"
+                    className="text-blue-800 hover:text-blue-800 text-sm font-semibold"
                   >
                     {client.website} →
                   </a>
@@ -192,7 +192,7 @@ export default function OurClientsPage() {
                 className="bg-white p-8 rounded-xl shadow-lg text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <achievement.icon className="w-8 h-8 text-blue-600" />
+                  <achievement.icon className="w-8 h-8 text-blue-800" />
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2">{achievement.title}</h3>
                 <p className="text-slate-600">{achievement.description}</p>
@@ -216,7 +216,7 @@ export default function OurClientsPage() {
             <p className="text-lg text-slate-600 mb-6">
               Federal Working Group operates under the Chief Information Officer - Solutions and Partners 3 (CIOSP3) contract vehicle, streamlining procurement for federal agencies.
             </p>
-            <div className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-bold">
+            <div className="inline-block px-6 py-3 bg-blue-800 text-white rounded-full font-bold">
               Authorized Federal Contract Holder
             </div>
           </motion.div>
@@ -224,7 +224,7 @@ export default function OurClientsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -239,7 +239,7 @@ export default function OurClientsPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 Contact Us
               </Link>

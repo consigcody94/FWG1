@@ -20,7 +20,7 @@ export function CTABlock({ data }: CTABlockProps) {
   const justifyContent = alignment === "center" ? "justify-center" : alignment === "right" ? "justify-end" : "justify-start";
 
   const buttonStyles = {
-    solid: "bg-white text-blue-600 hover:bg-gray-100",
+    solid: "bg-white text-blue-800 hover:bg-gray-100",
     outline: "border-2 border-white bg-transparent hover:bg-white/10",
     ghost: "bg-white/10 hover:bg-white/20"
   };
@@ -33,14 +33,14 @@ export function CTABlock({ data }: CTABlockProps) {
 
   return (
     <section
-      className="py-24"
+      className="py-16 md:py-24"
       style={{
         background: bgColor || 'linear-gradient(to right, #2563eb, #7c3aed)',
         color: textColor || 'white',
       }}
     >
       <ScrollReveal>
-        <div className={`mx-auto max-w-4xl px-6 ${textAlign}`}>
+        <div className={`mx-auto max-w-4xl px-4 md:px-6 ${textAlign}`}>
           <h3 className="text-3xl font-bold md:text-4xl" data-tina-field="heading">
             {data.heading || "Get Started Today"}
           </h3>

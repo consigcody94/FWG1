@@ -131,7 +131,7 @@ export default function ServicesPage() {
               transition={{ delay: 0.1 }}
               className="bg-white p-8 rounded-xl shadow-lg"
             >
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mb-4">
                 <Award className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-slate-900">96/100</h3>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
               transition={{ delay: 0.2 }}
               className="bg-white p-8 rounded-xl shadow-lg"
             >
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-slate-900">Lean Structure</h3>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
               transition={{ delay: 0.3 }}
               className="bg-white p-8 rounded-xl shadow-lg"
             >
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-slate-900">Best Practices</h3>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                       <ul className="space-y-3">
                         {service.features.map((feature) => (
                           <li key={feature} className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                            <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-0.5" />
                             <span className="text-slate-600">{feature}</span>
                           </li>
                         ))}
@@ -266,7 +266,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -281,7 +281,7 @@ export default function ServicesPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/assets/FWGCap.pdf"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 Download Capabilities Statement
               </Link>

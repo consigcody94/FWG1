@@ -85,7 +85,7 @@ export function JobListingLayout({ job }: JobListingLayoutProps) {
               Please submit your resume and cover letter to{' '}
               <a
                 href="mailto:careers@federalworking.com"
-                className="text-blue-600 hover:underline font-medium"
+                className="text-blue-800 hover:underline font-medium"
               >
                 careers@federalworking.com
               </a>

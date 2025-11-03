@@ -57,7 +57,7 @@ export default function CaringInTheCommunityPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-600 to-blue-600 text-white py-24">
+      <section className="relative bg-gradient-to-br from-green-600 to-blue-800 text-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -207,7 +207,7 @@ export default function CaringInTheCommunityPage() {
               >
                 <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="w-8 h-8 text-blue-600" />
+                    <item.icon className="w-8 h-8 text-blue-800" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-slate-900 text-center">{item.title}</h3>
                   <p className="text-slate-600 text-center leading-relaxed">{item.description}</p>
@@ -226,7 +226,7 @@ export default function CaringInTheCommunityPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-green-600 to-blue-600 text-white rounded-3xl p-12 md:p-16 text-center"
+            className="bg-gradient-to-br from-green-600 to-blue-800 text-white rounded-3xl p-12 md:p-16 text-center"
           >
             <h2 className="text-4xl font-black mb-6">Making a Real Difference</h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
@@ -252,7 +252,7 @@ export default function CaringInTheCommunityPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,7 +267,7 @@ export default function CaringInTheCommunityPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 Contact Us
               </Link>

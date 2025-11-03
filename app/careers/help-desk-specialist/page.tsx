@@ -50,7 +50,7 @@ export default function HelpDeskSpecialistPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,9 +129,9 @@ export default function HelpDeskSpecialistPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                  className="flex items-start gap-4 bg-white/90 backdrop-blur-xl p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-blue-800 flex-shrink-0 mt-1" />
                   <p className="text-slate-700">{responsibility}</p>
                 </motion.div>
               ))}
@@ -152,7 +152,7 @@ export default function HelpDeskSpecialistPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-700 to-blue-800 rounded-xl flex items-center justify-center">
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-3xl font-black text-slate-900">Required Qualifications</h2>
@@ -160,7 +160,7 @@ export default function HelpDeskSpecialistPage() {
               <div className="space-y-3">
                 {requiredQualifications.map((qual, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0 mt-2"></div>
+                    <div className="w-2 h-2 bg-blue-800 rounded-full flex-shrink-0 mt-2"></div>
                     <p className="text-slate-700">{qual}</p>
                   </div>
                 ))}
@@ -223,7 +223,7 @@ export default function HelpDeskSpecialistPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -246,7 +246,7 @@ export default function HelpDeskSpecialistPage() {
               </p>
               <Link
                 href="mailto:careers@federalworkinggroup.com?subject=Help Desk Specialist Application"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 careers@federalworkinggroup.com
                 <ArrowRight className="w-5 h-5" />

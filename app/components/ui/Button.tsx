@@ -26,9 +26,9 @@ export function Button({
   const baseClasses = 'inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all'
 
   const variantClasses = {
-    solid: 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/50',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
-    ghost: 'text-blue-600 hover:bg-blue-600/10',
+    solid: 'bg-blue-800 text-white hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-800/50',
+    outline: 'border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white',
+    ghost: 'text-blue-800 hover:bg-blue-800/10',
   }
 
   const sizeClasses = {

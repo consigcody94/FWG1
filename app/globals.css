@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --fwg-blue: #3b82f6;
-  --fwg-blue-light: #60a5fa;
+  --fwg-blue: #1e3a8a;
+  --fwg-blue-light: #1d4ed8;
   --fwg-navy: #0f172a;
   --fwg-slate: #1e293b;
   --fwg-accent: #10b981;
@@ -56,9 +56,47 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 ::selection {
   background: rgba(59, 130, 246, 0.2);
   color: #0f172a;
+}
+
+/* Enhanced focus indicators for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link styling */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Scroll Reveal Animations */

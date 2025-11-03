@@ -36,7 +36,7 @@ export default function SuccessStoriesPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 to-blue-600 text-white py-24">
+      <section className="relative bg-gradient-to-br from-purple-600 to-blue-800 text-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -194,7 +194,7 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-purple-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -6,6 +6,32 @@ import Link from 'next/link'
 import { GlassCard } from '../../components/ui/GlassCard'
 
 export default function ProgramManagementPage() {
+  // JSON-LD structured data for Service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Program and Project Management Services",
+    "description": "Comprehensive program and project management services leveraging PMI standards and best practices to ensure successful project delivery and organizational excellence.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Federal Working Group",
+      "url": "https://www.federalworking.com"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "audience": {
+      "@type": "Audience",
+      "name": "Federal Government Agencies"
+    },
+    "serviceType": "Program Management, Project Management, PMO Services",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+
   const capabilities = [
     {
       icon: Target,
@@ -42,8 +68,13 @@ export default function ProgramManagementPage() {
 
   return (
     <div className="bg-white min-h-screen">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,23 +121,23 @@ export default function ProgramManagementPage() {
               className="grid grid-cols-2 gap-6"
             >
               <GlassCard className="p-6 text-center">
-                <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-black text-blue-600 mb-2">98%</div>
+                <TrendingUp className="w-12 h-12 text-blue-800 mx-auto mb-3" />
+                <div className="text-3xl font-black text-blue-800 mb-2">98%</div>
                 <div className="text-sm font-semibold text-slate-600">On-Time Delivery</div>
               </GlassCard>
               <GlassCard className="p-6 text-center">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-black text-blue-600 mb-2">50+</div>
+                <Users className="w-12 h-12 text-blue-800 mx-auto mb-3" />
+                <div className="text-3xl font-black text-blue-800 mb-2">50+</div>
                 <div className="text-sm font-semibold text-slate-600">PMI Certified PMs</div>
               </GlassCard>
               <GlassCard className="p-6 text-center">
-                <Target className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-black text-blue-600 mb-2">500+</div>
+                <Target className="w-12 h-12 text-blue-800 mx-auto mb-3" />
+                <div className="text-3xl font-black text-blue-800 mb-2">500+</div>
                 <div className="text-sm font-semibold text-slate-600">Projects Delivered</div>
               </GlassCard>
               <GlassCard className="p-6 text-center">
-                <BarChart className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-black text-blue-600 mb-2">96/100</div>
+                <BarChart className="w-12 h-12 text-blue-800 mx-auto mb-3" />
+                <div className="text-3xl font-black text-blue-800 mb-2">96/100</div>
                 <div className="text-sm font-semibold text-slate-600">Client Satisfaction</div>
               </GlassCard>
             </motion.div>
@@ -139,7 +170,7 @@ export default function ProgramManagementPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <GlassCard className="p-6 h-full">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-800 rounded-xl flex items-center justify-center mb-4">
                     <capability.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-slate-900">{capability.title}</h3>
@@ -174,10 +205,10 @@ export default function ProgramManagementPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600"
+                className="bg-white/90 backdrop-blur-xl p-6 rounded-xl shadow-lg border-l-4 border-blue-800"
               >
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-blue-800 flex-shrink-0 mt-1" />
                   <span className="text-lg text-slate-700 font-medium">{service}</span>
                 </div>
               </motion.div>
@@ -187,7 +218,7 @@ export default function ProgramManagementPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -201,7 +232,7 @@ export default function ProgramManagementPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 Contact Us
               </Link>

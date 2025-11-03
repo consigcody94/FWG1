@@ -67,7 +67,7 @@ export default function CommitmentToQualityPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -107,9 +107,9 @@ export default function CommitmentToQualityPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-600 hover:shadow-2xl transition-all"
+                className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6">
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-black mb-3 text-slate-900">{pillar.title}</h3>
@@ -117,7 +117,7 @@ export default function CommitmentToQualityPage() {
                 <ul className="space-y-3">
                   {pillar.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -156,7 +156,7 @@ export default function CommitmentToQualityPage() {
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-blue-600" />
+                    <item.icon className="w-6 h-6 text-blue-800" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-slate-900">{item.title}</h3>
@@ -193,7 +193,7 @@ export default function CommitmentToQualityPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -208,7 +208,7 @@ export default function CommitmentToQualityPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 Contact Us
               </Link>

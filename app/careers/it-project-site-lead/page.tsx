@@ -52,7 +52,7 @@ export default function ITProjectSiteLeadPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -114,7 +114,7 @@ export default function ITProjectSiteLeadPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-black mb-4 text-slate-900">{item.title}</h3>
@@ -149,7 +149,7 @@ export default function ITProjectSiteLeadPage() {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     className="flex items-start gap-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-blue-800 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">{item}</span>
                   </motion.div>
                 ))}
@@ -176,7 +176,7 @@ export default function ITProjectSiteLeadPage() {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     className="flex items-start gap-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-blue-800 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">{item}</span>
                   </motion.div>
                 ))}
@@ -187,7 +187,7 @@ export default function ITProjectSiteLeadPage() {
       </section>
 
       {/* Apply CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ export default function ITProjectSiteLeadPage() {
             </p>
             <Link
               href="mailto:careers@federalworkinggroup.com?subject=IT Project Site Lead Application"
-              className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+              className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
             >
               Apply Now
             </Link>

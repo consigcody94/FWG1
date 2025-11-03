@@ -24,7 +24,7 @@ export function ServicesBlock({ data }: ServicesBlockProps) {
               <h2 className="text-4xl font-bold text-slate-900 md:text-5xl" data-tina-field="heading">
                 {data.heading}
               </h2>
-              <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-600 to-purple-600" />
+              <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-900 to-purple-600" />
             </div>
           </ScrollReveal>
         )}

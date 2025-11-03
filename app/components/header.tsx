@@ -46,14 +46,14 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-xl shadow-lg">
+    <header className="sticky top-0 z-40 border-b border-slate-200/50 bg-white/70 backdrop-blur-2xl shadow-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link href="/" className="flex items-center gap-3 group" aria-label="Federal Working Group home" onClick={closeMobileMenu}>
           <div className="relative h-8 w-[70px] flex-shrink-0 overflow-hidden">
             <Image src="/fwg_logo-removebg-preview.png" alt="Federal Working Group Logo" width={70} height={32} className="object-contain max-h-full" />
           </div>
           <div className="leading-tight">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600 group-hover:text-blue-700 transition-colors">Federal Working Group</p>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-800 group-hover:text-blue-800 transition-colors">Federal Working Group</p>
             <p className="text-xs text-slate-600">Excellence in federal IT solutions since 2004</p>
           </div>
         </Link>
@@ -85,7 +85,10 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`transition hover:text-slate-900 py-2 ${isActive ? "text-blue-600 font-semibold" : ""}`}
+                    className={`transition hover:text-slate-900 py-2 ${isActive ? "text-blue-800 font-semibold" : ""}`}
+                    aria-expanded={openDropdown === item.label}
+                    aria-haspopup="true"
+                    onFocus={() => handleMouseEnter(item.label)}
                   >
                     {item.label}
                   </Link>
@@ -95,7 +98,7 @@ export function Header() {
                       onMouseEnter={() => handleMouseEnter(item.label)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <div className="rounded-lg border border-slate-200 bg-white/95 backdrop-blur-xl shadow-2xl py-2">
+                      <div className="rounded-lg border border-slate-200/50 bg-white/80 backdrop-blur-2xl shadow-2xl py-2">
                         {item.subItems!.map((subItem) => (
                           <Link
                             key={subItem.href}
@@ -116,7 +119,7 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`transition hover:text-slate-900 ${isActive ? "text-blue-600 font-semibold" : ""}`}
+                className={`transition hover:text-slate-900 ${isActive ? "text-blue-800 font-semibold" : ""}`}
               >
                 {item.label}
               </Link>
@@ -125,7 +128,7 @@ export function Header() {
           <Search />
           <Link
             href="/employee-portal"
-            className="rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105"
+            className="rounded-full bg-gradient-to-r from-blue-900 to-blue-900 px-4 py-2 text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-blue-700/50 hover:scale-105"
           >
             Employee Portal
           </Link>
@@ -134,7 +137,7 @@ export function Header() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white">
+        <div className="md:hidden border-t border-slate-200/50 bg-white/80 backdrop-blur-xl">
           <nav className="mx-auto max-w-7xl px-6 py-4">
             {primaryNavigation.map((item) => {
               const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
@@ -147,7 +150,7 @@ export function Header() {
                       href={item.href}
                       onClick={closeMobileMenu}
                       className={`text-base font-medium transition hover:text-slate-900 ${
-                        isActive ? "text-blue-600" : "text-slate-700"
+                        isActive ? "text-blue-800" : "text-slate-700"
                       }`}
                     >
                       {item.label}
@@ -192,7 +195,7 @@ export function Header() {
               <Link
                 href="/employee-portal"
                 onClick={closeMobileMenu}
-                className="block w-full text-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-3 text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-blue-500/50"
+                className="block w-full text-center rounded-full bg-gradient-to-r from-blue-900 to-blue-900 px-4 py-3 text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-blue-700/50"
               >
                 Employee Portal
               </Link>

@@ -26,7 +26,7 @@ export function TeamBlock({ data }: TeamBlockProps) {
               <h2 className="text-4xl font-bold text-slate-900 md:text-5xl" data-tina-field="heading">
                 {data.heading}
               </h2>
-              <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-600 to-purple-600" />
+              <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-900 to-purple-600" />
             </div>
           </ScrollReveal>
         )}
@@ -49,7 +49,7 @@ export function TeamBlock({ data }: TeamBlockProps) {
                     {member.name || "Team Member"}
                   </h3>
                   {member.role && (
-                    <p className="text-sm font-semibold uppercase tracking-wide text-blue-600" data-tina-field={`members.${index}.role`}>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-blue-800" data-tina-field={`members.${index}.role`}>
                       {member.role}
                     </p>
                   )}
@@ -61,7 +61,7 @@ export function TeamBlock({ data }: TeamBlockProps) {
                   {member.email && (
                     <a
                       href={`mailto:${member.email}`}
-                      className="inline-block text-sm font-medium text-blue-600 hover:text-blue-700"
+                      className="inline-block text-sm font-medium text-blue-800 hover:text-blue-800"
                       data-tina-field={`members.${index}.email`}
                     >
                       {member.email}

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Users, Target, MessageSquare, Award, TrendingUp, Heart, Lightbulb, Zap } from 'lucide-react'
 import Link from 'next/link'
+import { VideoHero } from '../components/effects/VideoHero'
 
 export default function AboutPage() {
   const coreValues = [
@@ -49,24 +50,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-              <span className="text-sm font-bold tracking-wider">SINCE 2004</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-black mb-6">About Federal Working Group</h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-              A diverse team of inventive thinkers and courageous doers, united by an unwavering commitment to serve our customers
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <VideoHero videoSrc="/assets/about.mp4" />
 
       {/* Company Story */}
       <section className="py-20 px-6">
@@ -98,7 +82,7 @@ export default function AboutPage() {
               className="grid grid-cols-2 gap-6"
             >
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl text-center">
-                <div className="text-5xl font-black text-blue-600 mb-2">20+</div>
+                <div className="text-5xl font-black text-blue-800 mb-2">20+</div>
                 <div className="text-sm font-semibold text-slate-600">Years of Excellence</div>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl text-center">
@@ -144,7 +128,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6">
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-black mb-4 text-slate-900">{pillar.title}</h3>
@@ -182,7 +166,7 @@ export default function AboutPage() {
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-10 h-10 text-blue-600" />
+                  <value.icon className="w-10 h-10 text-blue-800" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">{value.title}</h3>
                 <p className="text-slate-600">{value.description}</p>
@@ -221,7 +205,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/about/our-clients"
-                className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block px-6 py-3 bg-blue-800 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors"
               >
                 View Client Portfolio →
               </Link>
@@ -309,7 +293,7 @@ export default function AboutPage() {
           >
             <Link
               href="/services"
-              className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-lg hover:scale-105"
+              className="inline-block px-8 py-4 bg-blue-800 text-white rounded-full font-bold text-lg hover:bg-blue-800 transition-all hover:shadow-lg hover:scale-105"
             >
               Explore Our Services
             </Link>
@@ -318,7 +302,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -333,7 +317,7 @@ export default function AboutPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/careers"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 View Career Opportunities
               </Link>

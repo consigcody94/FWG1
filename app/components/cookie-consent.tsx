@@ -49,7 +49,7 @@ export function CookieConsent() {
             <p className="text-sm text-slate-600">
               We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
               By clicking "Accept All", you consent to our use of cookies.{' '}
-              <Link href="/privacy-policy" className="text-blue-600 hover:underline">
+              <Link href="/privacy-policy" className="text-blue-800 hover:underline">
                 Privacy Policy
               </Link>
             </p>

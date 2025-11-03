@@ -49,7 +49,7 @@ export default function CareersPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ export default function CareersPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-black mb-4 text-slate-900">{item.title}</h3>
@@ -129,10 +129,10 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg text-center"
+                className="bg-white/90 backdrop-blur-xl p-6 rounded-xl shadow-lg text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-blue-600" />
+                  <benefit.icon className="w-8 h-8 text-blue-800" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-slate-900">{benefit.title}</h3>
                 <p className="text-sm text-slate-600">{benefit.description}</p>
@@ -153,7 +153,7 @@ export default function CareersPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-blue-800 rounded-2xl flex items-center justify-center mb-6">
                   <Briefcase className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl font-black mb-4 text-slate-900">Current Openings</h2>
@@ -162,19 +162,19 @@ export default function CareersPage() {
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
                     <span className="text-slate-700">Project Managers</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
                     <span className="text-slate-700">IT Infrastructure Specialists</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
                     <span className="text-slate-700">Enterprise Architects</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-800 rounded-full"></div>
                     <span className="text-slate-700">Cybersecurity Professionals</span>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default function CareersPage() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2">Email Your Resume To:</label>
                     <Link
                       href="mailto:careers@federalworkinggroup.com"
-                      className="text-blue-600 hover:text-blue-700 font-semibold text-lg"
+                      className="text-blue-800 hover:text-blue-800 font-semibold text-lg"
                     >
                       careers@federalworkinggroup.com
                     </Link>
@@ -214,7 +214,7 @@ export default function CareersPage() {
       </section>
 
       {/* Employee Portal Link */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -228,7 +228,7 @@ export default function CareersPage() {
             </p>
             <Link
               href="/employee-portal"
-              className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+              className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
             >
               Access Employee Portal
             </Link>

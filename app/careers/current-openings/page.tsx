@@ -92,7 +92,7 @@ export default function CurrentOpeningsPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ export default function CurrentOpeningsPage() {
                   onClick={() => setSelectedDepartment(dept)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all ${
                     selectedDepartment === dept
-                      ? 'bg-blue-600 text-white shadow-lg scale-105'
+                      ? 'bg-blue-800 text-white shadow-lg scale-105'
                       : 'bg-white text-slate-600 hover:bg-slate-100 shadow-md'
                   }`}
                 >
@@ -166,15 +166,15 @@ export default function CurrentOpeningsPage() {
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                       <div className="flex-1">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                          <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center flex-shrink-0">
                             <Briefcase className="w-7 h-7 text-white" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl font-black text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            <h3 className="text-2xl font-black text-slate-900 mb-2 group-hover:text-blue-800 transition-colors">
                               {job.title}
                             </h3>
                             <div className="inline-block px-3 py-1 bg-blue-100 rounded-full">
-                              <span className="text-sm font-bold text-blue-600">{job.department}</span>
+                              <span className="text-sm font-bold text-blue-800">{job.department}</span>
                             </div>
                           </div>
                         </div>
@@ -195,7 +195,7 @@ export default function CurrentOpeningsPage() {
                         </div>
                       </div>
                       <div className="flex-shrink-0">
-                        <div className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-bold group-hover:bg-blue-700 transition-colors">
+                        <div className="flex items-center gap-2 px-6 py-3 bg-blue-800 text-white rounded-full font-bold group-hover:bg-blue-800 transition-colors">
                           <span>View Details</span>
                           <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </div>
@@ -238,13 +238,13 @@ export default function CurrentOpeningsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="mailto:careers@federalworkinggroup.com"
-                className="px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-lg hover:scale-105"
+                className="px-8 py-4 bg-blue-800 text-white rounded-full font-bold text-lg hover:bg-blue-800 transition-all hover:shadow-lg hover:scale-105"
               >
                 Submit General Application
               </Link>
               <Link
                 href="/careers/apply"
-                className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-full font-bold text-lg hover:bg-blue-50 transition-all"
+                className="px-8 py-4 bg-white text-blue-800 border-2 border-blue-800 rounded-full font-bold text-lg hover:bg-blue-50 transition-all"
               >
                 Application Process
               </Link>
@@ -254,7 +254,7 @@ export default function CurrentOpeningsPage() {
       </section>
 
       {/* Benefits CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -300,7 +300,7 @@ export default function CurrentOpeningsPage() {
             >
               <Link
                 href="/careers/benefits"
-                className="px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg text-center"
+                className="px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg text-center"
               >
                 Explore Full Benefits Package
               </Link>

@@ -90,7 +90,7 @@ export default function WhyFWGPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,10 +134,10 @@ export default function WhyFWGPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-600 hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full">
                   <div className="flex items-start gap-6">
                     <div className="p-4 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex-shrink-0">
-                      <item.icon className="w-8 h-8 text-blue-600" />
+                      <item.icon className="w-8 h-8 text-blue-800" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold mb-3 text-slate-900">{item.title}</h3>
@@ -177,7 +177,7 @@ export default function WhyFWGPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg text-center"
               >
-                <div className="text-5xl font-black text-blue-600 mb-3">{item.metric}</div>
+                <div className="text-5xl font-black text-blue-800 mb-3">{item.metric}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{item.label}</h3>
                 <p className="text-slate-600 text-sm">{item.description}</p>
               </motion.div>
@@ -212,7 +212,7 @@ export default function WhyFWGPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-slate-900 text-center">{item.title}</h3>
@@ -249,9 +249,9 @@ export default function WhyFWGPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-600 hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                    <item.icon className="w-8 h-8 text-blue-600" />
+                    <item.icon className="w-8 h-8 text-blue-800" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-slate-900">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{item.description}</p>
@@ -263,7 +263,7 @@ export default function WhyFWGPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -278,7 +278,7 @@ export default function WhyFWGPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/assets/FWGCap.pdf"
-                className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 Download Capabilities Statement
               </Link>

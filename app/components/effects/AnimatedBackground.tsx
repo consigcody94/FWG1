@@ -9,7 +9,7 @@ export function AnimatedBackground() {
       {/* Animated Gradient Mesh */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-0 -left-4 w-96 h-96 bg-blue-500/30 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute top-0 -left-4 w-96 h-96 bg-blue-700/30 rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             x: [0, 100, 0],
             y: [0, -100, 0],

@@ -81,7 +81,7 @@ export default function HowToApplyPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,7 +145,7 @@ export default function HowToApplyPage() {
                   <div className="lg:col-span-10">
                     <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
                       <div className="flex items-start gap-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center flex-shrink-0">
                           <step.icon className="w-8 h-8 text-white" />
                         </div>
                         <div className="flex-1">
@@ -154,7 +154,7 @@ export default function HowToApplyPage() {
                           <ul className="space-y-3">
                             {step.details.map((detail, idx) => (
                               <li key={idx} className="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                                <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-0.5" />
                                 <span className="text-slate-700">{detail}</span>
                               </li>
                             ))}
@@ -197,7 +197,7 @@ export default function HowToApplyPage() {
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mb-6">
-                  <tip.icon className="w-8 h-8 text-blue-600" />
+                  <tip.icon className="w-8 h-8 text-blue-800" />
                 </div>
                 <h3 className="text-2xl font-black mb-4 text-slate-900">{tip.title}</h3>
                 <p className="text-slate-600">{tip.description}</p>
@@ -217,7 +217,7 @@ export default function HowToApplyPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <Clock className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+            <Clock className="w-16 h-16 text-blue-800 mx-auto mb-6" />
             <h2 className="text-4xl font-black mb-6 text-slate-900">What to Expect</h2>
             <p className="text-xl text-slate-600 mb-12">
               Our typical hiring timeline from application to offer
@@ -227,7 +227,7 @@ export default function HowToApplyPage() {
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">1-2</span>
                 </div>
                 <div>
@@ -236,7 +236,7 @@ export default function HowToApplyPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">1</span>
                 </div>
                 <div>
@@ -245,7 +245,7 @@ export default function HowToApplyPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">2</span>
                 </div>
                 <div>
@@ -254,7 +254,7 @@ export default function HowToApplyPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">3-4</span>
                 </div>
                 <div>
@@ -268,7 +268,7 @@ export default function HowToApplyPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -284,7 +284,7 @@ export default function HowToApplyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/careers/current-openings"
-                className="px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
+                className="px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
                 View Current Openings
               </Link>
