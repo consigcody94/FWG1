@@ -12,6 +12,8 @@ interface VideoHeroProps {
   badge?: string
   primaryCTA?: { text: string; link: string }
   secondaryCTA?: { text: string; link: string }
+  height?: string
+  objectFit?: 'cover' | 'contain'
 }
 
 export function VideoHero({
@@ -21,6 +23,8 @@ export function VideoHero({
   badge,
   primaryCTA,
   secondaryCTA,
+  height = "min-h-screen",
+  objectFit = "cover",
 }: VideoHeroProps) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -32,9 +36,9 @@ export function VideoHero({
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className={`relative ${height} flex items-center justify-center overflow-hidden`}>
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className={height === 'h-auto' ? 'relative w-full' : 'absolute inset-0 z-0'}>
         <video
           ref={videoRef}
           autoPlay
@@ -42,7 +46,7 @@ export function VideoHero({
           muted
           playsInline
           onLoadedData={() => setIsVideoLoaded(true)}
-          className="absolute inset-0 w-full h-full object-cover"
+          className={height === 'h-auto' ? 'w-full h-auto' : `absolute inset-0 w-full h-full object-${objectFit}`}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>

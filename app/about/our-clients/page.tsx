@@ -40,22 +40,26 @@ export default function OurClientsPage() {
     {
       name: "Federal Communications Commission",
       website: "fcc.gov",
-      abbreviation: "FCC"
+      abbreviation: "FCC",
+      logo: "/assets/clients/communications.png"
     },
     {
       name: "Federal Aviation Administration",
       website: "faa.gov",
-      abbreviation: "FAA"
+      abbreviation: "FAA",
+      logo: "/assets/clients/aviation-78x83.png"
     },
     {
       name: "Department of Agriculture",
       website: "usda.gov",
-      abbreviation: "USDA"
+      abbreviation: "USDA",
+      logo: "/assets/clients/agriculture-83x83.png"
     },
     {
       name: "Department of Justice",
       website: "justice.gov",
-      abbreviation: "DOJ"
+      abbreviation: "DOJ",
+      logo: "/assets/clients/justice.png"
     }
   ]
 
@@ -84,23 +88,6 @@ export default function OurClientsPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-black mb-6">Our Clients</h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-              Trusted by federal agencies to deliver mission-critical IT solutions
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Client Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
