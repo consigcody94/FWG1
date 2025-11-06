@@ -195,10 +195,10 @@ export default function CareersPage() {
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">Email Your Resume To:</label>
                     <Link
-                      href="mailto:careers@federalworkinggroup.com"
+                      href="mailto:careers@federalworking.com"
                       className="text-blue-800 hover:text-blue-800 font-semibold text-lg"
                     >
-                      careers@federalworkinggroup.com
+                      careers@federalworking.com
                     </Link>
                   </div>
                   <div className="pt-4 border-t border-slate-200">

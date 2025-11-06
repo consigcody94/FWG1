@@ -68,10 +68,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-slate-900 mb-2">Email</h3>
                     <Link
-                      href="mailto:info@federalworkinggroup.com"
+                      href="mailto:info@federalworking.com"
                       className="text-slate-600 hover:text-blue-800 transition-colors"
                     >
-                      info@federalworkinggroup.com
+                      info@federalworking.com
                     </Link>
                   </div>
                 </div>

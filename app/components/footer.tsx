@@ -65,8 +65,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-800" />
-                <Link href="mailto:info@federalworkinggroup.com" className="hover:text-blue-800 transition-colors">
-                  info@federalworkinggroup.com
+                <Link href="mailto:info@federalworking.com" className="hover:text-blue-800 transition-colors">
+                  info@federalworking.com
                 </Link>
               </li>
             </ul>

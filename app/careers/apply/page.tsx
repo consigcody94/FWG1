@@ -25,7 +25,7 @@ export default function HowToApplyPage() {
       title: "Submit Your Application",
       description: "Email your materials to our careers team",
       details: [
-        "Send to: careers@federalworkinggroup.com",
+        "Send to: careers@federalworking.com",
         "Subject line: Position title you're applying for",
         "Include all materials in PDF format",
         "Brief email introduction (2-3 sentences)",
@@ -289,7 +289,7 @@ export default function HowToApplyPage() {
                 View Current Openings
               </Link>
               <Link
-                href="mailto:careers@federalworkinggroup.com"
+                href="mailto:careers@federalworking.com"
                 className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white border-2 border-white rounded-full font-bold text-lg hover:bg-white/30 transition-all"
               >
                 Email Careers Team

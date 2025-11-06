@@ -237,7 +237,7 @@ export default function CurrentOpeningsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="mailto:careers@federalworkinggroup.com"
+                href="mailto:careers@federalworking.com"
                 className="px-8 py-4 bg-blue-800 text-white rounded-full font-bold text-lg hover:bg-blue-800 transition-all hover:shadow-lg hover:scale-105"
               >
                 Submit General Application

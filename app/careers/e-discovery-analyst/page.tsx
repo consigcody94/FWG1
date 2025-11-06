@@ -201,7 +201,7 @@ export default function EDiscoveryAnalystPage() {
               Send your resume, cover letter, and relevant certifications to our careers team. We'll review your application and get back to you promptly.
             </p>
             <Link
-              href="mailto:careers@federalworkinggroup.com?subject=E-Discovery Analyst Application"
+              href="mailto:careers@federalworking.com?subject=E-Discovery Analyst Application"
               className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
             >
               Apply Now

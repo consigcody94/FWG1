@@ -204,7 +204,7 @@ export default function ITProjectSiteLeadPage() {
               Send your resume, cover letter, and leadership experience details to our careers team. We're looking for exceptional leaders to drive our federal projects.
             </p>
             <Link
-              href="mailto:careers@federalworkinggroup.com?subject=IT Project Site Lead Application"
+              href="mailto:careers@federalworking.com?subject=IT Project Site Lead Application"
               className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
             >
               Apply Now
