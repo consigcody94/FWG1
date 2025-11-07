@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { MapPin, Mail, Phone, Clock } from 'lucide-react'
 import Link from 'next/link'
+import { ContactForm } from '../components/contact-form'
 
 export default function ContactPage() {
   return (
@@ -128,6 +129,32 @@ export default function ContactPage() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-black mb-4 text-slate-900">Send Us a Message</h2>
+            <p className="text-lg text-slate-600">
+              Have a question or want to discuss a project? Fill out the form below and we'll get back to you promptly.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <ContactForm />
+          </motion.div>
         </div>
       </section>
 

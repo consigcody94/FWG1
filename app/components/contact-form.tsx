@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { trackEvent } from './google-analytics';
 
 // Validation schema
 const contactSchema = z.object({
@@ -60,9 +59,6 @@ export function ContactForm() {
     setErrorMessage('');
 
     try {
-      // Track form submission attempt
-      trackEvent('form_submit', 'Contact', 'Contact Form');
-
       // Since we're using Netlify forms, we need to submit via FormData
       const formData = new FormData();
       formData.append('form-name', 'contact');
@@ -80,8 +76,6 @@ export function ContactForm() {
       if (response.ok) {
         setSubmitStatus('success');
         reset();
-        // Track successful submission
-        trackEvent('form_success', 'Contact', 'Contact Form');
       } else {
         throw new Error('Form submission failed');
       }
@@ -89,8 +83,6 @@ export function ContactForm() {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
       setErrorMessage('Failed to send message. Please try again or contact us directly.');
-      // Track form error
-      trackEvent('form_error', 'Contact', 'Contact Form');
     } finally {
       setIsSubmitting(false);
     }

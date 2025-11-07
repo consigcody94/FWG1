@@ -55,12 +55,16 @@ export function VideoHeroBlock({ data }: VideoHeroBlockProps) {
             loop={data.loop}
             muted={data.muted}
             playsInline
+            preload="metadata"
+            poster={data.fallbackImage}
             onLoadedData={() => setIsVideoLoaded(true)}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
+            aria-label={data.title ? `${data.title} background video` : 'Background video'}
           >
             {videoSrc && <source src={videoSrc} type="video/mp4" />}
+            Your browser does not support the video tag.
           </video>
           {data.fallbackImage && (
             <div

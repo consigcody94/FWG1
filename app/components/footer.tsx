@@ -117,9 +117,9 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-xs text-slate-500 text-center md:text-left">
             <p className="order-1 md:order-1">&copy; 2004-{new Date().getFullYear()} Federal Working Group. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 order-3 md:order-2">
-              <Link href="#" className="hover:text-blue-800 transition-colors whitespace-nowrap">Privacy Policy</Link>
-              <Link href="#" className="hover:text-blue-800 transition-colors whitespace-nowrap">Terms of Service</Link>
-              <Link href="#" className="hover:text-blue-800 transition-colors whitespace-nowrap">Accessibility</Link>
+              <Link href="/privacy-policy" className="hover:text-blue-800 transition-colors whitespace-nowrap">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="hover:text-blue-800 transition-colors whitespace-nowrap">Terms of Service</Link>
+              <Link href="/accessibility" className="hover:text-blue-800 transition-colors whitespace-nowrap">Accessibility</Link>
             </div>
             <p className="order-2 md:order-3 whitespace-nowrap">
               Site designed and guarded by{" "}

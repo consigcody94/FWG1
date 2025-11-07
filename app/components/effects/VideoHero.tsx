@@ -7,6 +7,8 @@ import { useState, useEffect, useRef } from 'react'
 
 interface VideoHeroProps {
   videoSrc: string
+  captionsSrc?: string
+  posterImage?: string
   title?: string
   subtitle?: string
   badge?: string
@@ -18,6 +20,8 @@ interface VideoHeroProps {
 
 export function VideoHero({
   videoSrc,
+  captionsSrc,
+  posterImage,
   title,
   subtitle,
   badge,
@@ -27,12 +31,24 @@ export function VideoHero({
   objectFit = "cover",
 }: VideoHeroProps) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
+    // Check if mobile for video optimization
+    setIsMobile(window.innerWidth < 768)
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    window.addEventListener('resize', handleResize)
+
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.75
     }
+
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   return (
@@ -45,10 +61,14 @@ export function VideoHero({
           loop
           muted
           playsInline
+          preload="metadata"
+          poster={posterImage}
           onLoadedData={() => setIsVideoLoaded(true)}
           className={height === 'h-auto' ? 'w-full h-auto' : `absolute inset-0 w-full h-full object-${objectFit}`}
+          aria-label={title ? `${title} background video` : 'Background video'}
         >
           <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
       </div>
 

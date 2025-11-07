@@ -5,7 +5,6 @@ import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { SkipNavigation } from "./components/skip-navigation";
 import { CookieConsent } from "./components/cookie-consent";
-import { GoogleAnalytics } from "./components/google-analytics";
 import NetlifyIdentityLoader from "./components/netlify-identity-loader";
 // import { VisualEditing } from "./components/VisualEditing";
 // import { draftMode } from "next/headers";
@@ -119,9 +118,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
         <script
           type="application/ld+json"
           suppressHydrationWarning
