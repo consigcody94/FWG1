@@ -50,7 +50,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <VideoHero videoSrc="/assets/about-upscaled.mp4" height="h-[60vh]" loop={false} frostGlass={true} />
+      <VideoHero videoSrc="/assets/about-upscaled.mp4" height="h-[60vh]" loop={false} />
 
       {/* Company Story */}
       <section className="py-20 px-6">
