@@ -81,31 +81,15 @@ export function Footer() {
                   href="/employee-portal"
                   className="hover:text-blue-800 transition-colors hover:translate-x-1 inline-block"
                 >
-                  Portal Login
+                  Portal Access
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="hover:text-blue-800 transition-colors hover:translate-x-1 inline-block"
                 >
-                  Employee Resources
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-blue-800 transition-colors hover:translate-x-1 inline-block"
-                >
-                  IT Support
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-blue-800 transition-colors hover:translate-x-1 inline-block"
-                >
-                  HR Portal
+                  Contact Support
                 </Link>
               </li>
             </ul>

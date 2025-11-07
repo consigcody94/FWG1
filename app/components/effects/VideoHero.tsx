@@ -9,6 +9,7 @@ interface VideoHeroProps {
   videoSrc: string
   captionsSrc?: string
   posterImage?: string
+  loop?: boolean
   title?: string
   subtitle?: string
   badge?: string
@@ -22,6 +23,7 @@ export function VideoHero({
   videoSrc,
   captionsSrc,
   posterImage,
+  loop = true,
   title,
   subtitle,
   badge,
@@ -58,7 +60,7 @@ export function VideoHero({
         <video
           ref={videoRef}
           autoPlay
-          loop
+          loop={loop}
           muted
           playsInline
           preload="metadata"

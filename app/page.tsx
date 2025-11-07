@@ -21,7 +21,8 @@ export default function Home() {
 
       {/* VIDEO HERO - Cinematic Full Height */}
       <VideoHero
-        videoSrc="/assets/video2.mp4"
+        videoSrc="/assets/video2-upscaled.mp4"
+        height="h-[70vh]"
         title="FEDERAL WORKING GROUP"
         subtitle="Innovate. Collaborate. Execute."
         badge="SINCE 2004 • 20 YEARS OF EXCELLENCE"
