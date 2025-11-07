@@ -34,6 +34,7 @@ export default function Home() {
           text: "Explore Our Services",
           link: "/services",
         }}
+        frostGlass={true}
       />
 
       {/* ANIMATED STATS */}

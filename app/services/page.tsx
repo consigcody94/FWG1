@@ -76,6 +76,8 @@ export default function ServicesPage() {
           >
             <source src="/assets/video1.mp4" type="video/mp4" />
           </video>
+          {/* Frosted Glass Effect */}
+          <div className="absolute inset-0 backdrop-blur-[8px] bg-white/20" />
           {/* Dark Overlay with Gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
         </div>

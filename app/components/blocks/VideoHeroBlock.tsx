@@ -20,6 +20,7 @@ interface VideoHeroBlockProps {
     loop?: boolean
     muted?: boolean
     disableOnMobile?: boolean
+    frostGlass?: boolean
   }
 }
 
@@ -81,6 +82,11 @@ export function VideoHeroBlock({ data }: VideoHeroBlockProps) {
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${data.fallbackImage})` }}
         />
+      )}
+
+      {/* Frosted Glass Effect */}
+      {data.frostGlass && (
+        <div className="absolute inset-0 backdrop-blur-[8px] bg-white/20" />
       )}
 
       {/* Overlay */}

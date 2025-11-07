@@ -17,6 +17,7 @@ interface VideoHeroProps {
   secondaryCTA?: { text: string; link: string }
   height?: string
   objectFit?: 'cover' | 'contain'
+  frostGlass?: boolean
 }
 
 export function VideoHero({
@@ -31,6 +32,7 @@ export function VideoHero({
   secondaryCTA,
   height = "min-h-screen",
   objectFit = "cover",
+  frostGlass = false,
 }: VideoHeroProps) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -73,6 +75,11 @@ export function VideoHero({
           Your browser does not support the video tag.
         </video>
       </div>
+
+      {/* Frosted Glass Effect */}
+      {frostGlass && (
+        <div className="absolute inset-0 backdrop-blur-[8px] bg-white/20 z-[1]" />
+      )}
 
       {/* Content */}
       {(title || subtitle || badge || primaryCTA || secondaryCTA) && (
