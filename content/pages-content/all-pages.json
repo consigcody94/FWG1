@@ -253,5 +253,100 @@
     "ctaButton1Link": "/assets/FWGCap.pdf",
     "ctaButton2Text": "Contact Us",
     "ctaButton2Link": "/contact"
+  },
+  "ourClients": {
+    "heroTitle": "Our Clients",
+    "heroSubtitle": "Trusted partnerships with leading federal agencies",
+    "heading": "Federal Agencies We Serve",
+    "subtitle": "Building long-term relationships through excellence and reliability",
+    "clients": [
+      { "name": "Department of Commerce", "website": "commerce.gov", "abbreviation": "DOC", "logo": "/assets/clients/commerce.png" },
+      { "name": "Department of Treasury", "website": "treasury.gov", "abbreviation": "TREASURY", "logo": "/assets/clients/treasury.png" },
+      { "name": "Department of Homeland Security", "website": "dhs.gov", "abbreviation": "DHS", "logo": "/assets/clients/homeland.png" },
+      { "name": "Department of Health and Human Services", "website": "hhs.gov", "abbreviation": "HHS", "logo": "/assets/clients/health.png" },
+      { "name": "Environmental Protection Agency", "website": "epa.gov", "abbreviation": "EPA", "logo": "/assets/clients/environment.png" },
+      { "name": "Federal Communications Commission", "website": "fcc.gov", "abbreviation": "FCC", "logo": "/assets/clients/communications.png" },
+      { "name": "Federal Aviation Administration", "website": "faa.gov", "abbreviation": "FAA", "logo": "/assets/clients/aviation-78x83.png" },
+      { "name": "Department of Agriculture", "website": "usda.gov", "abbreviation": "USDA", "logo": "/assets/clients/agriculture-83x83.png" },
+      { "name": "Department of Justice", "website": "justice.gov", "abbreviation": "DOJ", "logo": "/assets/clients/justice.png" }
+    ],
+    "achievements": [
+      { "title": "20+ Years", "description": "Serving Federal Agencies", "icon": "Award" },
+      { "title": "150+ Partners", "description": "Government Relationships", "icon": "Building2" },
+      { "title": "1000+ Projects", "description": "Successfully Delivered", "icon": "CheckCircle" },
+      { "title": "96/100", "description": "Customer Satisfaction", "icon": "Shield" }
+    ]
+  },
+  "commitmentToQuality": {
+    "heroTitle": "Commitment to Quality",
+    "heroSubtitle": "Excellence in every phase, every deliverable, every interaction",
+    "pillarsHeading": "Three Pillars of Quality",
+    "pillarsSubtitle": "Our quality approach is organized around three fundamental pillars",
+    "pillars": [
+      {
+        "title": "Quality Assurance",
+        "description": "Built into every phase of our management process",
+        "icon": "CheckCircle",
+        "features": ["Integrated planning and execution", "Continuous monitoring and validation", "Proactive risk identification", "Systematic quality checks"]
+      },
+      {
+        "title": "Quality Controls",
+        "description": "Integral part of all deliverables",
+        "icon": "Shield",
+        "features": ["Security Management - Committed to ensure compliance with Federal mandates", "Individual Accountability - Personnel ensure customer satisfaction", "Customer-Centered Focus - Performance measures quantify quality, timeliness, and effectiveness", "Deliverable verification processes"]
+      },
+      {
+        "title": "Quality Improvement",
+        "description": "Continuous assessment and adjustment",
+        "icon": "TrendingUp",
+        "features": ["Statistical analysis of performance", "Product enhancement initiatives", "Risk management optimization", "Efficiency improvements"]
+      }
+    ],
+    "securityHeading": "Our Quality Focus Areas",
+    "securitySubtitle": "Systematic approach to delivering excellence",
+    "securityFocus": [
+      { "title": "Federal Compliance", "description": "Committed to ensure compliance with Federal mandates and protect sensitive government data", "icon": "Shield" },
+      { "title": "Individual Accountability", "description": "Every team member ensures customer satisfaction through systematic execution of quality processes", "icon": "Users" },
+      { "title": "Customer-Centered Metrics", "description": "Performance measures quantify quality, timeliness, and effectiveness of assigned work", "icon": "Target" },
+      { "title": "Continuous Improvement", "description": "Statistical analysis drives product enhancement, risk management, and efficiency gains", "icon": "BarChart3" }
+    ]
+  },
+  "caringInCommunity": {
+    "heroBadge": "GIVING BACK • BUILDING COMMUNITY",
+    "heroTitle": "Caring in the Community",
+    "heroSubtitle": "Our commitment extends beyond business - we're dedicated to making a positive impact in the communities we serve",
+    "partnershipsHeading": "Community Partnerships",
+    "partnershipsSubtitle": "Supporting organizations that make a difference",
+    "partnerships": [
+      { "title": "Local Charities", "description": "Supporting food banks, homeless shelters, and community development organizations that strengthen our neighborhoods", "icon": "Users" },
+      { "title": "Education Initiatives", "description": "STEM education programs, coding bootcamps for underserved communities, and scholarship opportunities", "icon": "Target" },
+      { "title": "Volunteer Programs", "description": "Team volunteer days, mentorship programs, and skills-based volunteering to maximize community impact", "icon": "Handshake" }
+    ],
+    "environmentalHeading": "Environmental Responsibility",
+    "environmentalSubtitle": "Committed to sustainable practices",
+    "environmental": [
+      { "title": "Sustainable Practices", "description": "Paperless operations, energy-efficient offices, and carbon footprint reduction initiatives", "icon": "TreePine" },
+      { "title": "Green Technology", "description": "Promoting sustainable IT solutions and helping federal clients adopt eco-friendly technologies", "icon": "TreePine" }
+    ],
+    "engagementHeading": "Employee Engagement",
+    "engagementSubtitle": "Empowering our team to give back",
+    "engagement": [
+      { "title": "Volunteer Time Off", "description": "Paid time off for employees to volunteer with causes they're passionate about", "icon": "Heart" },
+      { "title": "Matching Donations", "description": "Company matches employee charitable donations to amplify their impact", "icon": "Gift" },
+      { "title": "Team Service Events", "description": "Regular company-wide volunteer activities building community and camaraderie", "icon": "Users" }
+    ]
+  },
+  "successStories": {
+    "heroBadge": "PROVEN EXCELLENCE • REAL RESULTS",
+    "heroTitle": "Success Stories",
+    "heroSubtitle": "Real-world impact across federal agencies - delivering mission-critical solutions that transform government operations",
+    "impactHeading": "Our Impact by the Numbers",
+    "impactSubtitle": "Two decades of excellence delivering transformative solutions to federal agencies",
+    "impactMetrics": [
+      { "metric": "1000+", "label": "Projects Completed", "description": "Mission-critical deliveries", "icon": "Award" },
+      { "metric": "150+", "label": "Federal Agencies", "description": "Trusted partnerships", "icon": "Users" },
+      { "metric": "96/100", "label": "Satisfaction Score", "description": "Industry-leading results", "icon": "TrendingUp" },
+      { "metric": "20+", "label": "Years of Service", "description": "Proven track record", "icon": "Shield" }
+    ]
   }
 }
