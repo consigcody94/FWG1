@@ -46,3 +46,6 @@ next-env.d.ts
 # Tina CMS
 tina/__generated__
 .env.local
+
+# Documentation (keep local only)
+/docs
