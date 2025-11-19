@@ -1,12 +1,12 @@
 ---
-name: "Cody Churchwell"
-title: "Chief Executive Officer"
+name: Alan
+title: Chief Executive Officer
+bio: pending
+email: ''
+linkedin: ''
 order: 1
 featured: true
-linkedin: "https://www.linkedin.com/in/cody-churchwell"
-email: "cchurchwell@federalworking.com"
 ---
-
 Cody Churchwell is the Chief Executive Officer of Federal Working Group, bringing over 15 years of experience in federal IT consulting and technology leadership. Under his guidance, FWG has grown to become a trusted partner for federal agencies seeking innovative IT solutions.
 
 ## Leadership & Vision
