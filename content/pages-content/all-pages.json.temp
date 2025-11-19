@@ -1,0 +1,20 @@
+,
+  "accessibility": {
+    "heroTitle": "Accessibility Statement",
+    "heroSubtitle": "Federal Working Group is committed to ensuring digital accessibility for all users",
+    "sections": [
+      { "heading": "Our Commitment", "content": "Federal Working Group is committed to ensuring that our website is accessible to people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards." },
+      { "heading": "Conformance Status", "content": "We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible for people with disabilities and user-friendly for everyone." },
+      { "heading": "Contact Us", "content": "If you encounter any accessibility barriers or have suggestions for improvement, please contact us at info@federalworkinggroup.com" }
+    ]
+  },
+  "employeePortal": {
+    "heroTitle": "Employee Portal",
+    "heroSubtitle": "Direct access to the systems you rely on every day",
+    "introText": "Launch webmail, manage payroll, or connect with support in just a click. Bookmark this page for the fastest path to your essential tools.",
+    "resources": [
+      { "title": "FWG Webmail", "description": "Access Outlook on the web for your email, calendar, and collaboration tools", "href": "https://outlook.office365.com/mail/", "cta": "Open Webmail", "details": ["Single sign-on enabled", "Multi-factor authentication enforced"] },
+      { "title": "ADP Workforce Now", "description": "Manage timesheets, payroll, benefits, and PTO requests from any device", "href": "https://workforcenow.adp.com/vd/client/index.html", "cta": "Launch ADP", "details": ["Use your FWG ADP credentials", "Support available via HR Operations"] }
+    ]
+  }
+}
