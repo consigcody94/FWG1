@@ -1,0 +1,124 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets"
+public_folder: "/assets"
+
+# Publish mode - "editorial_workflow" enables drafts
+publish_mode: editorial_workflow
+
+collections:
+  # Career Postings
+  - name: "careers"
+    label: "Career Postings"
+    folder: "content/careers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Job Type", name: "jobType", widget: "select", options: ["Full-Time", "Part-Time", "Contract"] }
+      - { label: "Security Clearance Required", name: "clearance", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Position Overview", name: "overview", widget: "markdown" }
+      - label: "Responsibilities"
+        name: "responsibilities"
+        widget: "list"
+        field: { label: "Responsibility", name: "item", widget: "string" }
+      - label: "Required Qualifications"
+        name: "requiredQualifications"
+        widget: "list"
+        field: { label: "Qualification", name: "item", widget: "string" }
+      - label: "Preferred Qualifications"
+        name: "preferredQualifications"
+        widget: "list"
+        field: { label: "Qualification", name: "item", widget: "string" }
+      - label: "Benefits"
+        name: "benefits"
+        widget: "list"
+        field: { label: "Benefit", name: "item", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+  # Services Pages
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Icon", name: "icon", widget: "select", options: ["Shield", "Cloud", "Network", "Database", "Server", "Lock"], required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Key Features"
+        name: "features"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Icon", name: "icon", widget: "string", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Order", name: "order", widget: "number", default: 0 }
+
+  # About Pages
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page Type", name: "pageType", widget: "select", options: ["about", "general", "legal"] }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Hero Video", name: "heroVideo", widget: "string", required: false }
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Section Title", name: "title", widget: "string" }
+          - { label: "Section Content", name: "content", widget: "markdown" }
+          - { label: "Icon", name: "icon", widget: "string", required: false }
+
+  # Home Page Settings
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/settings/home.json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Hero Badge", name: "heroBadge", widget: "string" }
+          - { label: "Hero Video", name: "heroVideo", widget: "string" }
+          - { label: "Primary CTA Text", name: "primaryCTAText", widget: "string" }
+          - { label: "Primary CTA Link", name: "primaryCTALink", widget: "string" }
+          - { label: "Secondary CTA Text", name: "secondaryCTAText", widget: "string" }
+          - { label: "Secondary CTA Link", name: "secondaryCTALink", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+      - label: "Navigation"
+        name: "navigation"
+        file: "content/settings/navigation.json"
+        fields:
+          - label: "Main Menu"
+            name: "mainMenu"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - label: "Submenu"
+                name: "submenu"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
