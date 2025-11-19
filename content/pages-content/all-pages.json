@@ -29,28 +29,143 @@
     "zip": "92651",
     "phone": "(571) 306-2656",
     "email": "info@federalworkinggroup.com",
+    "businessHours": "Monday - Friday: 8:00 AM - 5:00 PM EST\nSaturday - Sunday: Closed",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8675436!2d-117.7531234!3d33.5426892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcf1c4b5b5b5b5%3A0x1234567890abcdef!2s1968%20S%20Coast%20Hwy%2C%20Laguna%20Beach%2C%20CA%2092651!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus",
     "formHeading": "Send Us a Message",
-    "formSubtitle": "Fill out the form below and we'll get back to you within 24 hours"
+    "formSubtitle": "Have a question or want to discuss a project? Fill out the form below and we'll get back to you promptly.",
+    "ctaHeading": "Ready to Get Started?",
+    "ctaText": "Download our capabilities statement to learn more about how Federal Working Group can support your mission-critical IT needs.",
+    "ctaButtonText": "Download Capabilities Statement",
+    "ctaButtonLink": "/assets/FWGCap.pdf"
   },
   "careers": {
     "heroTitle": "Join Our Team",
-    "heroSubtitle": "Build your career with a leader in federal IT solutions",
-    "introHeading": "Why Work at FWG?",
-    "introText": "At Federal Working Group, we're more than just colleagues—we're a community of innovators, problem-solvers, and mission-driven professionals committed to excellence in federal IT.",
+    "heroSubtitle": "If you are looking for a place where you can put your creativity and experience to work, make a difference and be recognized for the value you offer, you've found it here.",
+    "heroBadge": "WE'RE SEEKING DYNAMIC AND SKILLED PROFESSIONALS",
+    "whyFwgHeading": "Why Federal Working Group?",
+    "whyFwgSubtitle": "An entrepreneurial environment where innovation meets opportunity",
+    "culture": [
+      { "title": "Entrepreneurial Spirit", "description": "Our entrepreneurial culture rewards employees who are willing to make a commitment and find dynamic solutions to complex problems", "icon": "TrendingUp" },
+      { "title": "Collaborative Environment", "description": "Work with a diverse team of inventive thinkers and courageous doers in a highly collaborative setting", "icon": "Users" },
+      { "title": "Recognition & Growth", "description": "Make a difference and be recognized for the value you offer in an environment that values your creativity and experience", "icon": "Award" }
+    ],
+    "benefitsHeading": "Comprehensive Benefits",
+    "benefitsSubtitle": "We invest in our employees' well-being and professional growth",
     "benefits": [
-      { "title": "Competitive Compensation", "description": "Industry-leading salaries and performance bonuses", "icon": "DollarSign" },
-      { "title": "Health & Wellness", "description": "Comprehensive health, dental, and vision coverage", "icon": "Heart" },
-      { "title": "Professional Development", "description": "Training, certifications, and career advancement", "icon": "GraduationCap" },
-      { "title": "Work-Life Balance", "description": "Flexible schedules and generous PTO", "icon": "Calendar" },
-      { "title": "Retirement Planning", "description": "401(k) with company matching", "icon": "PiggyBank" },
-      { "title": "Team Culture", "description": "Collaborative, supportive work environment", "icon": "Users" }
-    ]
+      { "title": "Health & Wellness", "description": "Comprehensive health, dental, and vision insurance for you and your family", "icon": "Heart" },
+      { "title": "Competitive Compensation", "description": "Competitive salaries and performance-based bonuses", "icon": "DollarSign" },
+      { "title": "Professional Development", "description": "Training programs, certifications, and continuous learning opportunities", "icon": "GraduationCap" },
+      { "title": "Work-Life Balance", "description": "Flexible work arrangements and generous PTO policy", "icon": "Gift" }
+    ],
+    "openingsHeading": "Current Openings",
+    "openingsSubtitle": "We're always looking for talented professionals to join our team. Explore our current opportunities and find your perfect fit.",
+    "openingsList": [
+      "Project Managers",
+      "IT Infrastructure Specialists",
+      "Enterprise Architects",
+      "Cybersecurity Professionals"
+    ],
+    "applicationHeading": "Submit Your Application",
+    "applicationSubtitle": "Don't see the perfect role? Send us your resume and let us know how you can contribute to our mission.",
+    "applicationEmail": "careers@federalworking.com",
+    "applicationNote": "Please include your resume, cover letter, and any relevant certifications or security clearances.",
+    "employeePortalHeading": "Current Employees",
+    "employeePortalSubtitle": "Access employee resources, webmail, time tracking, and IT support through our employee portal."
   },
   "services": {
-    "heroTitle": "Our Services",
-    "heroSubtitle": "Comprehensive IT solutions for federal agencies",
-    "introHeading": "Federal IT Excellence",
-    "introText": "Federal Working Group delivers end-to-end IT solutions tailored to the unique needs of federal agencies. Our services span the full spectrum of IT capabilities, from strategic planning to implementation and support."
+    "heroTitle": "Services & Solutions",
+    "heroSubtitle": "Elite capabilities for mission-critical federal IT transformation",
+    "heroVideo": "/assets/video1.mp4",
+    "heroBadges": ["PMI Certified", "ITIL Frameworks", "SEI Best Practices"],
+    "whyFwgHeading": "Why Choose FWG?",
+    "whyFwgSubtitle": "Effective support that builds customer trust and loyalty",
+    "differentiators": [
+      { "stat": "96/100", "description": "Customer Satisfaction Score", "icon": "Award" },
+      { "stat": "Lean Structure", "description": "Attracting and retaining highly skilled professionals", "icon": "CheckCircle" },
+      { "stat": "Best Practices", "description": "ITIL, PMI, and SEI framework expertise", "icon": "Shield" }
+    ],
+    "servicesList": [
+      {
+        "title": "Program and Project Management",
+        "description": "Comprehensive program and project management services leveraging PMI standards and best practices to ensure successful project delivery and organizational excellence.",
+        "icon": "TrendingUp",
+        "color": "blue",
+        "features": [
+          "Project Management Institute (PMI) Standards",
+          "Agile and Waterfall Methodologies",
+          "Risk Management and Mitigation",
+          "Stakeholder Communication and Reporting",
+          "Resource Planning and Optimization"
+        ]
+      },
+      {
+        "title": "IT Infrastructure, Technologies & Solutions",
+        "description": "Comprehensive data center management and transformation services, cloud computing solutions, and cutting-edge IT infrastructure leveraging the latest technologies.",
+        "icon": "Cloud",
+        "color": "cyan",
+        "features": [
+          "Data Center Management and Transformation",
+          "Cloud Migration and Optimization",
+          "Network Architecture and Design",
+          "Infrastructure Modernization",
+          "Hybrid Cloud Solutions"
+        ]
+      },
+      {
+        "title": "Enterprise Architecture",
+        "description": "Strategic enterprise architecture services that align technology with business objectives, ensuring scalable and sustainable solutions for mission-critical federal systems.",
+        "icon": "Network",
+        "color": "purple",
+        "features": [
+          "Enterprise Architecture Planning",
+          "Technology Roadmap Development",
+          "Business Process Optimization",
+          "Solution Architecture Design",
+          "Architecture Governance"
+        ]
+      },
+      {
+        "title": "IT Security, Strategy & Operations",
+        "description": "Comprehensive IT security, strategic planning, and operational excellence services applying ITIL frameworks and Software Engineering Institute best practices.",
+        "icon": "Shield",
+        "color": "green",
+        "features": [
+          "Cybersecurity Assessment and Implementation",
+          "ITIL Framework Application",
+          "IT Governance and Compliance",
+          "Security Operations and Monitoring",
+          "Strategic IT Planning"
+        ]
+      }
+    ],
+    "approachHeading": "Our Approach",
+    "approachSubtitle": "A highly collaborative and collegial work environment based on fairness and transparent business understandings",
+    "approachCards": [
+      {
+        "title": "Structured Frameworks",
+        "description": "We apply industry-leading structured management frameworks including:",
+        "items": [
+          "ITIL (IT Infrastructure Library)",
+          "Project Management Institute Standards",
+          "Software Engineering Institute Best Practices"
+        ]
+      },
+      {
+        "title": "Competitive Advantage",
+        "description": "Our lean structure and focus on excellence ensures:",
+        "items": [
+          "Highly skilled and experienced professionals",
+          "Competitive rates without sacrificing quality",
+          "Collaborative and transparent partnerships"
+        ]
+      }
+    ],
+    "ctaHeading": "Ready to Transform Your IT Operations?",
+    "ctaSubtitle": "Download our capabilities statement to learn more about our comprehensive service offerings.",
+    "ctaButton1Text": "Download Capabilities Statement",
+    "ctaButton1Link": "/assets/FWGCap.pdf",
+    "ctaButton2Text": "Contact Us",
+    "ctaButton2Link": "/contact"
   },
   "privacy": {
     "title": "Privacy Policy",
