@@ -3,7 +3,7 @@ backend:
   repo: consigcody94/FWG1
   branch: main
   base_url: https://gentle-biscochitos-7940a8.netlify.app
-  auth_endpoint: api/auth
+  auth_endpoint: .netlify/functions/auth
 
 media_folder: "public/assets"
 public_folder: "/assets"
