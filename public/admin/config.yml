@@ -8,8 +8,8 @@ backend:
 media_folder: "public/assets"
 public_folder: "/assets"
 
-# Publish mode - "editorial_workflow" enables drafts
-publish_mode: editorial_workflow
+# Simple mode - changes go live immediately on save
+# publish_mode: editorial_workflow
 
 collections:
   # Career Postings
