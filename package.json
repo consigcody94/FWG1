@@ -16,7 +16,6 @@
     "@vercel/analytics": "^1.1.1",
     "axios": "^1.13.2",
     "clsx": "^2.0.0",
-    "decap-cms-app": "^3.9.0",
     "focus-trap-react": "^10.2.3",
     "framer-motion": "^11.0.0",
     "fuse.js": "^7.0.0",

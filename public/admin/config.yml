@@ -8,117 +8,145 @@ backend:
 media_folder: "public/assets"
 public_folder: "/assets"
 
-# Simple mode - changes go live immediately on save
-# publish_mode: editorial_workflow
+# Logo and branding
+logo_url: /fwg_logo-removebg-preview.png
+site_url: https://gentle-biscochitos-7940a8.netlify.app
 
+# Enable local development backend
+local_backend: true
+
+# Collections
 collections:
   # Career Postings
   - name: "careers"
-    label: "Career Postings"
+    label: "🎯 Career Postings"
+    label_singular: "Career Posting"
     folder: "content/careers"
     create: true
     slug: "{{slug}}"
+    preview_path: "careers/{{slug}}"
+    summary: "{{title}} - {{jobType}}"
+    sortable_fields: ['title', 'date', 'jobType']
+    view_filters:
+      - label: "Full-Time Only"
+        field: jobType
+        pattern: 'Full-Time'
+      - label: "Featured"
+        field: featured
+        pattern: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Job Type", name: "jobType", widget: "select", options: ["Full-Time", "Part-Time", "Contract"] }
-      - { label: "Security Clearance Required", name: "clearance", widget: "string", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Position Overview", name: "overview", widget: "markdown" }
-      - label: "Responsibilities"
+      - { label: "Title", name: "title", widget: "string", hint: "Job title (e.g., 'Senior Network Engineer')" }
+      - { label: "Job Type", name: "jobType", widget: "select", options: ["Full-Time", "Part-Time", "Contract"], default: "Full-Time" }
+      - { label: "Security Clearance", name: "clearance", widget: "string", required: false, hint: "e.g., 'Security+' or leave blank" }
+      - { label: "Short Description", name: "description", widget: "text", hint: "Brief summary (shown in listings)" }
+      - { label: "Full Description", name: "overview", widget: "markdown", required: false, hint: "Detailed job description with markdown formatting" }
+      - label: "📋 Responsibilities"
         name: "responsibilities"
         widget: "list"
+        min: 1
         field: { label: "Responsibility", name: "item", widget: "string" }
-      - label: "Required Qualifications"
+      - label: "✅ Required Qualifications"
         name: "requiredQualifications"
         widget: "list"
+        min: 1
         field: { label: "Qualification", name: "item", widget: "string" }
-      - label: "Preferred Qualifications"
+      - label: "⭐ Preferred Qualifications"
         name: "preferredQualifications"
         widget: "list"
+        required: false
         field: { label: "Qualification", name: "item", widget: "string" }
-      - label: "Benefits"
+      - label: "💎 Benefits"
         name: "benefits"
         widget: "list"
+        required: false
         field: { label: "Benefit", name: "item", widget: "string" }
-      - { label: "Featured", name: "featured", widget: "boolean", default: false }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Position", name: "featured", widget: "boolean", default: false, hint: "Show on homepage" }
+      - { label: "Publish Date", name: "date", widget: "datetime", default: "", date_format: "MMMM D, YYYY", time_format: false }
 
-  # Services Pages
+  # Services
   - name: "services"
-    label: "Services"
+    label: "🛠️ Services"
+    label_singular: "Service"
     folder: "content/services"
     create: true
     slug: "{{slug}}"
+    preview_path: "services/{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ['title', 'order']
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
-      - { label: "Icon", name: "icon", widget: "select", options: ["Shield", "Cloud", "Network", "Database", "Server", "Lock"], required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Key Features"
+      - { label: "Service Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", hint: "Brief overview" }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false, hint: "Optional banner image" }
+      - { label: "Icon", name: "icon", widget: "select", options: ["Shield", "Cloud", "Network", "Database", "Server", "Lock", "Cpu", "Settings"], required: false }
+      - { label: "Content", name: "body", widget: "markdown", hint: "Full service description with formatting" }
+      - label: "🌟 Key Features"
         name: "features"
         widget: "list"
+        required: false
         fields:
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Feature Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
-          - { label: "Icon", name: "icon", widget: "string", required: false }
-      - { label: "Featured", name: "featured", widget: "boolean", default: false }
-      - { label: "Order", name: "order", widget: "number", default: 0 }
+          - { label: "Icon", name: "icon", widget: "string", required: false, hint: "Icon name (optional)" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show on homepage" }
+      - { label: "Display Order", name: "order", widget: "number", default: 0, hint: "Lower numbers appear first", value_type: "int", min: 0, max: 100 }
 
-  # About Pages
+  # General Pages
   - name: "pages"
-    label: "Pages"
+    label: "📄 Pages"
+    label_singular: "Page"
     folder: "content/pages"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} ({{pageType}})"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Page Type", name: "pageType", widget: "select", options: ["about", "general", "legal"] }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Hero Video", name: "heroVideo", widget: "string", required: false }
-      - label: "Sections"
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Page Type", name: "pageType", widget: "select", options: ["about", "general", "legal"], default: "general" }
+      - { label: "Description", name: "description", widget: "text", hint: "SEO description" }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Hero Video", name: "heroVideo", widget: "string", required: false, hint: "Path to video file (e.g., /assets/video.mp4)" }
+      - label: "📑 Sections"
         name: "sections"
         widget: "list"
         required: false
         fields:
           - { label: "Section Title", name: "title", widget: "string" }
-          - { label: "Section Content", name: "content", widget: "markdown" }
+          - { label: "Content", name: "content", widget: "markdown" }
           - { label: "Icon", name: "icon", widget: "string", required: false }
 
-  # Home Page Settings
+  # Site Settings
   - name: "settings"
-    label: "Site Settings"
+    label: "⚙️ Site Settings"
     files:
-      - label: "Home Page"
+      - label: "🏠 Home Page"
         name: "home"
         file: "content/settings/home.json"
         fields:
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
-          - { label: "Hero Badge", name: "heroBadge", widget: "string" }
-          - { label: "Hero Video", name: "heroVideo", widget: "string" }
-          - { label: "Primary CTA Text", name: "primaryCTAText", widget: "string" }
-          - { label: "Primary CTA Link", name: "primaryCTALink", widget: "string" }
-          - { label: "Secondary CTA Text", name: "secondaryCTAText", widget: "string" }
-          - { label: "Secondary CTA Link", name: "secondaryCTALink", widget: "string" }
-          - label: "Stats"
+          - { label: "Hero Title", name: "heroTitle", widget: "string", default: "FEDERAL WORKING GROUP" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string", default: "Innovate. Collaborate. Execute." }
+          - { label: "Hero Badge", name: "heroBadge", widget: "string", default: "SINCE 2004 • 20 YEARS OF EXCELLENCE" }
+          - { label: "Hero Video Path", name: "heroVideo", widget: "string", hint: "Path to video (e.g., /assets/video.mp4)" }
+          - { label: "Primary Button Text", name: "primaryCTAText", widget: "string" }
+          - { label: "Primary Button Link", name: "primaryCTALink", widget: "string" }
+          - { label: "Secondary Button Text", name: "secondaryCTAText", widget: "string" }
+          - { label: "Secondary Button Link", name: "secondaryCTALink", widget: "string" }
+          - label: "📊 Statistics"
             name: "stats"
             widget: "list"
             fields:
-              - { label: "Value", name: "value", widget: "string" }
-              - { label: "Label", name: "label", widget: "string" }
-      - label: "Navigation"
+              - { label: "Value", name: "value", widget: "string", hint: "e.g., '20+' or '500+'" }
+              - { label: "Label", name: "label", widget: "string", hint: "e.g., 'Years of Excellence'" }
+
+      - label: "🧭 Navigation"
         name: "navigation"
         file: "content/settings/navigation.json"
         fields:
-          - label: "Main Menu"
+          - label: "Main Menu Items"
             name: "mainMenu"
             widget: "list"
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
-              - label: "Submenu"
+              - label: "Submenu (optional)"
                 name: "submenu"
                 widget: "list"
                 required: false

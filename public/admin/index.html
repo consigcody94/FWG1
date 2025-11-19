@@ -5,9 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>Content Manager - Sveltia CMS</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+
+  <!-- Custom styling for better UX -->
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    /* Loading state */
+    #cms-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+      z-index: 9999;
+    }
+
+    #cms-loading.hidden {
+      display: none;
+    }
+
+    .loader {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <!-- Sveltia CMS - Modern, fast, beautiful CMS -->
+  <!-- Loading indicator -->
+  <div id="cms-loading">
+    <div style="text-align: center;">
+      <div class="loader"></div>
+      <div>Loading CMS...</div>
+      <div style="font-size: 14px; opacity: 0.8; margin-top: 10px;">Federal Working Group</div>
+    </div>
+  </div>
+
+  <!-- Sveltia CMS -->
+  <script type="module">
+    // Hide loading screen when CMS loads
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('cms-loading').classList.add('hidden');
+      }, 1000);
+    });
+  </script>
+
   <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </body>
 </html>
