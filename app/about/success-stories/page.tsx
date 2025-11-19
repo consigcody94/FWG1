@@ -91,7 +91,7 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* Success Stories List - From Markdown CMS */}
-      <SuccessStoriesBlock />
+      <SuccessStoriesBlock data={{}} />
     </div>
   )
 }
