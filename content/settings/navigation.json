@@ -1,0 +1,78 @@
+{
+  "mainMenu": [
+    {
+      "label": "About",
+      "link": "/about",
+      "submenu": [
+        {
+          "label": "Why FWG",
+          "link": "/about/why-fwg"
+        },
+        {
+          "label": "Our Clients",
+          "link": "/about/our-clients"
+        },
+        {
+          "label": "Success Stories",
+          "link": "/about/success-stories"
+        },
+        {
+          "label": "Commitment to Quality",
+          "link": "/about/commitment-to-quality"
+        },
+        {
+          "label": "Caring in the Community",
+          "link": "/about/caring-in-the-community"
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "link": "/services",
+      "submenu": [
+        {
+          "label": "IT Security",
+          "link": "/services/it-security"
+        },
+        {
+          "label": "IT Infrastructure",
+          "link": "/services/it-infrastructure"
+        },
+        {
+          "label": "Enterprise Architecture",
+          "link": "/services/enterprise-architecture"
+        },
+        {
+          "label": "Program Management",
+          "link": "/services/program-management"
+        }
+      ]
+    },
+    {
+      "label": "Careers",
+      "link": "/careers",
+      "submenu": [
+        {
+          "label": "Current Openings",
+          "link": "/careers/current-openings"
+        },
+        {
+          "label": "Benefits",
+          "link": "/careers/benefits"
+        },
+        {
+          "label": "Life at FWG",
+          "link": "/careers/life-at-fwg"
+        },
+        {
+          "label": "Apply Now",
+          "link": "/careers/apply"
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "link": "/contact"
+    }
+  ]
+}

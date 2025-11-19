@@ -153,3 +153,82 @@ collections:
                 fields:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
+
+      - label: "👣 Footer"
+        name: "footer"
+        file: "content/settings/footer.json"
+        fields:
+          - { label: "Company Tagline", name: "tagline", widget: "string", default: "Excellence in federal IT solutions since 2004" }
+          - { label: "Address Line 1", name: "addressLine1", widget: "string" }
+          - { label: "Address Line 2", name: "addressLine2", widget: "string" }
+          - { label: "City, State ZIP", name: "cityStateZip", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - label: "Social Media"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "Twitter URL", name: "twitter", widget: "string", required: false }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "Copyright Text", name: "copyright", widget: "string", default: "© 2025 Federal Working Group. All rights reserved." }
+
+  # Testimonials
+  - name: "testimonials"
+    label: "💬 Testimonials"
+    label_singular: "Testimonial"
+    folder: "content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Client Name", name: "name", widget: "string" }
+      - { label: "Job Title", name: "title", widget: "string", hint: "e.g., 'CIO' or 'Director of IT'" }
+      - { label: "Company/Agency", name: "company", widget: "string" }
+      - { label: "Testimonial", name: "quote", widget: "text", hint: "Their testimonial about working with FWG" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+  # Success Stories / Case Studies
+  - name: "success-stories"
+    label: "🎯 Success Stories"
+    label_singular: "Success Story"
+    folder: "content/success-stories"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "about/success-stories/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Client", name: "client", widget: "string", hint: "Client name (can be anonymized)" }
+      - { label: "Industry", name: "industry", widget: "string", hint: "e.g., 'Healthcare', 'Defense', 'Finance'" }
+      - { label: "Summary", name: "summary", widget: "text", hint: "Brief overview (1-2 sentences)" }
+      - { label: "Challenge", name: "challenge", widget: "markdown", hint: "What problem did the client face?" }
+      - { label: "Solution", name: "solution", widget: "markdown", hint: "How did FWG solve it?" }
+      - { label: "Results", name: "results", widget: "markdown", hint: "What were the outcomes?" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - label: "📊 Key Metrics"
+        name: "metrics"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Metric", name: "label", widget: "string", hint: "e.g., 'Time Saved'" }
+          - { label: "Value", name: "value", widget: "string", hint: "e.g., '40%'" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+  # Team Members
+  - name: "team"
+    label: "👥 Team Members"
+    label_singular: "Team Member"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", hint: "Job title" }
+      - { label: "Bio", name: "bio", widget: "markdown", hint: "Professional biography" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+      - { label: "Display Order", name: "order", widget: "number", default: 0 }
+      - { label: "Featured on Leadership Page", name: "featured", widget: "boolean", default: false }
