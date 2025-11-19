@@ -25,6 +25,26 @@ interface HomeSettings {
     value: string;
     label: string;
   }>;
+  servicesSection: {
+    heading: string;
+    subtitle: string;
+  };
+  serviceCards: Array<{
+    title: string;
+    description: string;
+    badge: string;
+    icon: string;
+  }>;
+  successStoriesSection: {
+    heading: string;
+    subtitle: string;
+  };
+  ctaSection: {
+    heading: string;
+    text: string;
+    buttonText: string;
+    buttonLink: string;
+  };
 }
 
 export default function Home() {
@@ -43,7 +63,27 @@ export default function Home() {
       { value: "500+", label: "Projects Delivered" },
       { value: "98%", label: "Client Satisfaction" },
       { value: "24/7", label: "Support Available" }
-    ]
+    ],
+    servicesSection: {
+      heading: "SERVICES & SOLUTIONS",
+      subtitle: "Elite capabilities for mission-critical federal IT transformation"
+    },
+    serviceCards: [
+      { title: "Program and Project Management", description: "Comprehensive program and project management services leveraging PMI standards and best practices to ensure successful project delivery and organizational excellence.", badge: "PMI Certified", icon: "TrendingUp" },
+      { title: "IT Infrastructure, Technologies & Solutions", description: "Comprehensive data center management and transformation services, cloud computing solutions, and cutting-edge IT infrastructure leveraging the latest technologies.", badge: "Cloud & Infrastructure", icon: "Cloud" },
+      { title: "Enterprise Architecture", description: "Strategic enterprise architecture services that align technology with business objectives, ensuring scalable and sustainable solutions for mission-critical federal systems.", badge: "Strategic Alignment", icon: "Network" },
+      { title: "IT Security, Strategy & Operations", description: "Comprehensive IT security, strategic planning, and operational excellence services applying ITIL frameworks and Software Engineering Institute best practices for secure, mission-critical systems.", badge: "ITIL & SEI Standards", icon: "Shield" }
+    ],
+    successStoriesSection: {
+      heading: "Client Success Stories",
+      subtitle: "Real-world impact across federal agencies"
+    },
+    ctaSection: {
+      heading: "Discover Our Full Capabilities",
+      text: "Download our comprehensive capabilities statement to learn how Federal Working Group can accelerate your mission success.",
+      buttonText: "Download Capabilities Statement",
+      buttonLink: "/assets/FWGCap.pdf"
+    }
   });
 
   // Fetch CMS content on mount
@@ -87,11 +127,11 @@ export default function Home() {
         />
       </ParallaxSection>
 
-      {/* PREMIUM CAPABILITIES - Glassmorphic Cards */}
+      {/* PREMIUM CAPABILITIES - Glassmorphic Cards - CMS EDITABLE */}
       <section className="relative py-32 px-6 bg-white">
         <ParallaxSection speed={0.15}>
           <div className="max-w-7xl mx-auto">
-            {/* Section Header */}
+            {/* Section Header - CMS EDITABLE */}
             <div className="text-center mb-20">
               <motion.h2
                 className="text-6xl md:text-7xl font-black mb-6 gradient-text-glow"
@@ -99,7 +139,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                SERVICES & SOLUTIONS
+                {settings.servicesSection.heading}
               </motion.h2>
               <motion.p
                 className="text-xl text-slate-600 max-w-3xl mx-auto"
@@ -108,139 +148,76 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                Elite capabilities for mission-critical federal IT transformation
+                {settings.servicesSection.subtitle}
               </motion.p>
             </div>
 
-            {/* Capabilities Grid */}
+            {/* Capabilities Grid - CMS EDITABLE */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Business Performance Management */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-              >
-                <GlassCard glow className="h-full">
-                  <div className="flex items-start gap-6">
-                    <div className="p-4 bg-gradient-to-br from-blue-700/20 to-purple-500/20 rounded-2xl glow-blue">
-                      <TrendingUp className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-slate-900">
-                        Program and Project Management
-                      </h3>
-                      <p className="text-slate-600 mb-4">
-                        Comprehensive program and project management services leveraging PMI standards and best practices to ensure successful project delivery and organizational excellence.
-                      </p>
-                      <div className="inline-block px-4 py-2 bg-blue-700/10 border border-blue-700/30 rounded-full text-sm font-semibold text-blue-800">
-                        PMI Certified
-                      </div>
-                    </div>
-                  </div>
-                </GlassCard>
-              </motion.div>
+              {settings.serviceCards.map((card, index) => {
+                // Icon mapping
+                const IconComponent = card.icon === 'TrendingUp' ? TrendingUp :
+                                     card.icon === 'Cloud' ? Cloud :
+                                     card.icon === 'Network' ? Network : Shield;
 
-              {/* IT Infrastructure & Cloud */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                <GlassCard glow className="h-full">
-                  <div className="flex items-start gap-6">
-                    <div className="p-4 bg-gradient-to-br from-cyan-500/20 to-blue-700/20 rounded-2xl glow-cyan">
-                      <Cloud className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-slate-900">
-                        IT Infrastructure, Technologies & Solutions
-                      </h3>
-                      <p className="text-slate-600 mb-4">
-                        Comprehensive data center management and transformation services, cloud computing solutions, and cutting-edge IT infrastructure leveraging the latest technologies.
-                      </p>
-                      <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-sm font-semibold text-cyan-600">
-                        Cloud & Infrastructure
-                      </div>
-                    </div>
-                  </div>
-                </GlassCard>
-              </motion.div>
+                // Color schemes for each card
+                const colorSchemes = [
+                  { gradient: "from-blue-700/20 to-purple-500/20", glow: "glow-blue", iconColor: "text-blue-600", badgeBg: "bg-blue-700/10", badgeBorder: "border-blue-700/30", badgeText: "text-blue-800" },
+                  { gradient: "from-cyan-500/20 to-blue-700/20", glow: "glow-cyan", iconColor: "text-cyan-400", badgeBg: "bg-cyan-500/10", badgeBorder: "border-cyan-500/30", badgeText: "text-cyan-600" },
+                  { gradient: "from-purple-500/20 to-pink-500/20", glow: "glow-purple", iconColor: "text-purple-400", badgeBg: "bg-purple-500/10", badgeBorder: "border-purple-500/30", badgeText: "text-purple-600" },
+                  { gradient: "from-green-500/20 to-emerald-500/20", glow: "glow-blue", iconColor: "text-green-400", badgeBg: "bg-green-500/10", badgeBorder: "border-green-500/30", badgeText: "text-green-600" }
+                ];
+                const colors = colorSchemes[index % colorSchemes.length];
 
-              {/* Enterprise Architecture */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-              >
-                <GlassCard glow className="h-full">
-                  <div className="flex items-start gap-6">
-                    <div className="p-4 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl glow-purple">
-                      <Network className="w-8 h-8 text-purple-400" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-slate-900">
-                        Enterprise Architecture
-                      </h3>
-                      <p className="text-slate-600 mb-4">
-                        Strategic enterprise architecture services that align technology with business objectives, ensuring scalable and sustainable solutions for mission-critical federal systems.
-                      </p>
-                      <div className="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-sm font-semibold text-purple-600">
-                        Strategic Alignment
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 * (index + 1) }}
+                  >
+                    <GlassCard glow className="h-full">
+                      <div className="flex items-start gap-6">
+                        <div className={`p-4 bg-gradient-to-br ${colors.gradient} rounded-2xl ${colors.glow}`}>
+                          <IconComponent className={`w-8 h-8 ${colors.iconColor}`} />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold mb-3 text-slate-900">
+                            {card.title}
+                          </h3>
+                          <p className="text-slate-600 mb-4">
+                            {card.description}
+                          </p>
+                          <div className={`inline-block px-4 py-2 ${colors.badgeBg} border ${colors.badgeBorder} rounded-full text-sm font-semibold ${colors.badgeText}`}>
+                            {card.badge}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </GlassCard>
-              </motion.div>
-
-              {/* IT Strategy & Security */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-              >
-                <GlassCard glow className="h-full">
-                  <div className="flex items-start gap-6">
-                    <div className="p-4 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl glow-blue">
-                      <Shield className="w-8 h-8 text-green-400" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-slate-900">
-                        IT Security, Strategy & Operations
-                      </h3>
-                      <p className="text-slate-600 mb-4">
-                        Comprehensive IT security, strategic planning, and operational excellence services applying ITIL frameworks and Software Engineering Institute best practices for secure, mission-critical systems.
-                      </p>
-                      <div className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm font-semibold text-green-600">
-                        ITIL & SEI Standards
-                      </div>
-                    </div>
-                  </div>
-                </GlassCard>
-              </motion.div>
+                    </GlassCard>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </ParallaxSection>
       </section>
 
-      {/* CLIENT SUCCESS STORIES - Detailed Project Highlights */}
+      {/* CLIENT SUCCESS STORIES - CMS EDITABLE */}
       <SuccessStoriesBlock
         data={{
-          heading: "Client Success Stories",
-          subtitle: "Real-world impact across federal agencies"
+          heading: settings.successStoriesSection.heading,
+          subtitle: settings.successStoriesSection.subtitle
         }}
       />
 
-      {/* PREMIUM CTA - Bold Call to Action */}
+      {/* PREMIUM CTA - CMS EDITABLE */}
       <CTABlock
         data={{
-          heading: "Discover Our Full Capabilities",
-          text: "Download our comprehensive capabilities statement to learn how Federal Working Group can accelerate your mission success.",
-          buttonText: "Download Capabilities Statement",
-          buttonLink: "/assets/FWGCap.pdf",
+          heading: settings.ctaSection.heading,
+          text: settings.ctaSection.text,
+          buttonText: settings.ctaSection.buttonText,
+          buttonLink: settings.ctaSection.buttonLink,
           backgroundColor: { hex: "#1E40AF" },
           textColor: { hex: "#FFFFFF" },
           buttonStyle: "solid",

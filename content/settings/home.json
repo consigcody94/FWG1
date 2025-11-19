@@ -24,5 +24,45 @@
       "value": "24/7",
       "label": "Support Available"
     }
-  ]
+  ],
+  "servicesSection": {
+    "heading": "SERVICES & SOLUTIONS",
+    "subtitle": "Elite capabilities for mission-critical federal IT transformation"
+  },
+  "serviceCards": [
+    {
+      "title": "Program and Project Management",
+      "description": "Comprehensive program and project management services leveraging PMI standards and best practices to ensure successful project delivery and organizational excellence.",
+      "badge": "PMI Certified",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "IT Infrastructure, Technologies & Solutions",
+      "description": "Comprehensive data center management and transformation services, cloud computing solutions, and cutting-edge IT infrastructure leveraging the latest technologies.",
+      "badge": "Cloud & Infrastructure",
+      "icon": "Cloud"
+    },
+    {
+      "title": "Enterprise Architecture",
+      "description": "Strategic enterprise architecture services that align technology with business objectives, ensuring scalable and sustainable solutions for mission-critical federal systems.",
+      "badge": "Strategic Alignment",
+      "icon": "Network"
+    },
+    {
+      "title": "IT Security, Strategy & Operations",
+      "description": "Comprehensive IT security, strategic planning, and operational excellence services applying ITIL frameworks and Software Engineering Institute best practices for secure, mission-critical systems.",
+      "badge": "ITIL & SEI Standards",
+      "icon": "Shield"
+    }
+  ],
+  "successStoriesSection": {
+    "heading": "Client Success Stories",
+    "subtitle": "Real-world impact across federal agencies"
+  },
+  "ctaSection": {
+    "heading": "Discover Our Full Capabilities",
+    "text": "Download our comprehensive capabilities statement to learn how Federal Working Group can accelerate your mission success.",
+    "buttonText": "Download Capabilities Statement",
+    "buttonLink": "/assets/FWGCap.pdf"
+  }
 }

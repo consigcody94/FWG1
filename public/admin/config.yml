@@ -121,20 +121,66 @@ collections:
         name: "home"
         file: "content/settings/home.json"
         fields:
-          - { label: "Hero Title", name: "heroTitle", widget: "string", default: "FEDERAL WORKING GROUP" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string", default: "Innovate. Collaborate. Execute." }
-          - { label: "Hero Badge", name: "heroBadge", widget: "string", default: "SINCE 2004 • 20 YEARS OF EXCELLENCE" }
-          - { label: "Hero Video Path", name: "heroVideo", widget: "string", hint: "Path to video (e.g., /assets/video.mp4)" }
-          - { label: "Primary Button Text", name: "primaryCTAText", widget: "string" }
-          - { label: "Primary Button Link", name: "primaryCTALink", widget: "string" }
-          - { label: "Secondary Button Text", name: "secondaryCTAText", widget: "string" }
-          - { label: "Secondary Button Link", name: "secondaryCTALink", widget: "string" }
+          # Hero Section
+          - { label: "Hero Title", name: "heroTitle", widget: "string", default: "FEDERAL WORKING GROUP", hint: "Main headline (appears large at top)" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string", default: "Innovate. Collaborate. Execute.", hint: "Tagline under main headline" }
+          - { label: "Hero Badge", name: "heroBadge", widget: "string", default: "SINCE 2004 • 20 YEARS OF EXCELLENCE", hint: "Small badge text above headline" }
+          - { label: "Hero Video Path", name: "heroVideo", widget: "string", hint: "Path to video (e.g., /assets/video.mp4)", default: "/assets/video2-upscaled.mp4" }
+          - { label: "Primary Button Text", name: "primaryCTAText", widget: "string", default: "Download Capabilities Statement" }
+          - { label: "Primary Button Link", name: "primaryCTALink", widget: "string", default: "/assets/FWGCap.pdf" }
+          - { label: "Secondary Button Text", name: "secondaryCTAText", widget: "string", default: "Explore Our Services" }
+          - { label: "Secondary Button Link", name: "secondaryCTALink", widget: "string", default: "/services" }
+
+          # Stats Section
           - label: "📊 Statistics"
             name: "stats"
             widget: "list"
+            hint: "4 stats displayed in a row below the hero"
             fields:
               - { label: "Value", name: "value", widget: "string", hint: "e.g., '20+' or '500+'" }
               - { label: "Label", name: "label", widget: "string", hint: "e.g., 'Years of Excellence'" }
+
+          # Services Section
+          - label: "🛠️ Services Section"
+            name: "servicesSection"
+            widget: "object"
+            collapsed: true
+            hint: "Heading and subtitle for the services capabilities section"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string", default: "SERVICES & SOLUTIONS" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string", default: "Elite capabilities for mission-critical federal IT transformation" }
+
+          - label: "🔷 Service Capability Cards"
+            name: "serviceCards"
+            widget: "list"
+            hint: "4 service cards with icons (edit title, description, badge for each)"
+            fields:
+              - { label: "Card Title", name: "title", widget: "string", hint: "e.g., 'Program and Project Management'" }
+              - { label: "Card Description", name: "description", widget: "text", hint: "Detailed description of the service" }
+              - { label: "Badge Text", name: "badge", widget: "string", hint: "Small badge at bottom (e.g., 'PMI Certified')" }
+              - { label: "Icon", name: "icon", widget: "select", options: ["TrendingUp", "Cloud", "Network", "Shield"], hint: "Choose icon for this card" }
+
+          # Success Stories Section
+          - label: "🎯 Success Stories Section"
+            name: "successStoriesSection"
+            widget: "object"
+            collapsed: true
+            hint: "Heading and subtitle for the success stories section"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string", default: "Client Success Stories" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string", default: "Real-world impact across federal agencies" }
+
+          # Bottom CTA Section
+          - label: "💼 Bottom Call-to-Action"
+            name: "ctaSection"
+            widget: "object"
+            collapsed: true
+            hint: "Final CTA section at the bottom of the homepage"
+            fields:
+              - { label: "CTA Heading", name: "heading", widget: "string", default: "Discover Our Full Capabilities" }
+              - { label: "CTA Text", name: "text", widget: "text", default: "Download our comprehensive capabilities statement to learn how Federal Working Group can accelerate your mission success." }
+              - { label: "Button Text", name: "buttonText", widget: "string", default: "Download Capabilities Statement" }
+              - { label: "Button Link", name: "buttonLink", widget: "string", default: "/assets/FWGCap.pdf" }
 
       - label: "🧭 Navigation"
         name: "navigation"
