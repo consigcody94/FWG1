@@ -10,8 +10,49 @@ import { SuccessStoriesBlock } from "./components/blocks/SuccessStoriesBlock";
 import { CTABlock } from "./components/blocks/CTABlock";
 import { motion } from "framer-motion";
 import { Shield, Cloud, Network, TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
+
+interface HomeSettings {
+  heroTitle: string;
+  heroSubtitle: string;
+  heroBadge: string;
+  heroVideo: string;
+  primaryCTAText: string;
+  primaryCTALink: string;
+  secondaryCTAText: string;
+  secondaryCTALink: string;
+  stats: Array<{
+    value: string;
+    label: string;
+  }>;
+}
 
 export default function Home() {
+  // State for CMS content
+  const [settings, setSettings] = useState<HomeSettings>({
+    heroTitle: "FEDERAL WORKING GROUP",
+    heroSubtitle: "Innovate. Collaborate. Execute.",
+    heroBadge: "SINCE 2004 • 20 YEARS OF EXCELLENCE",
+    heroVideo: "/assets/video2-upscaled.mp4",
+    primaryCTAText: "Download Capabilities Statement",
+    primaryCTALink: "/assets/FWGCap.pdf",
+    secondaryCTAText: "Explore Our Services",
+    secondaryCTALink: "/services",
+    stats: [
+      { value: "20+", label: "Years of Excellence" },
+      { value: "500+", label: "Projects Delivered" },
+      { value: "98%", label: "Client Satisfaction" },
+      { value: "24/7", label: "Support Available" }
+    ]
+  });
+
+  // Fetch CMS content on mount
+  useEffect(() => {
+    fetch('/api/home-settings')
+      .then(res => res.json())
+      .then(data => setSettings(data))
+      .catch(err => console.error('Error loading home settings:', err));
+  }, []);
   return (
     <div className="bg-white text-slate-900 min-h-screen relative overflow-hidden">
       {/* Advanced Background Effects (only for non-video sections) - light version */}
@@ -19,46 +60,29 @@ export default function Home() {
         <FloatingParticles count={40} />
       </div>
 
-      {/* VIDEO HERO - Cinematic Full Height */}
+      {/* VIDEO HERO - Cinematic Full Height - CMS EDITABLE */}
       <VideoHero
-        videoSrc="/assets/video2-upscaled.mp4"
+        videoSrc={settings.heroVideo}
         height="h-[70vh]"
-        title="FEDERAL WORKING GROUP"
-        subtitle="Innovate. Collaborate. Execute."
-        badge="SINCE 2004 • 20 YEARS OF EXCELLENCE"
+        title={settings.heroTitle}
+        subtitle={settings.heroSubtitle}
+        badge={settings.heroBadge}
         primaryCTA={{
-          text: "Download Capabilities Statement",
-          link: "/assets/FWGCap.pdf",
+          text: settings.primaryCTAText,
+          link: settings.primaryCTALink,
         }}
         secondaryCTA={{
-          text: "Explore Our Services",
-          link: "/services",
+          text: settings.secondaryCTAText,
+          link: settings.secondaryCTALink,
         }}
         frostGlass={true}
       />
 
-      {/* ANIMATED STATS */}
+      {/* ANIMATED STATS - CMS EDITABLE */}
       <ParallaxSection speed={0.1}>
         <StatsBlock
           data={{
-            items: [
-              {
-                value: "20+",
-                label: "Years of Excellence",
-              },
-              {
-                value: "500+",
-                label: "Expert Professionals",
-              },
-              {
-                value: "1000+",
-                label: "Projects Completed",
-              },
-              {
-                value: "150+",
-                label: "Government Partners",
-              },
-            ],
+            items: settings.stats,
           }}
         />
       </ParallaxSection>
