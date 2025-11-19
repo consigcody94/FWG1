@@ -3,93 +3,37 @@
 import { motion } from 'framer-motion'
 import { Award, Users, Target, Lightbulb, TrendingUp, MessageCircle, Shield, Zap } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function WhyFWGPage() {
-  const differentiators = [
-    {
-      icon: Award,
-      title: "96/100 Customer Satisfaction",
-      description: "Industry-leading satisfaction scores reflecting our commitment to excellence and client success"
-    },
-    {
-      icon: Users,
-      title: "Lean, Agile Structure",
-      description: "Efficient organizational model that delivers maximum value with minimal overhead and bureaucracy"
-    },
-    {
-      icon: Target,
-      title: "Best Practice Standards",
-      description: "Rigorous adherence to PMI, ITIL, and SEI frameworks ensuring consistent, high-quality delivery"
-    },
-    {
-      icon: Zap,
-      title: "Entrepreneurial Culture",
-      description: "Innovative mindset that drives creative solutions and rapid adaptation to evolving mission needs"
-    }
-  ]
+  const [content, setContent] = useState<any>(null)
 
-  const trackRecord = [
-    {
-      metric: "1000+",
-      label: "Projects Delivered",
-      description: "Successfully completed across federal agencies"
-    },
-    {
-      metric: "150+",
-      label: "Agency Partners",
-      description: "Trusted relationships built over two decades"
-    },
-    {
-      metric: "500+",
-      label: "Expert Professionals",
-      description: "Certified, cleared, and mission-ready"
-    },
-    {
-      metric: "20+",
-      label: "Years of Excellence",
-      description: "Proven track record since 2004"
-    }
-  ]
+  useEffect(() => {
+    fetch('/api/pages-content')
+      .then(res => res.json())
+      .then(data => setContent(data.whyFwg))
+      .catch(err => console.error('Error loading why-fwg content:', err))
+  }, [])
 
-  const customerFirst = [
-    {
-      icon: Shield,
-      title: "Unwavering Commitment",
-      description: "We stand behind every project with dedicated resources and accountability at every level"
-    },
-    {
-      icon: MessageCircle,
-      title: "Transparent Communication",
-      description: "Proactive updates, clear reporting, and open dialogue ensure alignment throughout delivery"
-    },
-    {
-      icon: Target,
-      title: "Mission-Focused Results",
-      description: "Your success is our success - we measure ourselves by the impact we deliver"
-    }
-  ]
+  if (!content) {
+    return <div className="min-h-screen bg-white">Loading...</div>
+  }
 
-  const innovation = [
-    {
-      icon: Lightbulb,
-      title: "Cutting-Edge Technology",
-      description: "Cloud computing, AI/ML integration, DevSecOps, and modern architecture patterns"
-    },
-    {
-      icon: TrendingUp,
-      title: "Continuous Improvement",
-      description: "Lessons learned processes, knowledge management, and evolving best practices"
-    },
-    {
-      icon: Users,
-      title: "Talent Development",
-      description: "Ongoing training, certifications, and professional development for our team"
-    }
-  ]
+  // Icon mapping
+  const iconMap: any = {
+    Award,
+    Users,
+    Target,
+    Lightbulb,
+    TrendingUp,
+    MessageCircle,
+    Shield,
+    Zap
+  }
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section - CMS EDITABLE */}
       <section className="relative bg-gradient-to-br from-blue-900 to-blue-900 text-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -99,17 +43,17 @@ export default function WhyFWGPage() {
             className="text-center"
           >
             <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-6">
-              SINCE 2004 • 20+ YEARS OF EXCELLENCE
+              {content.heroBadge}
             </div>
-            <h1 className="text-5xl md:text-6xl font-black mb-6">Why Choose Federal Working Group</h1>
+            <h1 className="text-5xl md:text-6xl font-black mb-6">{content.heroTitle}</h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-              Two decades of proven excellence delivering mission-critical IT solutions to federal agencies
+              {content.heroSubtitle}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Our Differentiators */}
+      {/* Our Differentiators - CMS EDITABLE */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -119,39 +63,42 @@ export default function WhyFWGPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-black mb-6 text-slate-900">Our Differentiators</h2>
+            <h2 className="text-4xl font-black mb-6 text-slate-900">{content.differentiatorsHeading}</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              What sets Federal Working Group apart in the federal IT marketplace
+              {content.differentiatorsSubtitle}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {differentiators.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full">
-                  <div className="flex items-start gap-6">
-                    <div className="p-4 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex-shrink-0">
-                      <item.icon className="w-8 h-8 text-blue-800" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-slate-900">{item.title}</h3>
-                      <p className="text-slate-600 leading-relaxed">{item.description}</p>
+            {content.differentiators.map((item: any, index: number) => {
+              const IconComponent = iconMap[item.icon]
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full">
+                    <div className="flex items-start gap-6">
+                      <div className="p-4 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex-shrink-0">
+                        <IconComponent className="w-8 h-8 text-blue-800" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-3 text-slate-900">{item.title}</h3>
+                        <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Proven Track Record */}
+      {/* Proven Track Record - CMS EDITABLE */}
       <section className="py-20 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -161,14 +108,14 @@ export default function WhyFWGPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-black mb-6 text-slate-900">Proven Track Record</h2>
+            <h2 className="text-4xl font-black mb-6 text-slate-900">{content.trackRecordHeading}</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Numbers that demonstrate our commitment and capability
+              {content.trackRecordSubtitle}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {trackRecord.map((item, index) => (
+            {content.trackRecord.map((item: any, index: number) => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, y: 40 }}
@@ -186,7 +133,7 @@ export default function WhyFWGPage() {
         </div>
       </section>
 
-      {/* Customer-First Approach */}
+      {/* Customer-First Approach - CMS EDITABLE */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -196,35 +143,38 @@ export default function WhyFWGPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-black mb-6 text-slate-900">Customer-First Approach</h2>
+            <h2 className="text-4xl font-black mb-6 text-slate-900">{content.customerFirstHeading}</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Your mission is our priority - commitment, communication, and transparency
+              {content.customerFirstSubtitle}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {customerFirst.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="w-8 h-8 text-white" />
+            {content.customerFirst.map((item: any, index: number) => {
+              const IconComponent = iconMap[item.icon]
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 h-full">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-slate-900 text-center">{item.title}</h3>
+                    <p className="text-slate-600 text-center leading-relaxed">{item.description}</p>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900 text-center">{item.title}</h3>
-                  <p className="text-slate-600 text-center leading-relaxed">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Innovation & Excellence */}
+      {/* Innovation & Excellence - CMS EDITABLE */}
       <section className="py-20 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -234,35 +184,38 @@ export default function WhyFWGPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-black mb-6 text-slate-900">Innovation & Excellence</h2>
+            <h2 className="text-4xl font-black mb-6 text-slate-900">{content.innovationHeading}</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Staying ahead of the curve with cutting-edge technology and continuous improvement
+              {content.innovationSubtitle}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {innovation.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                    <item.icon className="w-8 h-8 text-blue-800" />
+            {content.innovation.map((item: any, index: number) => {
+              const IconComponent = iconMap[item.icon]
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <div className="bg-white border-2 border-slate-200 rounded-xl p-8 hover:border-blue-800 hover:shadow-2xl transition-all duration-300 h-full">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                      <IconComponent className="w-8 h-8 text-blue-800" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-slate-900">{item.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{item.description}</p>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - CMS EDITABLE */}
       <section className="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -271,22 +224,22 @@ export default function WhyFWGPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-black mb-6">Ready to Experience the FWG Difference?</h2>
+            <h2 className="text-4xl font-black mb-6">{content.ctaHeading}</h2>
             <p className="text-xl text-white/90 mb-8">
-              Discover how our proven approach can accelerate your mission success
+              {content.ctaSubtitle}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
-                href="/assets/FWGCap.pdf"
+                href={content.ctaButton1Link}
                 className="inline-block px-8 py-4 bg-white text-blue-800 rounded-full font-bold text-lg hover:bg-slate-100 transition-all hover:shadow-lg hover:scale-105"
               >
-                Download Capabilities Statement
+                {content.ctaButton1Text}
               </Link>
               <Link
-                href="/contact"
+                href={content.ctaButton2Link}
                 className="inline-block px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all"
               >
-                Contact Us
+                {content.ctaButton2Text}
               </Link>
             </div>
           </motion.div>

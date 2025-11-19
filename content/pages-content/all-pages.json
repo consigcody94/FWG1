@@ -212,5 +212,46 @@
         "content": "In no event shall Federal Working Group be liable for any damages arising out of the use or inability to use the materials on our website."
       }
     ]
+  },
+  "whyFwg": {
+    "heroBadge": "SINCE 2004 • 20+ YEARS OF EXCELLENCE",
+    "heroTitle": "Why Choose Federal Working Group",
+    "heroSubtitle": "Two decades of proven excellence delivering mission-critical IT solutions to federal agencies",
+    "differentiatorsHeading": "Our Differentiators",
+    "differentiatorsSubtitle": "What sets Federal Working Group apart in the federal IT marketplace",
+    "differentiators": [
+      { "title": "96/100 Customer Satisfaction", "description": "Industry-leading satisfaction scores reflecting our commitment to excellence and client success", "icon": "Award" },
+      { "title": "Lean, Agile Structure", "description": "Efficient organizational model that delivers maximum value with minimal overhead and bureaucracy", "icon": "Users" },
+      { "title": "Best Practice Standards", "description": "Rigorous adherence to PMI, ITIL, and SEI frameworks ensuring consistent, high-quality delivery", "icon": "Target" },
+      { "title": "Entrepreneurial Culture", "description": "Innovative mindset that drives creative solutions and rapid adaptation to evolving mission needs", "icon": "Zap" }
+    ],
+    "trackRecordHeading": "Proven Track Record",
+    "trackRecordSubtitle": "Numbers that demonstrate our commitment and capability",
+    "trackRecord": [
+      { "metric": "1000+", "label": "Projects Delivered", "description": "Successfully completed across federal agencies" },
+      { "metric": "150+", "label": "Agency Partners", "description": "Trusted relationships built over two decades" },
+      { "metric": "500+", "label": "Expert Professionals", "description": "Certified, cleared, and mission-ready" },
+      { "metric": "20+", "label": "Years of Excellence", "description": "Proven track record since 2004" }
+    ],
+    "customerFirstHeading": "Customer-First Approach",
+    "customerFirstSubtitle": "Your mission is our priority - commitment, communication, and transparency",
+    "customerFirst": [
+      { "title": "Unwavering Commitment", "description": "We stand behind every project with dedicated resources and accountability at every level", "icon": "Shield" },
+      { "title": "Transparent Communication", "description": "Proactive updates, clear reporting, and open dialogue ensure alignment throughout delivery", "icon": "MessageCircle" },
+      { "title": "Mission-Focused Results", "description": "Your success is our success - we measure ourselves by the impact we deliver", "icon": "Target" }
+    ],
+    "innovationHeading": "Innovation & Excellence",
+    "innovationSubtitle": "Staying ahead of the curve with cutting-edge technology and continuous improvement",
+    "innovation": [
+      { "title": "Cutting-Edge Technology", "description": "Cloud computing, AI/ML integration, DevSecOps, and modern architecture patterns", "icon": "Lightbulb" },
+      { "title": "Continuous Improvement", "description": "Lessons learned processes, knowledge management, and evolving best practices", "icon": "TrendingUp" },
+      { "title": "Talent Development", "description": "Ongoing training, certifications, and professional development for our team", "icon": "Users" }
+    ],
+    "ctaHeading": "Ready to Experience the FWG Difference?",
+    "ctaSubtitle": "Discover how our proven approach can accelerate your mission success",
+    "ctaButton1Text": "Download Capabilities Statement",
+    "ctaButton1Link": "/assets/FWGCap.pdf",
+    "ctaButton2Text": "Contact Us",
+    "ctaButton2Link": "/contact"
   }
 }
