@@ -219,6 +219,189 @@ collections:
               - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
           - { label: "Copyright Text", name: "copyright", widget: "string", default: "© 2025 Federal Working Group. All rights reserved." }
 
+      - label: "📄 All Pages Content"
+        name: "pages-content"
+        file: "content/pages-content/all-pages.json"
+        fields:
+          # About Page
+          - label: "📖 About Page"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Hero Video Path", name: "heroVideo", widget: "string", default: "/assets/about-upscaled.mp4" }
+              - label: "Company Story"
+                name: "companyStory"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Subheading", name: "subheading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "text" }
+              - { label: "Mission Statement", name: "mission", widget: "text" }
+              - { label: "Vision Statement", name: "vision", widget: "text" }
+              - label: "Core Values"
+                name: "coreValues"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["TrendingUp", "Heart", "MessageSquare", "Target", "Award"] }
+              - label: "Cultural Pillars"
+                name: "culturalPillars"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["Lightbulb", "Users", "Zap"] }
+
+          # Contact Page
+          - label: "📞 Contact Page"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "State", name: "state", widget: "string" }
+              - { label: "ZIP", name: "zip", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Business Hours", name: "businessHours", widget: "text", hint: "Use line breaks for multiple lines" }
+              - { label: "Google Maps Embed URL", name: "mapUrl", widget: "string", hint: "Full iframe src URL from Google Maps embed code" }
+              - { label: "Form Heading", name: "formHeading", widget: "string" }
+              - { label: "Form Subtitle", name: "formSubtitle", widget: "text" }
+              - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "text" }
+              - { label: "CTA Button Text", name: "ctaButtonText", widget: "string" }
+              - { label: "CTA Button Link", name: "ctaButtonLink", widget: "string" }
+
+          # Careers Page
+          - label: "💼 Careers Page"
+            name: "careers"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Hero Badge", name: "heroBadge", widget: "string" }
+              - { label: "Why FWG Heading", name: "whyFwgHeading", widget: "string" }
+              - { label: "Why FWG Subtitle", name: "whyFwgSubtitle", widget: "text" }
+              - label: "Culture Points"
+                name: "culture"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["TrendingUp", "Users", "Award"] }
+              - { label: "Benefits Heading", name: "benefitsHeading", widget: "string" }
+              - { label: "Benefits Subtitle", name: "benefitsSubtitle", widget: "text" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["Heart", "DollarSign", "GraduationCap", "Gift"] }
+              - { label: "Openings Heading", name: "openingsHeading", widget: "string" }
+              - { label: "Openings Subtitle", name: "openingsSubtitle", widget: "text" }
+              - label: "Openings List"
+                name: "openingsList"
+                widget: "list"
+                field: { label: "Position", name: "position", widget: "string" }
+              - { label: "Application Heading", name: "applicationHeading", widget: "string" }
+              - { label: "Application Subtitle", name: "applicationSubtitle", widget: "text" }
+              - { label: "Application Email", name: "applicationEmail", widget: "string" }
+              - { label: "Application Note", name: "applicationNote", widget: "text" }
+              - { label: "Employee Portal Heading", name: "employeePortalHeading", widget: "string" }
+              - { label: "Employee Portal Subtitle", name: "employeePortalSubtitle", widget: "text" }
+
+          # Services Page
+          - label: "🛠️ Services Page"
+            name: "services"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Hero Video Path", name: "heroVideo", widget: "string" }
+              - label: "Hero Badges"
+                name: "heroBadges"
+                widget: "list"
+                field: { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Why FWG Heading", name: "whyFwgHeading", widget: "string" }
+              - { label: "Why FWG Subtitle", name: "whyFwgSubtitle", widget: "text" }
+              - label: "Differentiators"
+                name: "differentiators"
+                widget: "list"
+                fields:
+                  - { label: "Stat", name: "stat", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["Award", "CheckCircle", "Shield"] }
+              - label: "Services List"
+                name: "servicesList"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["TrendingUp", "Cloud", "Network", "Shield"] }
+                  - { label: "Color", name: "color", widget: "select", options: ["blue", "cyan", "purple", "green"] }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    field: { label: "Feature", name: "feature", widget: "string" }
+              - { label: "Approach Heading", name: "approachHeading", widget: "string" }
+              - { label: "Approach Subtitle", name: "approachSubtitle", widget: "text" }
+              - label: "Approach Cards"
+                name: "approachCards"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    field: { label: "Item", name: "item", widget: "string" }
+              - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
+              - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
+              - { label: "CTA Button 1 Text", name: "ctaButton1Text", widget: "string" }
+              - { label: "CTA Button 1 Link", name: "ctaButton1Link", widget: "string" }
+              - { label: "CTA Button 2 Text", name: "ctaButton2Text", widget: "string" }
+              - { label: "CTA Button 2 Link", name: "ctaButton2Link", widget: "string" }
+
+          # Privacy Policy
+          - label: "🔒 Privacy Policy"
+            name: "privacy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - { label: "Introduction", name: "introduction", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "text" }
+
+          # Terms of Service
+          - label: "📜 Terms of Service"
+            name: "terms"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - { label: "Introduction", name: "introduction", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "text" }
+
   # Testimonials
   - name: "testimonials"
     label: "💬 Testimonials"
