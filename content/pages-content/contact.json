@@ -1,0 +1,36 @@
+{
+  "heroTitle": "Get in Touch",
+  "heroSubtitle": "Ready to transform your federal IT operations? Contact us today.",
+  "officeInfo": {
+    "heading": "Our Office",
+    "address": "1968 S. Coast Hwy #3479",
+    "city": "Laguna Beach, CA",
+    "zip": "92651",
+    "phone": "(571) 306-2656",
+    "email": "info@federalworkinggroup.com"
+  },
+  "contactReasons": [
+    {
+      "title": "New Project Inquiries",
+      "description": "Discuss your upcoming IT needs and how we can help",
+      "icon": "Briefcase"
+    },
+    {
+      "title": "Partnership Opportunities",
+      "description": "Explore collaboration and partnership possibilities",
+      "icon": "Handshake"
+    },
+    {
+      "title": "Career Opportunities",
+      "description": "Join our team of federal IT professionals",
+      "icon": "Users"
+    },
+    {
+      "title": "General Inquiries",
+      "description": "Any questions about our services or capabilities",
+      "icon": "MessageCircle"
+    }
+  ],
+  "formHeading": "Send Us a Message",
+  "formSubtitle": "Fill out the form below and we'll get back to you within 24 hours"
+}

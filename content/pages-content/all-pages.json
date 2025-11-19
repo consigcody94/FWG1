@@ -1,0 +1,101 @@
+{
+  "about": {
+    "heroVideo": "/assets/about-upscaled.mp4",
+    "companyStory": {
+      "heading": "Our Story",
+      "subheading": "20 Years of Excellence",
+      "content": "Since 2004, Federal Working Group has been at the forefront of delivering innovative IT solutions to federal agencies. Our journey began with a simple mission: to bridge the gap between cutting-edge technology and mission-critical government operations.\n\nToday, we stand as a trusted partner to numerous federal agencies, delivering comprehensive IT services that drive digital transformation and operational excellence."
+    },
+    "mission": "To deliver innovative, reliable, and secure IT solutions that empower federal agencies to achieve their missions with excellence.",
+    "vision": "To be the premier provider of transformative IT services for the federal government, recognized for innovation, quality, and unwavering commitment to our clients' success.",
+    "coreValues": [
+      { "title": "High Performance", "description": "Delivering best-in-class services leading to innovative solutions and high satisfaction levels", "icon": "TrendingUp" },
+      { "title": "Commitment", "description": "Unwavering dedication to serve our customers and exceed expectations", "icon": "Heart" },
+      { "title": "Communication", "description": "Transparent, clear, and consistent communication with all stakeholders", "icon": "MessageSquare" },
+      { "title": "Customer Focus", "description": "Maintaining a track record of exceeding customer expectations", "icon": "Target" }
+    ],
+    "culturalPillars": [
+      { "title": "Innovate", "description": "At FWG, innovation is at the heart of everything we do. We leverage cutting-edge technologies and forward-thinking strategies to create tailored solutions that drive success.", "icon": "Lightbulb" },
+      { "title": "Collaborate", "description": "At FWG, collaboration is the cornerstone of our success. We believe that the best solutions emerge from diverse perspectives and collective expertise working together.", "icon": "Users" },
+      { "title": "Execute", "description": "At FWG, we are dedicated to the successful execution of projects. Our methodical approach combines strategic planning, agile methodologies, and deep understanding of clients' objectives.", "icon": "Zap" }
+    ]
+  },
+  "contact": {
+    "heroTitle": "Get in Touch",
+    "heroSubtitle": "Ready to transform your federal IT operations? Contact us today.",
+    "address": "1968 S. Coast Hwy #3479",
+    "city": "Laguna Beach",
+    "state": "CA",
+    "zip": "92651",
+    "phone": "(571) 306-2656",
+    "email": "info@federalworkinggroup.com",
+    "formHeading": "Send Us a Message",
+    "formSubtitle": "Fill out the form below and we'll get back to you within 24 hours"
+  },
+  "careers": {
+    "heroTitle": "Join Our Team",
+    "heroSubtitle": "Build your career with a leader in federal IT solutions",
+    "introHeading": "Why Work at FWG?",
+    "introText": "At Federal Working Group, we're more than just colleagues—we're a community of innovators, problem-solvers, and mission-driven professionals committed to excellence in federal IT.",
+    "benefits": [
+      { "title": "Competitive Compensation", "description": "Industry-leading salaries and performance bonuses", "icon": "DollarSign" },
+      { "title": "Health & Wellness", "description": "Comprehensive health, dental, and vision coverage", "icon": "Heart" },
+      { "title": "Professional Development", "description": "Training, certifications, and career advancement", "icon": "GraduationCap" },
+      { "title": "Work-Life Balance", "description": "Flexible schedules and generous PTO", "icon": "Calendar" },
+      { "title": "Retirement Planning", "description": "401(k) with company matching", "icon": "PiggyBank" },
+      { "title": "Team Culture", "description": "Collaborative, supportive work environment", "icon": "Users" }
+    ]
+  },
+  "services": {
+    "heroTitle": "Our Services",
+    "heroSubtitle": "Comprehensive IT solutions for federal agencies",
+    "introHeading": "Federal IT Excellence",
+    "introText": "Federal Working Group delivers end-to-end IT solutions tailored to the unique needs of federal agencies. Our services span the full spectrum of IT capabilities, from strategic planning to implementation and support."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "November 2025",
+    "introduction": "Federal Working Group (\"FWG,\" \"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.",
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "content": "We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise when you contact us."
+      },
+      {
+        "heading": "How We Use Your Information",
+        "content": "We use the information we collect or receive to communicate with you, to respond to inquiries and provide customer service, and to improve our website and services."
+      },
+      {
+        "heading": "Disclosure of Your Information",
+        "content": "We may share information we have collected about you in certain situations. Your information may be disclosed to comply with legal obligations, protect our rights, or prevent fraud."
+      },
+      {
+        "heading": "Security",
+        "content": "We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that no security measures are perfect or impenetrable."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "November 2025",
+    "introduction": "Please read these Terms of Service carefully before using the Federal Working Group website.",
+    "sections": [
+      {
+        "heading": "Agreement to Terms",
+        "content": "By accessing our website, you agree to be bound by these Terms of Service and all applicable laws and regulations."
+      },
+      {
+        "heading": "Use License",
+        "content": "Permission is granted to temporarily access the materials on Federal Working Group's website for personal, non-commercial use only."
+      },
+      {
+        "heading": "Disclaimer",
+        "content": "The materials on Federal Working Group's website are provided on an 'as is' basis. Federal Working Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties."
+      },
+      {
+        "heading": "Limitations",
+        "content": "In no event shall Federal Working Group be liable for any damages arising out of the use or inability to use the materials on our website."
+      }
+    ]
+  }
+}
