@@ -79,8 +79,8 @@ export default function EmployeePortal() {
             <p className="font-semibold text-white mb-2">Need Help?</p>
             <p>
               For technical support or account access issues, contact IT Support at{" "}
-              <a href="mailto:support@federalworkinggroup.com" className="text-cyan-400 hover:text-cyan-300">
-                support@federalworkinggroup.com
+              <a href="mailto:support@federalworking.com" className="text-cyan-400 hover:text-cyan-300">
+                support@federalworking.com
               </a>
             </p>
           </div>
