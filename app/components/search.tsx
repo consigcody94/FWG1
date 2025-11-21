@@ -32,14 +32,7 @@ const searchIndex: SearchResult[] = [
   { title: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'IT infrastructure and solutions', category: 'Services' },
   { title: 'Enterprise Architecture', href: '/services/enterprise-architecture', description: 'Enterprise architecture services', category: 'Services' },
   { title: 'IT Security', href: '/services/it-security', description: 'IT security, strategy and operations', category: 'Services' },
-  
-  // Contract pages
-  { title: 'Contract Vehicles', href: '/contracts', description: 'Our contract vehicles', category: 'Contracts' },
-  { title: 'CIOSP3', href: '/contracts/ciosp3', description: 'CIO-SP3 contract information', category: 'Contracts' },
-  { title: 'GSA MAS', href: '/contracts/gsa-mas-54151s', description: 'GSA Multiple Award Schedule', category: 'Contracts' },
-  { title: 'CTO EA', href: '/contracts/ctoea', description: 'CTO Enterprise Architecture contract', category: 'Contracts' },
-  { title: 'USAC', href: '/contracts/usac', description: 'USAC contract information', category: 'Contracts' },
-  
+
   // Career pages
   { title: 'Life at FWG', href: '/careers/life-at-fwg', description: 'Experience life at Federal Working Group', category: 'Careers' },
   { title: 'Benefits', href: '/careers/benefits', description: 'Employee benefits and perks', category: 'Careers' },
@@ -57,8 +50,11 @@ const searchIndex: SearchResult[] = [
   { title: 'IT Security Specialist', href: '/careers/itsecurityspecialist', description: 'IT Security Specialist position in Tuscaloosa, AL', category: 'Jobs' },
   { title: 'Enterprise Architect', href: '/careers/enterprise-architect', description: 'Enterprise Architect position in Suitland, MD', category: 'Jobs' },
   
-  // Employee Portal
+  // Other pages
   { title: 'Employee Portal', href: '/employee-portal', description: 'Access employee resources and tools', category: 'Employee' },
+  { title: 'Privacy Policy', href: '/privacy-policy', description: 'Our privacy policy and data practices', category: 'Legal' },
+  { title: 'Terms of Service', href: '/terms-of-service', description: 'Website terms of service', category: 'Legal' },
+  { title: 'Accessibility', href: '/accessibility', description: 'Website accessibility statement', category: 'Legal' },
 ];
 
 export function Search() {
