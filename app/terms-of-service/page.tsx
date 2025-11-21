@@ -70,8 +70,8 @@ export default function TermsOfServicePage() {
             </p>
             <div className="bg-slate-50 p-6 rounded-xl">
               <p className="text-slate-900 font-semibold">Federal Working Group</p>
-              <p className="text-slate-600">1968 S. Coast Hwy #3479</p>
-              <p className="text-slate-600">Laguna Beach, CA 92651</p>
+              <p className="text-slate-600">7918 Jones Branch Drive, 4th Floor</p>
+              <p className="text-slate-600">McLean, VA 22102</p>
               <p className="text-slate-600 mt-2">Email: info@federalworking.com</p>
             </div>
           </motion.div>

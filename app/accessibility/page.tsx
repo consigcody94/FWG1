@@ -57,8 +57,8 @@ export default function AccessibilityPage() {
 
             <div className="bg-slate-50 p-6 rounded-xl mt-12">
               <p className="text-slate-900 font-semibold">Federal Working Group</p>
-              <p className="text-slate-600">1968 S. Coast Hwy #3479</p>
-              <p className="text-slate-600">Laguna Beach, CA 92651</p>
+              <p className="text-slate-600">7918 Jones Branch Drive, 4th Floor</p>
+              <p className="text-slate-600">McLean, VA 22102</p>
               <p className="text-slate-600 mt-2">Email: info@federalworking.com</p>
               <Link href="/contact" className="inline-block mt-4 px-6 py-3 bg-blue-800 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
